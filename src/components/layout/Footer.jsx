@@ -5,7 +5,7 @@ export default function Footer({ links }) {
 		<footer className="logo-pattern-bg border-t border-white/10 bg-surface-soft/75 backdrop-blur">
 			<div className="site-container flex flex-col gap-6 py-5 sm:flex-row md:items-center md:justify-between">
 				<div>
-					<img alt="FabDigital Studio" className="max-w-40 shrink-0" src={logo} />
+					<img alt="FabDigital Studio" className="h-10 w-auto opacity-90 shrink-0" src={logo} />
 					<p className="mt-3 text-sm text-ink-700">
 						Modern websites designed with AI and built for performance.
 					</p>
