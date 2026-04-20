@@ -22,10 +22,10 @@ export default function SelectedWork({ projects }) {
         <div className="mt-12 grid gap-6 lg:grid-cols-12">
           {projects.map((project, index) => (
             <article key={project.title} className={`glass-panel hover-lift group overflow-hidden ${layoutClasses[index] ?? 'lg:col-span-6'}`}>
-              <a className="flex h-full flex-col" href={project.href} rel="noreferrer" target="_blank">
+              <div className="flex h-full flex-col">
                 <div className="relative overflow-hidden">
                   <img
-                    alt={project.title}
+                    alt={project.category}
                     className="h-64 w-full object-cover transition duration-500 group-hover:scale-[1.03] lg:h-72"
                     src={project.image}
                   />
@@ -34,14 +34,11 @@ export default function SelectedWork({ projects }) {
                 <div className="flex flex-1 flex-col justify-between p-6">
                   <div>
                     <div className="chip-accent">Client Work</div>
-                    <h3 className="mt-4 text-xl font-semibold text-ink-950 sm:text-2xl">{project.title}</h3>
+                    <h3 className="mt-4 text-xl font-semibold text-ink-950 sm:text-2xl">{project.category}</h3>
                     <p className="mt-3 max-w-2xl text-sm leading-7 text-ink-600">{project.description}</p>
                   </div>
-                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-600">
-                    View project <span aria-hidden="true">↗</span>
-                  </div>
                 </div>
-              </a>
+              </div>
             </article>
           ))}
         </div>
