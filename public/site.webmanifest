@@ -1,0 +1,15 @@
+{
+  "name": "FabDigital Studio",
+  "short_name": "FabDigital",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1630",
+  "theme_color": "#0B1630",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
