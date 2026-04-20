@@ -3,19 +3,19 @@ const variants = {
   secondary: 'button-secondary',
 };
 
-export default function Button({ href, children, variant = 'primary', className = '' }) {
+export default function Button({ href, children, variant = 'primary', className = '', ...props }) {
   const classes = `${variants[variant] ?? variants.primary} ${className}`.trim();
 
   if (href) {
     return (
-      <a className={classes} href={href}>
+      <a className={classes} href={href} {...props}>
         {children}
       </a>
     );
   }
 
   return (
-    <button className={classes} type="button">
+    <button className={classes} type="button" {...props}>
       {children}
     </button>
   );
