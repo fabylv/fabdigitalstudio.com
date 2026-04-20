@@ -2,8 +2,8 @@ import logo from '/fabdigitalstudio-logo-transparent.png';
 
 export default function Footer({ links }) {
 	return (
-		<footer className="logo-pattern-bg border-t border-white/10 bg-surface-soft/75 backdrop-blur space-y-4">
-			<div className="site-container flex flex-col gap-6 pt-5 sm:flex-row md:items-center md:justify-between">
+		<footer className="logo-pattern-bg border-t border-white/10 bg-surface-soft/75 backdrop-blur space-y-2">
+			<div className="site-container flex flex-col gap-6 pt-4 sm:flex-row md:items-center md:justify-between">
 				<div>
 					<img
 						alt="FabDigital Studio"
