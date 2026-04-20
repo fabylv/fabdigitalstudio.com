@@ -1,11 +1,11 @@
-import logo from '../../assets/fabdigitalstudio-logo.png';
+import logo from '/fabdigitalstudio-logo-transparent.png';
 
 export default function Footer({ links }) {
 	return (
-		<footer className="border-t border-white/10 bg-surface-soft/75 backdrop-blur">
-			<div className="site-container flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
+		<footer className="logo-pattern-bg border-t border-white/10 bg-surface-soft/75 backdrop-blur">
+			<div className="site-container flex flex-col gap-6 py-5 sm:flex-row md:items-center md:justify-between">
 				<div>
-					<img alt="FabDigital Studio" className="h-14 w-auto sm:h-16" src={logo} />
+					<img alt="FabDigital Studio" className="max-w-40 shrink-0" src={logo} />
 					<p className="mt-3 text-sm text-ink-700">
 						Modern websites designed with AI and built for performance.
 					</p>

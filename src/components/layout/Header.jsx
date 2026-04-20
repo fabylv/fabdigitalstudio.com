@@ -1,4 +1,4 @@
-import logo from '../../assets/fabdigitalstudio-logo.png';
+import logo from '/fabdigitalstudio-logo-transparent.png';
 import Button from '../ui/Button';
 
 export default function Header({ navigation }) {
@@ -6,7 +6,7 @@ export default function Header({ navigation }) {
 		<header className="logo-pattern-bg sticky top-0 z-30 border-b border-white/10 shadow-[0_12px_30px_rgba(2,8,23,0.24)] backdrop-blur-xl">
 			<div className="site-container flex items-center justify-between gap-6 py-4">
 				<a className="inline-flex items-center" href="#top">
-					<img alt="FabDigital Studio" className="h-12 w-auto sm:h-14" src={logo} />
+					<img alt="FabDigital Studio" className="max-w-40" src={logo} />
 				</a>
 
 				<nav aria-label="Primary" className="hidden items-center gap-8 md:flex">
