@@ -1,4 +1,4 @@
-import logo from '../../assets/fabdigitialstudio-logo.png';
+import logo from '../../assets/fabdigitialstudio-logo-transparent.png';
 
 export default function Footer({ links }) {
   return (
