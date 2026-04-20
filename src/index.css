@@ -15,10 +15,10 @@
 
   body {
     @apply m-0 bg-surface-soft font-sans text-ink-800 antialiased;
-    background-image:
-      radial-gradient(circle at 12% 10%, rgba(99, 102, 241, 0.16), transparent 24%),
-      radial-gradient(circle at 86% 14%, rgba(34, 211, 238, 0.16), transparent 20%),
-      linear-gradient(180deg, #fbfcff 0%, #f6f8ff 46%, #f7fbff 100%);
+    background:
+      linear-gradient(180deg, rgba(6, 13, 31, 0.88) 0%, rgba(11, 19, 40, 0.82) 100%),
+      url('./assets/fabdigitalstudio-body-background.png') center top / cover no-repeat,
+      #0b1328;
   }
 
   body::before {
@@ -30,7 +30,7 @@
       linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
       linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
     background-size: 30px 30px;
-    mask-image: linear-gradient(180deg, rgba(15, 23, 42, 0.22), transparent 68%);
+    mask-image: linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent 72%);
     z-index: -1;
   }
 
@@ -53,19 +53,19 @@
   }
 
   .card-surface {
-    @apply rounded-3xl border border-white/70 bg-white/80 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl;
+    @apply rounded-3xl border border-white/10 bg-white/[0.06] shadow-[0_24px_70px_rgba(2,8,23,0.32)] backdrop-blur-xl;
   }
 
   .button-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(79,70,229,0.28)] transition duration-200 ease-out hover:bg-brand-700;
+    @apply inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_34px_rgba(47,111,228,0.35)] transition duration-200 ease-out hover:bg-brand-500;
   }
 
   .button-secondary {
-    @apply inline-flex items-center justify-center rounded-full border border-white/80 bg-white/80 px-6 py-3 text-sm font-semibold text-ink-800 shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition duration-200 ease-out hover:border-brand-100 hover:text-ink-950;
+    @apply inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.06] px-6 py-3 text-sm font-semibold text-ink-900 shadow-[0_10px_30px_rgba(2,8,23,0.20)] transition duration-200 ease-out hover:border-brand-500 hover:text-white;
   }
 
   .section-kicker {
-    @apply mb-4 inline-flex rounded-full border border-brand-100 bg-white/80 px-3 py-1 text-sm font-semibold text-brand-700 shadow-[0_8px_24px_rgba(79,70,229,0.08)];
+    @apply mb-4 inline-flex rounded-full border border-white/10 bg-white/[0.06] px-3 py-1 text-sm font-semibold text-brand-700 shadow-[0_8px_24px_rgba(2,8,23,0.16)];
   }
 
   .section-title {
@@ -84,19 +84,19 @@
   }
 
   .glass-panel {
-    @apply rounded-[2rem] border border-white/70 bg-white/70 backdrop-blur-xl shadow-[0_24px_70px_rgba(15,23,42,0.08)];
+    @apply rounded-[2rem] border border-white/10 bg-white/[0.07] backdrop-blur-xl shadow-[0_24px_70px_rgba(2,8,23,0.28)];
   }
 
   .hover-lift {
-    @apply transition duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_28px_80px_rgba(15,23,42,0.12)];
+    @apply transition duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_28px_80px_rgba(2,8,23,0.36)];
   }
 
   .chip {
-    @apply inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/80 px-3 py-2 text-sm font-medium text-ink-700 shadow-[0_12px_30px_rgba(15,23,42,0.08)] backdrop-blur;
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.07] px-3 py-2 text-sm font-medium text-ink-800 shadow-[0_12px_30px_rgba(2,8,23,0.20)] backdrop-blur;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-brand-700 via-brand-500 to-cyan-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-brand-600 via-cyan-300 to-accent-400 bg-clip-text text-transparent;
   }
 
   .animate-float-slow {

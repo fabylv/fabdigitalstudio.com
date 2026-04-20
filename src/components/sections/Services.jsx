@@ -17,7 +17,7 @@ export default function Services({ services }) {
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-600 to-cyan-400 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(79,70,229,0.24)]">
                   {String(index + 1).padStart(2, '0')}
                 </span>
-                <span className="h-px flex-1 bg-gradient-to-r from-brand-100 via-cyan-100 to-transparent" />
+                <span className="h-px flex-1 bg-gradient-to-r from-brand-500/45 via-cyan-300/30 to-transparent" />
               </div>
               <h3 className="mt-6 text-xl font-semibold text-ink-950">{service.title}</h3>
               <p className="mt-4 text-sm leading-7 text-ink-600">{service.description}</p>
