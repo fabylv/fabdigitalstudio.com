@@ -109,6 +109,17 @@
     @apply bg-gradient-to-r from-brand-600 via-cyan-300 to-accent-400 bg-clip-text text-transparent;
   }
 
+  .logo-pattern-bg {
+    background-color: #0b1630;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      radial-gradient(circle at 18% 18%, rgba(47, 123, 255, 0.16), transparent 28%),
+      radial-gradient(circle at 82% 20%, rgba(53, 214, 230, 0.10), transparent 22%);
+    background-size: 18px 18px, 18px 18px, auto, auto;
+    background-position: center;
+  }
+
   .animate-float-slow {
     animation: float-slow 7s ease-in-out infinite;
   }
