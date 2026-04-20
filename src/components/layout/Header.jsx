@@ -1,4 +1,4 @@
-import logo from '../../assets/fabdigitialstudio-logo-transparent.png';
+import logo from '../../assets/fabdigitialstudio-logo.png';
 import Button from '../ui/Button';
 
 export default function Header({ navigation }) {
