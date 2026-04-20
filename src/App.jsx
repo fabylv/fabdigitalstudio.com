@@ -19,7 +19,7 @@ import {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-surface-soft">
+    <div className="min-h-screen">
       <div className="pointer-events-none fixed inset-x-0 top-0 -z-10 h-[40rem] bg-[radial-gradient(circle_at_top_left,rgba(47,111,228,0.24),transparent_32%),radial-gradient(circle_at_82%_10%,rgba(47,215,230,0.18),transparent_24%),radial-gradient(circle_at_88%_18%,rgba(255,111,58,0.12),transparent_16%)]" />
       <Header navigation={navigation} />
       <main>
