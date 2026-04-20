@@ -26,7 +26,7 @@ export default function Contact({ content }) {
         </div>
 
         <div className="glass-panel p-8 sm:p-10">
-          <form className="space-y-6">
+          <form action="mailto:faby@fabdigitalstudio.com" className="space-y-6" encType="text/plain" method="post">
             <div className="grid gap-6 sm:grid-cols-2">
               <label className="block text-sm font-medium text-ink-700">
                 Name
@@ -34,6 +34,7 @@ export default function Contact({ content }) {
                   className="mt-2 w-full rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3 text-base text-ink-950 outline-none ring-0 transition placeholder:text-ink-600/60 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/20"
                   name="name"
                   placeholder="Your name"
+                  required
                   type="text"
                 />
               </label>
@@ -43,6 +44,7 @@ export default function Contact({ content }) {
                   className="mt-2 w-full rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3 text-base text-ink-950 outline-none ring-0 transition placeholder:text-ink-600/60 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/20"
                   name="email"
                   placeholder="you@business.com"
+                  required
                   type="email"
                 />
               </label>
@@ -54,6 +56,7 @@ export default function Contact({ content }) {
                 className="mt-2 min-h-40 w-full rounded-3xl border border-white/10 bg-white/[0.06] px-4 py-3 text-base text-ink-950 outline-none ring-0 transition placeholder:text-ink-600/60 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/20"
                 name="message"
                 placeholder="Tell us about your project, goals, or current website."
+                required
               />
             </label>
 

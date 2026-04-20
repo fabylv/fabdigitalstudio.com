@@ -93,7 +93,7 @@ export const contactDetails = {
   title: 'Tell us about your project',
   description:
     'Share what you need, where your current site stands, and what you want your next version to do better.',
-  email: 'hello@fabdigitalstudio.com',
+  email: 'faby@fabdigitalstudio.com',
 };
 
 export const footerLinks = [
