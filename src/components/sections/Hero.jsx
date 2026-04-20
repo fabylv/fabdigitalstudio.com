@@ -36,16 +36,16 @@ export default function Hero({ content }) {
         </div>
 
         <div className="relative animate-rise">
-          <div className="absolute -left-4 top-10 hidden animate-float-slow lg:block">
+          <div className="absolute -left-4 top-10 hidden animate-float-slow rotate-[-4deg] lg:block">
             <div className="chip">Conversion-focused layouts</div>
           </div>
-          <div className="absolute -right-4 bottom-14 hidden animate-float-delayed lg:block">
+          <div className="absolute -right-4 bottom-14 hidden animate-float-delayed rotate-[4deg] lg:block">
             <div className="chip">Clean front-end build</div>
           </div>
           <div className="absolute inset-0 animate-glow rounded-[2.25rem] bg-[radial-gradient(circle_at_top_left,rgba(47,123,255,0.30),transparent_36%),radial-gradient(circle_at_82%_22%,rgba(53,214,230,0.24),transparent_30%),radial-gradient(circle_at_68%_84%,rgba(255,106,61,0.16),transparent_20%)] blur-2xl" />
-          <div className="glass-panel soft-grid relative overflow-hidden p-4 sm:p-6">
+          <div className="glass-panel soft-grid relative overflow-hidden p-4 sm:p-6 lg:rotate-[-1.5deg]">
             <div className="absolute inset-x-8 top-6 h-24 rounded-full bg-[radial-gradient(circle,rgba(99,102,241,0.16),transparent_68%)] blur-2xl" />
-            <img alt="FabDigital Studio website preview" className="relative w-full rounded-2xl border border-white/80 shadow-[0_28px_70px_rgba(15,23,42,0.12)]" src={content.image} />
+            <img alt="FabDigital Studio website preview" className="relative w-full rounded-2xl border border-white/10 shadow-[0_28px_70px_rgba(2,8,23,0.28)] lg:rotate-[1.5deg]" src={content.image} />
           </div>
         </div>
       </div>
