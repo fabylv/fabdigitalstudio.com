@@ -37,7 +37,7 @@ body {
 	@apply m-0 bg-surface-soft font-sans antialiased;
 	color: var(--color-ink-200);
 	background: linear-gradient(180deg, rgba(6, 13, 31, 0.88) 0%, rgba(11, 19, 40, 0.82) 100%),
-		url('./assets/fabdigitalstudio-body-background.png') center top / cover no-repeat, #0b1328;
+		url('./assets/fabdigitalstudio-body-background.webp') center top / cover no-repeat, #0b1328;
 }
 
 body::before {

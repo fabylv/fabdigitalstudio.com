@@ -50,37 +50,37 @@ export const selectedWork = [
     title: 'Portfolio sample one',
     category: 'Personal Brand Website',
     description: 'A professional website presence built to feel personal, polished, and easy to explore.',
-    image: 'https://i1.wp.com/www.fabyvanyo.com/wp-content/uploads/2016/01/cropped-grace2.jpg?zoom=2&w=3840',
+    image: '/portfolio/grace-stetelbaun.jpg',
   },
   {
     title: 'Portfolio sample two',
     category: 'Editorial-Style Client Site',
     description: 'A refined client website with a clean structure and a more editorial visual feel.',
-    image: 'https://i0.wp.com/www.fabyvanyo.com/wp-content/uploads/2017/01/cropped-lasr.jpg?zoom=2&w=3840',
+    image: '/portfolio/la-southreia.jpg',
   },
   {
     title: 'Portfolio sample three',
     category: 'Service Business Website',
     description: 'A client-facing website designed to present services clearly and build trust quickly.',
-    image: 'https://i2.wp.com/www.fabyvanyo.com/wp-content/uploads/cropped-claudiagrosz.png?zoom=2&w=3840',
+    image: '/portfolio/claudia-grosz.png',
   },
   {
     title: 'Portfolio sample four',
     category: 'Branded Experience Site',
     description: 'A branded website experience with strong visual identity and a calm, structured layout.',
-    image: 'https://i1.wp.com/www.fabyvanyo.com/wp-content/uploads/cropped-syncoasis.jpg?zoom=2&w=3840',
+    image: '/portfolio/syncoasis.jpg',
   },
   {
     title: 'Portfolio sample five',
     category: 'Campaign Landing Page',
     description: 'A focused promotional page built to showcase an offer with a cleaner conversion path.',
-    image: 'https://i1.wp.com/www.fabyvanyo.com/wp-content/uploads/cropped-giftsHP.jpg?zoom=2&w=3840',
+    image: '/portfolio/campaign-landing-page.jpg',
   },
   {
     title: 'Portfolio sample six',
     category: 'Promotional Web Experience',
     description: 'A visually driven landing page created to support a stronger marketing presentation.',
-    image: 'https://i2.wp.com/www.fabyvanyo.com/wp-content/uploads/2017/01/cropped-gpc-1.jpg?zoom=2&w=3840',
+    image: '/portfolio/promotional-web-experience.jpg',
   },
 ];
 
