@@ -8,7 +8,7 @@ export default function ValueSection({ points }) {
           <SectionIntro
             kicker="Why choose us"
             title="A modern workflow without the agency bloat"
-            description="Fab Digital Studio combines strategy, clean front-end execution, and AI-assisted efficiency to deliver polished websites with less drag."
+            description="FabDigital Studio combines strategy, clean front-end execution, and AI-assisted efficiency to deliver polished websites with less drag."
           />
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">

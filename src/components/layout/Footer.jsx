@@ -3,7 +3,7 @@ export default function Footer({ links }) {
     <footer className="border-t border-line bg-white">
       <div className="site-container flex flex-col gap-6 py-8 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="text-base font-semibold text-ink-950">Fab Digital Studio</p>
+          <p className="text-base font-semibold text-ink-950">FabDigital Studio</p>
           <p className="mt-2 text-sm text-ink-600">Modern websites designed with AI and built for performance.</p>
         </div>
 
@@ -16,7 +16,7 @@ export default function Footer({ links }) {
         </nav>
       </div>
       <div className="border-t border-line/80 bg-surface-soft">
-        <div className="site-container py-4 text-sm text-ink-600">© 2026 Fab Digital Studio. All rights reserved.</div>
+        <div className="site-container py-4 text-sm text-ink-600">© 2026 FabDigital Studio. All rights reserved.</div>
       </div>
     </footer>
   );

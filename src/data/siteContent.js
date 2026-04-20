@@ -7,7 +7,7 @@ export const navigation = [
 ];
 
 export const heroContent = {
-  eyebrow: 'Fab Digital Studio',
+  eyebrow: 'FabDigital Studio',
   title: 'Modern websites designed with AI and built for performance.',
   description:
     'We help small businesses, service providers, and professionals launch a stronger digital presence with fast, polished websites that look premium and work hard for the business behind them.',

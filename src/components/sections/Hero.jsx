@@ -28,7 +28,7 @@ export default function Hero({ content }) {
         </div>
 
         <div className="card-surface overflow-hidden p-4 sm:p-6">
-          <img alt="Fab Digital Studio website preview" className="w-full rounded-2xl" src={content.image} />
+          <img alt="FabDigital Studio website preview" className="w-full rounded-2xl" src={content.image} />
         </div>
       </div>
     </section>
