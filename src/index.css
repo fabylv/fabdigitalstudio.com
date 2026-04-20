@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --color-brand-50: #eef6ff;
+  --color-brand-100: #d9eaff;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-ink-950: #0f172a;
+  --color-ink-800: #1e293b;
+  --color-ink-700: #334155;
+  --color-ink-600: #475569;
+  --color-line: #e2e8f0;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f8fafc;
+}
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply m-0 bg-surface-soft font-sans text-ink-800 antialiased;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+}
+
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10;
+  }
+
+  .section-shell {
+    @apply py-20 sm:py-24;
+  }
+
+  .card-surface {
+    @apply rounded-3xl border border-line bg-white shadow-[0_12px_40px_rgba(15,23,42,0.06)];
+  }
+
+  .button-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-ink-950 px-6 py-3 text-sm font-semibold text-white transition duration-200 ease-out hover:bg-ink-800;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-line bg-white px-6 py-3 text-sm font-semibold text-ink-800 transition duration-200 ease-out hover:border-ink-950 hover:text-ink-950;
+  }
+
+  .section-kicker {
+    @apply mb-4 inline-flex rounded-full bg-brand-50 px-3 py-1 text-sm font-semibold text-brand-700;
+  }
+
+  .section-title {
+    @apply text-3xl font-semibold tracking-tight text-ink-950 sm:text-4xl;
+  }
+
+  .section-copy {
+    @apply mt-4 max-w-2xl text-base leading-7 text-ink-600 sm:text-lg;
+  }
+}
