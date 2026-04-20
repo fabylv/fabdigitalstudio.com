@@ -29,15 +29,21 @@ export default function Contact({ content }) {
       const result = await response.json();
 
       if (!response.ok || result.success === 'false') {
-        throw new Error('Unable to send form');
+        throw new Error(result.message || 'Unable to send form');
       }
 
       form.reset();
       setStatus({ type: 'success', message: 'Thanks, your message was sent successfully.' });
     } catch (error) {
+      const message =
+        error.message?.includes('Activate Form')
+          ? 'FormSubmit still needs activation. Check faby@fabdigitalstudio.com for the activation email and click the link inside it.'
+          : error.message ||
+            'Something went wrong while sending. Please try again or email faby@fabdigitalstudio.com directly.';
+
       setStatus({
         type: 'error',
-        message: 'Something went wrong while sending. Please try again or email faby@fabdigitalstudio.com directly.',
+        message,
       });
     } finally {
       setIsSubmitting(false);
