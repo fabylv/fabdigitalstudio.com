@@ -22,6 +22,7 @@ export default function Hero({ content }) {
             <span className="chip">AI-assisted workflow</span>
             <span className="chip">Launch-ready pages</span>
             <span className="chip">Fast performance</span>
+            <span className="chip-accent">Bold modern presence</span>
           </div>
 
           <dl className="mt-10 grid gap-4 sm:grid-cols-3">
@@ -41,7 +42,7 @@ export default function Hero({ content }) {
           <div className="absolute -right-4 bottom-14 hidden animate-float-delayed lg:block">
             <div className="chip">Clean front-end build</div>
           </div>
-          <div className="absolute inset-0 rounded-[2.25rem] bg-[radial-gradient(circle_at_top_left,rgba(99,102,241,0.22),transparent_38%),radial-gradient(circle_at_82%_22%,rgba(34,211,238,0.18),transparent_30%)] blur-2xl" />
+          <div className="absolute inset-0 animate-glow rounded-[2.25rem] bg-[radial-gradient(circle_at_top_left,rgba(47,123,255,0.30),transparent_36%),radial-gradient(circle_at_82%_22%,rgba(53,214,230,0.24),transparent_30%),radial-gradient(circle_at_68%_84%,rgba(255,106,61,0.16),transparent_20%)] blur-2xl" />
           <div className="glass-panel soft-grid relative overflow-hidden p-4 sm:p-6">
             <div className="absolute inset-x-8 top-6 h-24 rounded-full bg-[radial-gradient(circle,rgba(99,102,241,0.16),transparent_68%)] blur-2xl" />
             <img alt="FabDigital Studio website preview" className="relative w-full rounded-2xl border border-white/80 shadow-[0_28px_70px_rgba(15,23,42,0.12)]" src={content.image} />
