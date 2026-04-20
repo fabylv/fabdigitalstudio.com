@@ -13,7 +13,7 @@ export default function Footer({ links }) {
 					<p className="mt-3 text-sm text-ink-700">
 						Modern websites with personality, built to perform.
 					</p>
-					<div className="my-4 h-1 w-40 rounded-full bg-gradient-to-r from-brand-500 to-cyan-400" />
+					<div className="my-4 h-1 w-40 rounded-full bg-linear-to-r from-brand-500 to-cyan-400" />
 				</div>
 
 				<nav aria-label="Footer" className="flex flex-wrap gap-5 text-sm text-ink-600">

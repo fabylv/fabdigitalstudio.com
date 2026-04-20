@@ -36,10 +36,8 @@ html {
 body {
 	@apply m-0 bg-surface-soft font-sans antialiased;
 	color: var(--color-ink-200);
-	background:
-		linear-gradient(180deg, rgba(6, 13, 31, 0.88) 0%, rgba(11, 19, 40, 0.82) 100%),
-		url('./assets/fabdigitalstudio-body-background.png') center top / cover no-repeat,
-		#0b1328;
+	background: linear-gradient(180deg, rgba(6, 13, 31, 0.88) 0%, rgba(11, 19, 40, 0.82) 100%),
+		url('./assets/fabdigitalstudio-body-background.png') center top / cover no-repeat, #0b1328;
 }
 
 body::before {
@@ -47,8 +45,7 @@ body::before {
 	position: fixed;
 	inset: 0;
 	pointer-events: none;
-	background-image:
-		linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+	background-image: linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
 		linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
 	background-size: 30px 30px;
 	mask-image: linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent 72%);
@@ -72,7 +69,7 @@ img {
 }
 
 .card-surface {
-	@apply rounded-3xl border border-white/10 bg-white/[0.06] shadow-[0_24px_70px_rgba(2,8,23,0.32)] backdrop-blur-xl;
+	@apply rounded-3xl border border-white/10 bg-white/6 shadow-[0_24px_70px_rgba(2,8,23,0.32)] backdrop-blur-xl;
 }
 
 .button-primary {
@@ -86,12 +83,12 @@ img {
 }
 
 .button-secondary {
-	@apply inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.06] px-6 py-3 text-sm font-semibold shadow-[0_10px_30px_rgba(2,8,23,0.20)] transition duration-200 ease-out hover:border-brand-500 hover:text-white;
+	@apply inline-flex items-center justify-center rounded-full border border-white/15 bg-white/6 px-6 py-3 text-sm font-semibold shadow-[0_10px_30px_rgba(2,8,23,0.20)] transition duration-200 ease-out hover:border-brand-500 hover:text-white;
 	color: var(--color-ink-100);
 }
 
 .section-kicker {
-	@apply mb-4 inline-flex rounded-full border border-white/10 bg-white/[0.06] px-3 py-1 text-sm font-semibold shadow-[0_8px_24px_rgba(2,8,23,0.16)];
+	@apply mb-4 inline-flex rounded-full border border-white/10 bg-white/6 px-3 py-1 text-sm font-semibold shadow-[0_8px_24px_rgba(2,8,23,0.16)];
 	color: var(--color-cyan-400);
 }
 
@@ -106,14 +103,13 @@ img {
 }
 
 .soft-grid {
-	background-image:
-		linear-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px),
+	background-image: linear-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px),
 		linear-gradient(90deg, rgba(148, 163, 184, 0.1) 1px, transparent 1px);
 	background-size: 32px 32px;
 }
 
 .glass-panel {
-	@apply rounded-[2rem] border border-white/10 bg-white/[0.07] shadow-[0_24px_70px_rgba(2,8,23,0.28)] backdrop-blur-xl;
+	@apply rounded-4xl border border-white/10 bg-white/[0.07] shadow-[0_24px_70px_rgba(2,8,23,0.28)] backdrop-blur-xl;
 }
 
 .hover-lift {
@@ -133,13 +129,12 @@ img {
 }
 
 .gradient-text {
-	@apply bg-gradient-to-r from-brand-600 via-cyan-400 to-accent-400 bg-clip-text text-transparent;
+	@apply bg-linear-to-r from-brand-600 via-cyan-400 to-accent-400 bg-clip-text text-transparent;
 }
 
 .logo-pattern-bg {
 	background-color: #0b1630;
-	background-image:
-		linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+	background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
 		linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
 		radial-gradient(circle at 18% 18%, rgba(47, 123, 255, 0.16), transparent 28%),
 		radial-gradient(circle at 82% 20%, rgba(53, 214, 230, 0.1), transparent 22%);
