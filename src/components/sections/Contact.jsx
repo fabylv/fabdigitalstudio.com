@@ -1,6 +1,49 @@
+import { useState } from 'react';
 import SectionIntro from '../ui/SectionIntro';
 
 export default function Contact({ content }) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState({ type: 'idle', message: '' });
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    formData.append('_subject', 'New FabDigital Studio inquiry');
+    formData.append('_template', 'table');
+    formData.append('_captcha', 'false');
+
+    setIsSubmitting(true);
+    setStatus({ type: 'idle', message: '' });
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/faby@fabdigitalstudio.com', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+        },
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || result.success === 'false') {
+        throw new Error('Unable to send form');
+      }
+
+      form.reset();
+      setStatus({ type: 'success', message: 'Thanks, your message was sent successfully.' });
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: 'Something went wrong while sending. Please try again or email faby@fabdigitalstudio.com directly.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="section-shell" id="contact">
       <div className="site-container grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
@@ -26,7 +69,9 @@ export default function Contact({ content }) {
         </div>
 
         <div className="glass-panel p-8 sm:p-10">
-          <form action="mailto:faby@fabdigitalstudio.com" className="space-y-6" encType="text/plain" method="post">
+          <form className="space-y-6" onSubmit={handleSubmit}>
+            <input autoComplete="off" className="hidden" name="_honey" tabIndex="-1" type="text" />
+
             <div className="grid gap-6 sm:grid-cols-2">
               <label className="block text-sm font-medium text-ink-700">
                 Name
@@ -60,9 +105,21 @@ export default function Contact({ content }) {
               />
             </label>
 
-            <button className="button-primary" type="submit">
-              Send Inquiry
-            </button>
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+              <button className="button-primary" disabled={isSubmitting} type="submit">
+                {isSubmitting ? 'Sending...' : 'Send Inquiry'}
+              </button>
+
+              {status.message ? (
+                <p
+                  className={`text-sm ${
+                    status.type === 'success' ? 'text-cyan-300' : 'text-accent-400'
+                  }`}
+                >
+                  {status.message}
+                </p>
+              ) : null}
+            </div>
           </form>
         </div>
       </div>
