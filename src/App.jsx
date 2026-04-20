@@ -2,6 +2,7 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
 import Services from './components/sections/Services';
+import SelectedWork from './components/sections/SelectedWork';
 import ValueSection from './components/sections/ValueSection';
 import Process from './components/sections/Process';
 import CTASection from './components/sections/CTASection';
@@ -13,6 +14,7 @@ import {
   heroContent,
   navigation,
   processSteps,
+  selectedWork,
   services,
   valuePoints,
 } from './data/siteContent';
@@ -25,6 +27,7 @@ export default function App() {
       <main>
         <Hero content={heroContent} />
         <Services services={services} />
+        <SelectedWork projects={selectedWork} />
         <ValueSection points={valuePoints} />
         <Process steps={processSteps} />
         <CTASection content={ctaContent} />
