@@ -1,11 +1,12 @@
+import logo from '../../assets/fabdigitialstudio-logo.png';
 import Button from '../ui/Button';
 
 export default function Header({ navigation }) {
   return (
     <header className="sticky top-0 z-30 border-b border-white/60 bg-white/70 backdrop-blur-xl">
       <div className="site-container flex items-center justify-between gap-6 py-4">
-        <a className="text-lg font-semibold tracking-tight text-ink-950 sm:text-xl" href="#top">
-          FabDigital Studio
+        <a className="inline-flex items-center" href="#top">
+          <img alt="FabDigital Studio" className="h-12 w-auto sm:h-14" src={logo} />
         </a>
 
         <nav aria-label="Primary" className="hidden items-center gap-8 md:flex">
