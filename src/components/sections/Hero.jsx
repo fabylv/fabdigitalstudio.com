@@ -62,7 +62,7 @@ export default function Hero({ content }) {
 								</div>
 							</div>
 
-							<div className="relative overflow-hidden rrounded-3xl border border-white/10 bg-slate-900 shadow-2xl">
+							<div className="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900 shadow-2xl">
 								<img
 									alt="FabDigital Studio website preview"
 									className="w-full"
