@@ -7,6 +7,7 @@ import ValueSection from './components/sections/ValueSection';
 import Process from './components/sections/Process';
 import CTASection from './components/sections/CTASection';
 import Contact from './components/sections/Contact';
+import ScrollToTopButton from './components/ui/ScrollToTopButton';
 
 import {
 	navigation,
@@ -42,6 +43,7 @@ export default function App() {
 			</main>
 
 			<Footer links={footerLinks} />
+			<ScrollToTopButton />
 		</div>
 	);
 }
