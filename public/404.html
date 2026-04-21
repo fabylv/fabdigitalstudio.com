@@ -14,12 +14,12 @@
 				padding: 2rem;
 				font-family: Inter, Arial, sans-serif;
 				color: #f5f7fa;
-				background: linear-gradient(180deg, rgba(6, 13, 31, 0.9), rgba(11, 19, 40, 0.92)),
-					url('/logo.png') center / 18rem no-repeat, #0b1328;
+				background: linear-gradient(180deg, rgba(6, 13, 31, 0.9), rgba(11, 19, 40, 0.92)), #0b1328;
 			}
+
 			.logo {
 				text-align: center;
-				width: 500px;
+				max-width: 400px;
 				margin: 0 auto 50px;
 			}
 			.logo img {
@@ -29,7 +29,7 @@
 			}
 			.card {
 				max-width: 42rem;
-				width: 100%;
+
 				text-align: center;
 				padding: 2.5rem;
 				border-radius: 1.75rem;
@@ -48,7 +48,7 @@
 				margin: 1rem 0 0;
 				line-height: 1.2;
 				color: rgba(245, 247, 250, 0.8);
-				font-size: 1.2rem;
+				font-size: clamp(1.2rem, 1.4vw, 2.5rem);
 			}
 
 			a {
@@ -63,10 +63,10 @@
 			}
 		</style>
 	</head>
-	<body>
+	<body class="logo-pattern-bg">
 		<main>
 			<div class="logo">
-				<img src="/public/fabdigitalstudio-logo-transparent.png" alt="FabDigital Studio" />
+				<img src="/public/fds-logo.png" alt="FabDigital Studio" />
 			</div>
 			<div class="card">
 				<h1>404</h1>

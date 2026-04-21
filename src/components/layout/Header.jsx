@@ -1,16 +1,16 @@
-import logo from '../../assets/fabdigitalstudio-logo.png';
+import logo from '../../assets/fds-logo.png';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
 
 export default function Header({ navigation }) {
 	return (
-		<header className="sticky logo-pattern-bg top-0 z-50 border-b border-white/8 shadow-[0_14px_32px_rgba(2,8,23,0.28)] backdrop-blur-xl">
+		<header className="sticky top-0 z-50 logo-pattern-bg  border-b border-white/10 shadow-[0_14px_32px_rgba(2,8,23,0.28)] backdrop-blur-xl">
 			<Container>
 				<div className="flex items-center justify-between gap-6 py-4">
 					<a className="inline-flex items-center" href="#top">
 						<img
 							alt="FabDigital Studio"
-							className="h-12 w-auto shrink-0 sm:h-14 lg:h-16"
+							className="h-12 w-auto shrink-0 opacity-95 sm:h-14 lg:h-20 filter-[drop-shadow(0_0_18px_rgba(59,130,246,0.18))] "
 							src={logo}
 						/>
 					</a>
@@ -19,7 +19,7 @@ export default function Header({ navigation }) {
 						{navigation.map((item) => (
 							<a
 								key={item.label}
-								className="text-sm font-medium text-white/70 transition hover:text-amber-200"
+								className="text-sm font-medium text-white/72 transition hover:text-amber-200"
 								href={item.href}
 							>
 								{item.label}
