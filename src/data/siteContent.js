@@ -89,40 +89,13 @@ export const selectedWork = [
 			'A structured business website layout focused on clarity, content hierarchy, and stronger presentation.',
 		image: '/portfolio/portfolio-wb4.jpg'
 	},
-	{
-		title: 'Portfolio sample five',
-		category: 'Campaign Feature Page',
-		description:
-			'A focused campaign page designed to spotlight a key offer with stronger visual emphasis.',
-		image: '/portfolio/promotional-web-experience.jpg'
-	},
+
 	{
 		title: 'Portfolio sample six',
 		category: 'Personal Brand Website',
 		description:
 			'A professional website presence built to feel personal, polished, and easy to explore.',
 		image: '/portfolio/grace-stetelbaun.jpg'
-	},
-	{
-		title: 'Portfolio sample seven',
-		category: 'Retail Landing Page',
-		description:
-			'A product-forward landing page built to feel visual, seasonal, and conversion-oriented.',
-		image: '/portfolio/gift-landing-page-two.jpg'
-	},
-	{
-		title: 'Portfolio sample eight',
-		category: 'Gift Campaign Website',
-		description:
-			'A promotional web page designed to support a featured offer with a clean browsing path.',
-		image: '/portfolio/gift-landing-page-one.jpg'
-	},
-	{
-		title: 'Portfolio sample nine',
-		category: 'Marketing Homepage',
-		description:
-			'A homepage concept built to showcase featured products and create a stronger first impression.',
-		image: '/portfolio/campaign-landing-page.jpg'
 	},
 	{
 		title: 'Portfolio sample ten',
