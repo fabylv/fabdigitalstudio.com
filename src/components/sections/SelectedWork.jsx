@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
-import SectionIntro from '../ui/SectionIntro';
+import Container from '../ui/Container';
+import GlassCard from '../ui/GlassCard';
+import SectionTitle from '../ui/SectionTitle';
+import { workIntro } from '../../data/siteContent';
 
 export default function SelectedWork({ projects }) {
 	const [activeProject, setActiveProject] = useState(null);
@@ -36,19 +39,20 @@ export default function SelectedWork({ projects }) {
 
 	return (
 		<>
-			<section className="section-shell" id="work">
-				<div className="site-container">
-					<SectionIntro
-						kicker="Selected work"
-						title="A few examples from projects you’ve already brought to life"
-						description="A curated snapshot of websites and digital experiences that show range, visual polish, and real-world client work, without turning this into a technical skills list."
+			<section className="py-20 sm:py-24" id="work">
+				<Container>
+					<SectionTitle
+						eyebrow={workIntro.eyebrow}
+						title={workIntro.title}
+						description={workIntro.description}
+						align="center"
 					/>
 
 					<div className="mt-12 grid gap-6 lg:grid-cols-12">
 						{projects.map((project, index) => (
-							<article
+							<GlassCard
 								key={project.title}
-								className={`glass-panel hover-lift group overflow-hidden ${
+								className={`group overflow-hidden transition hover:-translate-y-1 ${
 									layoutClasses[index] ?? 'lg:col-span-6'
 								}`}
 							>
@@ -60,48 +64,53 @@ export default function SelectedWork({ projects }) {
 									<div className="relative overflow-hidden">
 										<img
 											alt={project.category}
-											className="h-64 w-full object-cover transition duration-500 group-hover:scale-[1.03] lg:h-72"
+											className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 lg:h-72"
 											src={project.image}
 										/>
-										<div className="absolute inset-0 bg-linear-to-t from-surface-soft via-surface-soft/20 to-transparent" />
-										<div className="absolute right-4 top-4 rounded-full border border-white/10 bg-surface-soft/70 px-3 py-1 text-xs font-semibold text-ink-100 backdrop-blur">
+										<div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/20 to-transparent" />
+										<div className="absolute right-4 top-4 rounded-full border border-white/10 bg-slate-950/70 px-3 py-1 text-xs font-semibold text-white/90 backdrop-blur">
 											Click to enlarge
 										</div>
 									</div>
+
 									<div className="flex flex-1 flex-col justify-between p-6">
 										<div>
 											<div className="chip-accent">Client Work</div>
-											<h3 className="mt-4 text-xl font-semibold text-ink-950 sm:text-2xl">
+											<h3 className="mt-4 text-xl font-semibold text-white sm:text-2xl">
 												{project.category}
 											</h3>
-											<p className="mt-3 max-w-2xl text-sm leading-7 text-ink-600">
+											<p className="mt-3 max-w-2xl text-sm leading-7 text-white/70">
 												{project.description}
 											</p>
 										</div>
 									</div>
 								</button>
-							</article>
+							</GlassCard>
 						))}
 					</div>
-				</div>
+				</Container>
 			</section>
 
 			{activeProject ? (
 				<div
-					className="fixed inset-0 z-50 flex items-center justify-center bg-surface-soft/90 p-6 backdrop-blur-sm"
+					className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 p-6 backdrop-blur-sm"
 					onClick={() => setActiveProject(null)}
 				>
-					<div className="relative max-h-[90vh] w-full max-w-6xl" onClick={(event) => event.stopPropagation()}>
+					<div
+						className="relative max-h-[90vh] w-full max-w-6xl"
+						onClick={(event) => event.stopPropagation()}
+					>
 						<button
-							className="absolute right-4 top-4 z-10 rounded-full border border-white/10 bg-surface-soft/80 px-4 py-2 text-sm font-medium text-ink-100 backdrop-blur"
+							className="absolute right-4 top-4 z-10 rounded-full border border-white/10 bg-slate-950/80 px-4 py-2 text-sm font-medium text-white backdrop-blur"
 							type="button"
 							onClick={() => setActiveProject(null)}
 						>
 							Close
 						</button>
+
 						<img
 							alt={activeProject.category}
-							className="max-h-[90vh] w-full rounded-[2rem] border border-white/10 object-contain shadow-[0_30px_80px_rgba(2,8,23,0.45)]"
+							className="max-h-[90vh] w-full rounded-3xl border border-white/10 object-contain shadow-2xl"
 							src={activeProject.image}
 						/>
 					</div>

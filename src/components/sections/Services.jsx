@@ -1,48 +1,48 @@
-import SectionIntro from '../ui/SectionIntro';
+import Container from '../ui/Container';
+import GlassCard from '../ui/GlassCard';
+import SectionTitle from '../ui/SectionTitle';
+import { servicesIntro } from '../../data/siteContent';
 
 export default function Services({ services }) {
+	const layoutClasses = [
+		'lg:col-span-7 lg:min-h-72',
+		'lg:col-span-5 lg:translate-y-8',
+		'lg:col-span-5 lg:-translate-y-6',
+		'lg:col-span-7 lg:min-h-72'
+	];
+
 	return (
-		<section className="section-shell" id="services">
-			<div className="site-container">
-				<SectionIntro
-					kicker="Services"
-					title="The website work most businesses actually need"
-					description="A practical service stack designed to improve credibility, clarity, and performance without adding unnecessary complexity."
+		<section className="py-20 sm:py-24" id="services">
+			<Container>
+				<SectionTitle
+					eyebrow={servicesIntro.eyebrow}
+					title={servicesIntro.title}
+					description={servicesIntro.description}
+					align="center"
 				/>
 
 				<div className="mt-12 grid gap-6 lg:grid-cols-12">
-					{services.map((service, index) => {
-						const layoutClasses = [
-							'lg:col-span-7 lg:min-h-[19rem]',
-							'lg:col-span-5 lg:translate-y-8',
-							'lg:col-span-5 lg:-translate-y-6',
-							'lg:col-span-7 lg:min-h-[18rem]'
-						];
+					{services.map((service, index) => (
+						<GlassCard
+							key={service.title}
+							className={`group p-7 transition hover:-translate-y-1 hover:border-amber-300/20 ${
+								layoutClasses[index] ?? 'lg:col-span-6'
+							}`}
+						>
+							<div className="flex items-center justify-between gap-4">
+								<span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-linear-to-br from-blue-500 via-cyan-400 to-amber-300 text-sm font-semibold text-white shadow-lg">
+									{String(index + 1).padStart(2, '0')}
+								</span>
+								<span className="h-px flex-1 bg-linear-to-r from-blue-500/40 via-cyan-300/30 to-transparent" />
+							</div>
 
-						return (
-							<article
-								key={service.title}
-								className={`glass-panel hover-lift group p-7 ${
-									layoutClasses[index] ?? 'lg:col-span-6'
-								}`}
-							>
-								<div className="flex items-center justify-between gap-4">
-									<span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-linear-to-br from-brand-600 via-cyan-400 to-accent-400 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(47,123,255,0.26)]">
-										{String(index + 1).padStart(2, '0')}
-									</span>
-									<span className="h-px flex-1 bg-linear-to-r from-brand-500/45 via-cyan-300/30 to-transparent" />
-								</div>
-								<h3 className="mt-6 text-xl font-semibold text-ink-950 sm:text-2xl">
-									{service.title}
-								</h3>
-								<p className="mt-4 max-w-xl text-sm leading-7 text-ink-600">
-									{service.description}
-								</p>
-							</article>
-						);
-					})}
+							<h3 className="mt-6 text-xl font-semibold text-white sm:text-2xl">{service.title}</h3>
+
+							<p className="mt-4 max-w-xl text-sm leading-7 text-white/70">{service.description}</p>
+						</GlassCard>
+					))}
 				</div>
-			</div>
+			</Container>
 		</section>
 	);
 }

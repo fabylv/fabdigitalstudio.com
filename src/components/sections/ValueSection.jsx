@@ -1,18 +1,23 @@
-import SectionIntro from '../ui/SectionIntro';
+import Container from '../ui/Container';
+import GlassCard from '../ui/GlassCard';
+import SectionTitle from '../ui/SectionTitle';
+import { valueIntro } from '../../data/siteContent';
 
 export default function ValueSection({ points }) {
 	return (
-		<section className="section-shell">
-			<div className="site-container">
-				<div className="glass-panel relative overflow-hidden px-6 py-10 sm:px-10 sm:py-12">
-					<div className="absolute -left-20 top-0 h-52 w-52 rounded-full bg-brand-600/25 blur-3xl" />
-					<div className="absolute -right-12 bottom-0 h-44 w-44 rounded-full bg-accent-400/20 blur-3xl" />
-					<div className="relative grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+		<section className="py-20 sm:py-24" id="why-us">
+			<Container>
+				<GlassCard className="relative overflow-hidden px-6 py-10 sm:px-10 sm:py-12">
+					<div className="absolute -left-20 top-0 h-52 w-52 rounded-full bg-blue-500/20 blur-3xl" />
+					<div className="absolute -right-12 bottom-0 h-44 w-44 rounded-full bg-amber-300/15 blur-3xl" />
+
+					<div className="relative grid gap-10 lg:grid-cols-2 lg:items-start">
 						<div>
-							<SectionIntro
-								kicker="Why choose us"
-								title="A sharper digital process, built for today’s clients"
-								description="FabDigital Studio blends strategy, modern front-end execution, and AI-assisted speed to create websites that feel current, clear, and confidently professional."
+							<SectionTitle
+								eyebrow={valueIntro.eyebrow}
+								title={valueIntro.title}
+								description={valueIntro.description}
+								align="left"
 							/>
 						</div>
 
@@ -20,17 +25,17 @@ export default function ValueSection({ points }) {
 							{points.map((point) => (
 								<article
 									key={point.title}
-									className="hover-lift rounded-3xl border border-white/10 bg-white/6 p-6 shadow-[0_16px_45px_rgba(2,8,23,0.24)] backdrop-blur"
+									className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur transition hover:-translate-y-1"
 								>
-									<div className="h-1.5 w-14 rounded-full bg-linear-to-r from-brand-500 to-cyan-400" />
-									<h3 className="mt-5 text-lg font-semibold text-ink-950">{point.title}</h3>
-									<p className="mt-3 text-sm leading-7 text-ink-600">{point.description}</p>
+									<div className="h-1.5 w-14 rounded-full bg-linear-to-r from-blue-500 to-cyan-400" />
+									<h3 className="mt-5 text-lg font-semibold text-white">{point.title}</h3>
+									<p className="mt-3 text-sm leading-7 text-white/70">{point.description}</p>
 								</article>
 							))}
 						</div>
 					</div>
-				</div>
-			</div>
+				</GlassCard>
+			</Container>
 		</section>
 	);
 }

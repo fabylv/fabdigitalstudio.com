@@ -3,6 +3,7 @@ import heroPreview from '../assets/hero-preview.svg';
 export const navigation = [
 	{ label: 'Services', href: '#services' },
 	{ label: 'Work', href: '#work' },
+	{ label: 'Why Us', href: '#why-us' },
 	{ label: 'Process', href: '#process' },
 	{ label: 'Contact', href: '#contact' }
 ];
@@ -20,6 +21,13 @@ export const heroContent = {
 		{ label: 'Built for growth', value: 'Scalable' }
 	],
 	image: heroPreview
+};
+
+export const servicesIntro = {
+	eyebrow: 'Services',
+	title: 'The website work most businesses actually need.',
+	description:
+		'A practical service stack designed to improve credibility, clarity, and performance without adding unnecessary complexity.'
 };
 
 export const services = [
@@ -44,6 +52,13 @@ export const services = [
 			'Improve speed, structure, and usability so your site feels better, loads faster, and performs more consistently.'
 	}
 ];
+
+export const workIntro = {
+	eyebrow: 'Selected Work',
+	title: 'A curated look at polished, high-impact website concepts.',
+	description:
+		'A selection of website directions that show range, visual polish, and a strong sense of structure without feeling generic.'
+};
 
 export const selectedWork = [
 	{
@@ -132,6 +147,13 @@ export const selectedWork = [
 	}
 ];
 
+export const valueIntro = {
+	eyebrow: 'Why FabDigital Studio',
+	title: 'A sharper digital process, built for today’s clients.',
+	description:
+		'FabDigital Studio blends strategy, modern front-end execution, and AI-assisted speed to create websites that feel current, clear, and confidently professional.'
+};
+
 export const valuePoints = [
 	{
 		title: 'Performance-first builds',
@@ -154,6 +176,13 @@ export const valuePoints = [
 			'Clear scope, organized process, and practical execution keep projects moving without the usual drag.'
 	}
 ];
+
+export const processIntro = {
+	eyebrow: 'Process',
+	title: 'A clear path from idea to launch.',
+	description:
+		'Simple, focused steps that keep the project moving and make collaboration easy for busy clients.'
+};
 
 export const processSteps = [
 	{
@@ -179,6 +208,7 @@ export const processSteps = [
 ];
 
 export const ctaContent = {
+	eyebrow: 'Start Your Project',
 	title: 'Ready for a website that feels sharper, faster, and more professional?',
 	description:
 		'Let’s build a digital presence that reflects the quality of your business and helps you win more trust online.',
@@ -186,10 +216,15 @@ export const ctaContent = {
 };
 
 export const contactDetails = {
+	eyebrow: 'Contact',
 	title: 'Tell us about your project',
 	description:
 		'Share what you need, where your current site stands, and what you want your next version to do better.',
 	email: 'faby@fabdigitalstudio.com'
+};
+
+export const footerContent = {
+	tagline: 'Modern websites with personality, built to perform.'
 };
 
 export const footerLinks = [
