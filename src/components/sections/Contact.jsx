@@ -1,54 +1,6 @@
-import { useState } from 'react';
 import SectionIntro from '../ui/SectionIntro';
 
 export default function Contact({ content }) {
-	const [isSubmitting, setIsSubmitting] = useState(false);
-	const [status, setStatus] = useState({ type: 'idle', message: '' });
-
-	const handleSubmit = async (event) => {
-		event.preventDefault();
-
-		const form = event.currentTarget;
-		const formData = new FormData(form);
-		formData.append('_subject', 'New FabDigital Studio inquiry');
-		formData.append('_template', 'table');
-		formData.append('_captcha', 'false');
-
-		setIsSubmitting(true);
-		setStatus({ type: 'idle', message: '' });
-
-		try {
-			const response = await fetch('https://formsubmit.co/ajax/faby@fabdigitalstudio.com', {
-				method: 'POST',
-				headers: {
-					Accept: 'application/json'
-				},
-				body: formData
-			});
-
-			const result = await response.json();
-
-			if (!response.ok || result.success === 'false') {
-				throw new Error(result.message || 'Unable to send form');
-			}
-
-			form.reset();
-			setStatus({ type: 'success', message: 'Thanks, your message was sent successfully.' });
-		} catch (error) {
-			const message = error.message?.includes('Activate Form')
-				? 'FormSubmit still needs activation. Check faby@fabdigitalstudio.com for the activation email and click the link inside it.'
-				: error.message ||
-				  'Something went wrong while sending. Please try again or email faby@fabdigitalstudio.com directly.';
-
-			setStatus({
-				type: 'error',
-				message
-			});
-		} finally {
-			setIsSubmitting(false);
-		}
-	};
-
 	return (
 		<section className="section-shell" id="contact">
 			<div className="site-container grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
@@ -77,27 +29,27 @@ export default function Contact({ content }) {
 				</div>
 
 				<div className="glass-panel p-8 sm:p-10">
-					<form className="space-y-6" onSubmit={handleSubmit}>
-						<input autoComplete="off" className="hidden" name="_honey" tabIndex="-1" type="text" />
+					<div className="space-y-6">
+						<div className="rounded-2xl border border-accent-400/20 bg-accent-500/10 p-4 text-sm text-accent-400 shadow-[0_16px_40px_rgba(2,8,23,0.20)]">
+							The inquiry form is coming soon. For now, please email me directly and I’ll get back to you.
+						</div>
 
 						<div className="grid gap-6 sm:grid-cols-2">
 							<label className="block text-sm font-medium text-ink-700">
 								Name
 								<input
-									className="mt-2 w-full rounded-2xl border border-white/10 bg-white/6 px-4 py-3 text-base text-ink-950 outline-none ring-0 transition placeholder:text-ink-600/60 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/20"
-									name="name"
+									className="mt-2 w-full rounded-2xl border border-white/10 bg-white/6 px-4 py-3 text-base text-ink-950 outline-none opacity-60"
 									placeholder="Your name"
-									required
+									disabled
 									type="text"
 								/>
 							</label>
 							<label className="block text-sm font-medium text-ink-700">
 								Email
 								<input
-									className="mt-2 w-full rounded-2xl border border-white/10 bg-white/6 px-4 py-3 text-base text-ink-950 outline-none ring-0 transition placeholder:text-ink-600/60 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/20"
-									name="email"
+									className="mt-2 w-full rounded-2xl border border-white/10 bg-white/6 px-4 py-3 text-base text-ink-950 outline-none opacity-60"
 									placeholder="you@business.com"
-									required
+									disabled
 									type="email"
 								/>
 							</label>
@@ -106,29 +58,19 @@ export default function Contact({ content }) {
 						<label className="block text-sm font-medium text-ink-700">
 							Message
 							<textarea
-								className="mt-2 min-h-40 w-full rounded-3xl border border-white/10 bg-white/6 px-4 py-3 text-base text-ink-950 outline-none ring-0 transition placeholder:text-ink-600/60 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/20"
-								name="message"
-								placeholder="Tell us about your project, goals, or current website."
-								required
+								className="mt-2 min-h-40 w-full rounded-3xl border border-white/10 bg-white/6 px-4 py-3 text-base text-ink-950 outline-none opacity-60"
+								placeholder="Tell me about your project, goals, or current website."
+								disabled
 							/>
 						</label>
 
 						<div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-							<button className="button-primary" disabled={isSubmitting} type="submit">
-								{isSubmitting ? 'Sending...' : 'Send Inquiry'}
-							</button>
-
-							{status.message ? (
-								<p
-									className={`text-sm ${
-										status.type === 'success' ? 'text-cyan-300' : 'text-accent-400'
-									}`}
-								>
-									{status.message}
-								</p>
-							) : null}
+							<a className="button-primary" href={`mailto:${content.email}`}>
+								Email Faby
+							</a>
+							<p className="text-sm text-ink-600">Direct email is the best way to reach me for now.</p>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 		</section>
