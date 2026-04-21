@@ -4,7 +4,7 @@ import { footerContent } from '../../data/siteContent';
 
 export default function Footer({ links }) {
 	return (
-		<footer className="border-t border-white/10 bg-slate-950/60 backdrop-blur">
+		<footer className="logo-pattern-bg border-t border-white/8 backdrop-blur">
 			<Container>
 				<div className="flex flex-col gap-6 py-6 sm:flex-row sm:items-center sm:justify-between">
 					<div>
