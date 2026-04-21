@@ -20,7 +20,7 @@ export default function ValueSection({ points }) {
 							{points.map((point) => (
 								<article
 									key={point.title}
-									className="hover-lift rounded-3xl border border-white/10 bg-white/[0.06] p-6 shadow-[0_16px_45px_rgba(2,8,23,0.24)] backdrop-blur"
+									className="hover-lift rounded-3xl border border-white/10 bg-white/6 p-6 shadow-[0_16px_45px_rgba(2,8,23,0.24)] backdrop-blur"
 								>
 									<div className="h-1.5 w-14 rounded-full bg-linear-to-r from-brand-500 to-cyan-400" />
 									<h3 className="mt-5 text-lg font-semibold text-ink-950">{point.title}</h3>
