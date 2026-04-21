@@ -1,4 +1,4 @@
-import heroPreview from '../assets/hero-preview.svg';
+import heroPreview from '../assets/fabdigitalstudio-hero-preview.png';
 
 export const navigation = [
 	{ label: 'Services', href: '#services' },
