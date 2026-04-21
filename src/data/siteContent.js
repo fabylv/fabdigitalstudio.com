@@ -48,38 +48,31 @@ export const services = [
 export const selectedWork = [
 	{
 		title: 'Portfolio sample one',
-		category: 'Personal Brand Website',
+		category: 'Custom Website Concept',
 		description:
-			'A professional website presence built to feel personal, polished, and easy to explore.',
-		image: '/portfolio/grace-stetelbaun.jpg'
+			'A polished visual website concept with a premium presentation and a more editorial layout feel.',
+		image: '/portfolio/portfolio-wb1.jpg'
 	},
 	{
 		title: 'Portfolio sample two',
-		category: 'Editorial-Style Client Site',
+		category: 'Creative Brand Website',
 		description:
-			'A refined client website with a clean structure and a more editorial visual feel.',
-		image: '/portfolio/la-southreia.jpg'
+			'A visually led brand site designed to feel modern, immersive, and easy to explore.',
+		image: '/portfolio/portfolio-wb2.jpg'
 	},
 	{
 		title: 'Portfolio sample three',
-		category: 'Service Business Website',
+		category: 'Promotional Web Experience',
 		description:
-			'A client-facing website designed to present services clearly and build trust quickly.',
-		image: '/portfolio/claudia-grosz.png'
+			'A design-forward web experience built to showcase a product, campaign, or featured offering.',
+		image: '/portfolio/portfolio-wb3.jpg'
 	},
 	{
 		title: 'Portfolio sample four',
-		category: 'Branded Experience Site',
+		category: 'Multi-Page Business Website',
 		description:
-			'A branded website experience with strong visual identity and a calm, structured layout.',
-		image: '/portfolio/syncoasis.jpg'
-	},
-	{
-		title: 'Portfolio sample five',
-		category: 'Campaign Landing Page',
-		description:
-			'A focused promotional page built to showcase an offer with a cleaner conversion path.',
-		image: '/portfolio/campaign-landing-page.jpg'
+			'A structured business website layout focused on clarity, content hierarchy, and stronger presentation.',
+		image: '/portfolio/portfolio-wb4.jpg'
 	}
 ];
 
