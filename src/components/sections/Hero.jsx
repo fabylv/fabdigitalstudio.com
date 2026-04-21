@@ -16,7 +16,7 @@ export default function Hero({ content }) {
 								{content.eyebrow}
 							</span>
 
-							<h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-7xl lg:leading-none">
+							<h1 className="max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-5xl lg:text-7xl lg:leading-none">
 								<span className="bg-linear-to-r from-white via-amber-100 to-amber-300 bg-clip-text text-transparent">
 									{content.title}
 								</span>

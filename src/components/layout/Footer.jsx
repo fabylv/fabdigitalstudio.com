@@ -26,7 +26,7 @@ export default function Footer({ links }) {
 					</nav>
 				</div>
 
-				<div className="pb-6 text-sm text-white/50">
+				<div className="pb-6 text-xs text-white/50">
 					© {new Date().getFullYear()} FabDigital Studio. All rights reserved.
 				</div>
 			</Container>
