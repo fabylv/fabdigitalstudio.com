@@ -1,4 +1,4 @@
-import logo from '../../assets/fds-logo.png';
+const logo = '/apple-touch-icon.png';
 import Container from '../ui/Container';
 import { footerContent } from '../../data/siteContent';
 
