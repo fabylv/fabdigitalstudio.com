@@ -2,7 +2,7 @@ import heroPreview from '../assets/hero-preview.svg';
 
 export const navigation = [
 	{ label: 'Services', href: '#services' },
-	{ label: 'Work', href: '#work' },
+	{ label: 'Capabilities', href: '#work' },
 	{ label: 'Why Us', href: '#why-us' },
 	{ label: 'Process', href: '#process' },
 	{ label: 'Contact', href: '#contact' }
@@ -54,69 +54,48 @@ export const services = [
 ];
 
 export const workIntro = {
-	eyebrow: 'Selected Work',
-	title: 'A curated look at polished, high-impact website concepts.',
+	eyebrow: 'What I Can Do',
+	title: 'Whether you need a brand new site, a redesign, or a cleanup, I can help.',
 	description:
-		'A selection of website directions that show range, visual polish, and a strong sense of structure without feeling generic.'
+		'This section is less about old portfolio pieces and more about the kinds of website transformations I can create for you right now.'
 };
 
 export const selectedWork = [
 	{
-		title: 'Portfolio sample one',
-		category: 'Custom Website Concept',
+		title: 'Fresh Website Build',
 		description:
-			'A polished visual website concept with a premium presentation and a more editorial layout feel.',
-		image: '/portfolio/portfolio-wb1.jpg'
+			'For businesses that need a professional online presence from scratch with a clear structure and a polished visual feel.',
+		highlights: ['Custom layout direction', 'Modern responsive design', 'Built for trust and clarity']
 	},
 	{
-		title: 'Portfolio sample two',
-		category: 'Creative Brand Website',
+		title: 'Website Redesign',
 		description:
-			'A visually led brand site designed to feel modern, immersive, and easy to explore.',
-		image: '/portfolio/portfolio-wb2.jpg'
+			'For outdated websites that need a stronger first impression, cleaner messaging, and a more modern visual identity.',
+		highlights: ['Visual refresh', 'Improved hierarchy', 'Cleaner user flow']
 	},
 	{
-		title: 'Portfolio sample three',
-		category: 'Promotional Web Experience',
+		title: 'Landing Page Creation',
 		description:
-			'A design-forward web experience built to showcase a product, campaign, or featured offering.',
-		image: '/portfolio/portfolio-wb3.jpg'
+			'For launches, campaigns, offers, or lead generation pages that need to feel focused, clear, and persuasive.',
+		highlights: ['Offer-focused structure', 'Higher conversion intent', 'Fast launch turnaround']
 	},
 	{
-		title: 'Portfolio sample four',
-		category: 'Multi-Page Business Website',
+		title: 'Website Cleanup',
 		description:
-			'A structured business website layout focused on clarity, content hierarchy, and stronger presentation.',
-		image: '/portfolio/portfolio-wb4.jpg'
-	},
-
-	{
-		title: 'Portfolio sample six',
-		category: 'Personal Brand Website',
-		description:
-			'A professional website presence built to feel personal, polished, and easy to explore.',
-		image: '/portfolio/grace-stetelbaun.jpg'
+			'For websites that already exist but feel cluttered, inconsistent, or visually outdated and need to be tightened up.',
+		highlights: ['Content cleanup', 'Layout refinement', 'Visual consistency']
 	},
 	{
-		title: 'Portfolio sample ten',
-		category: 'Editorial Business Website',
+		title: 'Mobile + Speed Polish',
 		description:
-			'A refined business website with a more editorial layout and a premium visual tone.',
-		image: '/portfolio/la-southreia.jpg'
+			'For websites that work, but still need better responsiveness, smoother interaction, and stronger performance on mobile.',
+		highlights: ['Responsive fixes', 'Performance improvements', 'Better user experience']
 	},
 	{
-		title: 'Portfolio sample eleven',
-		category: 'Professional Service Website',
+		title: 'Ongoing Website Updates',
 		description:
-			'A service-based website structured to communicate expertise clearly and build trust quickly.',
-		image: '/portfolio/claudia-grosz.png'
-	},
-	{
-		title: 'Portfolio sample twelve',
-		category: 'Branded Experience Site',
-		description:
-			'A branded website experience with strong visual identity and a calm, structured layout.',
-		image: '/portfolio/syncoasis.jpg'
+			'For businesses that want someone they can rely on for edits, refreshes, improvements, and continued site care over time.',
+		highlights: ['Content updates', 'Design refreshes', 'Continuous improvement']
 	}
 ];
 
@@ -202,7 +181,7 @@ export const footerContent = {
 
 export const footerLinks = [
 	{ label: 'Services', href: '#services' },
-	{ label: 'Work', href: '#work' },
+	{ label: 'Capabilities', href: '#work' },
 	{ label: 'Process', href: '#process' },
 	{ label: 'Contact', href: '#contact' }
 ];
