@@ -5,7 +5,8 @@ import Button from '../ui/Button';
 
 export default function Contact({ content }) {
 	return (
-		<section className="pb-20 sm:pb-24" id="contact">
+		<section className="relative pb-20 sm:pb-24">
+			<div className="absolute top-8" id="contact" />
 			<Container>
 				<div className="grid gap-8 lg:grid-cols-2">
 					<GlassCard className="overflow-hidden p-8 sm:p-10">

@@ -12,7 +12,8 @@ export default function Services({ services }) {
 	];
 
 	return (
-		<section className="py-20 sm:py-24" id="services">
+		<section className="relative py-20 sm:py-24">
+			<div className="absolute top-8" id="services" />
 			<Container>
 				<SectionTitle
 					eyebrow={servicesIntro.eyebrow}

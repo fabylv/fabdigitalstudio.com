@@ -5,7 +5,8 @@ import { processIntro } from '../../data/siteContent';
 
 export default function Process({ steps }) {
 	return (
-		<section className="py-20 sm:py-24" id="process">
+		<section className="relative py-20 sm:py-24">
+			<div className="absolute top-8" id="process" />
 			<Container>
 				<SectionTitle
 					eyebrow={processIntro.eyebrow}
