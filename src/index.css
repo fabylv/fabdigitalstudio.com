@@ -16,9 +16,9 @@ html {
 body {
 	@apply m-0 min-h-screen bg-[#07111f] font-sans text-white antialiased;
 	background-image: linear-gradient(180deg, rgba(7, 17, 31, 0.92) 0%, rgba(7, 17, 31, 0.96) 100%),
-		url('./assets/fabdigitalstudio-body-background.webp');
-	background-position: center top;
-	background-repeat: no-repeat;
+		url('./assets/fabdigitalstudio-body-bg.webp');
+	background-position: top;
+	background-repeat: repeat;
 	background-size: cover;
 }
 

@@ -1,4 +1,4 @@
-import logo from '/fabdigitalstudio-logo-transparent.png';
+import logo from '../../assets/fabdigitalstudio-logo.png';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
 
