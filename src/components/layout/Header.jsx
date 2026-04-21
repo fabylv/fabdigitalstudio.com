@@ -1,4 +1,4 @@
-const logo = '/apple-touch-icon.png';
+import logo from '../../assets/fds-logo.png';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
 

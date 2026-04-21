@@ -1,4 +1,4 @@
-const logo = '/apple-touch-icon.png';
+import logo from '../../assets/fds-logo.png';
 import Container from '../ui/Container';
 import { footerContent } from '../../data/siteContent';
 
@@ -6,7 +6,7 @@ export default function Footer({ links }) {
 	return (
 		<footer className="logo-pattern-bg border-t border-white/8 backdrop-blur">
 			<Container>
-				<div className="flex flex-col gap-6 py-6 sm:flex-row sm:items-center sm:justify-between">
+				<div className="flex flex-col gap-6 py-4 sm:flex-row sm:items-center sm:justify-between">
 					<div>
 						<img
 							alt="FabDigital Studio"
@@ -27,7 +27,7 @@ export default function Footer({ links }) {
 				</div>
 
 				<div className="pb-6 text-xs text-white/50">
-					© {new Date().getFullYear()} FabDigital Studio. All rights reserved.
+					&copy; {new Date().getFullYear()} FabDigital Studio. All rights reserved.
 				</div>
 			</Container>
 		</footer>
