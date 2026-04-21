@@ -5,8 +5,7 @@ import { valueIntro } from '../../data/siteContent';
 
 export default function ValueSection({ points }) {
 	return (
-		<section className="relative py-20 sm:py-24">
-			<div className="absolute top-8" id="why-us" />
+		<section id="why-us" className="relative py-20 sm:py-24">
 			<Container>
 				<GlassCard className="relative overflow-hidden px-6 py-10 sm:px-10 sm:py-12">
 					<div className="absolute -left-20 top-0 h-52 w-52 rounded-full bg-blue-500/20 blur-3xl" />

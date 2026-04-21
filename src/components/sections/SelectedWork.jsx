@@ -14,8 +14,7 @@ export default function SelectedWork({ projects }) {
 	];
 
 	return (
-		<section className="relative py-20 sm:py-24">
-			<div className="absolute top-8" id="work" />
+		<section id="work" className="relative py-20 sm:py-24">
 			<Container>
 				<SectionTitle
 					eyebrow={workIntro.eyebrow}
