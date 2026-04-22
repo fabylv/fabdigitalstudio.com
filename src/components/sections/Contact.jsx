@@ -260,7 +260,7 @@ export default function Contact({ content }) {
 							</label>
 
 							<div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-								<Button disabled={isSubmitting} className={isSubmitting ? 'opacity-70' : ''}>
+								<Button type="submit" disabled={isSubmitting} className={isSubmitting ? 'opacity-70' : ''}>
 									{isSubmitting ? 'Sending...' : 'Send Project Inquiry'}
 								</Button>
 							</div>
