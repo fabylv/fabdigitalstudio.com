@@ -47,9 +47,9 @@ export const services = [
 			'High-conversion pages tailored for offers, campaigns, and lead generation without unnecessary complexity.'
 	},
 	{
-		title: 'Performance Optimization',
+		title: 'Accessibility & Usability',
 		description:
-			'Improve speed, structure, and usability so your site feels better, loads faster, and performs more consistently.'
+			'Improve readability, navigation, structure, and inclusive design so your site is easier to use for more people across every device.'
 	}
 ];
 
