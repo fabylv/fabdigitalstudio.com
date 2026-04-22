@@ -46,7 +46,16 @@ export default function Contact({ content }) {
 				body: JSON.stringify(formData)
 			});
 
-			const data = await response.json();
+			const responseText = await response.text();
+			let data = {};
+
+			if (responseText) {
+				try {
+					data = JSON.parse(responseText);
+				} catch {
+					throw new Error('The server returned an unexpected response. Please try again.');
+				}
+			}
 
 			if (!response.ok) {
 				throw new Error(data.error || 'Something went wrong while sending your message.');
