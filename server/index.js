@@ -11,6 +11,14 @@ const app = express();
 const resend = new Resend(process.env.RESEND_API_KEY);
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const port = Number(process.env.PORT) || 3000;
+const basicAuthUser = process.env.DEV_BASIC_AUTH_USER || '';
+const basicAuthPass = process.env.DEV_BASIC_AUTH_PASS || '';
+const basicAuthEnabled = Boolean(basicAuthUser && basicAuthPass);
+
+function sendBasicAuthChallenge(res) {
+	res.setHeader('WWW-Authenticate', 'Basic realm="FabDigital Studio Dev"');
+	return res.status(401).send('Authentication required.');
+}
 
 function escapeHtml(value = '') {
 	return String(value)
@@ -22,6 +30,28 @@ function escapeHtml(value = '') {
 }
 
 app.use(express.json());
+
+if (basicAuthEnabled) {
+	app.use((req, res, next) => {
+		const authHeader = req.headers.authorization || '';
+
+		if (!authHeader.startsWith('Basic ')) {
+			return sendBasicAuthChallenge(res);
+		}
+
+		const decoded = Buffer.from(authHeader.slice(6), 'base64').toString('utf8');
+		const separatorIndex = decoded.indexOf(':');
+		const user = separatorIndex >= 0 ? decoded.slice(0, separatorIndex) : decoded;
+		const pass = separatorIndex >= 0 ? decoded.slice(separatorIndex + 1) : '';
+
+		if (user !== basicAuthUser || pass !== basicAuthPass) {
+			return sendBasicAuthChallenge(res);
+		}
+
+		next();
+	});
+}
+
 app.use(express.static(distPath));
 
 app.post('/api/contact', async (req, res) => {
