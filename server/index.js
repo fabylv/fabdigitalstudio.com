@@ -67,7 +67,7 @@ app.post('/api/contact', async (req, res) => {
 	};
 
 	try {
-		await resend.emails.send({
+		const resendResult = await resend.emails.send({
 			from: process.env.CONTACT_FROM_EMAIL,
 			to: [process.env.CONTACT_TO_EMAIL],
 			subject: `New FabDigital Studio inquiry from ${name.trim()}`,
@@ -96,6 +96,13 @@ app.post('/api/contact', async (req, res) => {
 				</div>
 			`
 		});
+
+		if (resendResult?.error) {
+			console.error('FabDigital resend error:', resendResult.error);
+			return res.status(500).json({
+				error: 'Email sending is not ready yet. Please verify the sending domain in Resend and try again.'
+			});
+		}
 
 		return res.status(200).json({ success: true, message: 'Your message was sent successfully.' });
 	} catch (error) {
