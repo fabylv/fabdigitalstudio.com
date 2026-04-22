@@ -49,7 +49,7 @@ export default function Header({ navigation }) {
 		<header className="sticky top-0 z-50 logo-pattern-bg border-b border-white/10 shadow-[0_14px_32px_rgba(2,8,23,0.28)] backdrop-blur-xl">
 			<Container>
 				<div className="flex items-center justify-between gap-6 py-4">
-					<a className="inline-flex items-center" href="#top">
+					<a aria-label="Back to top of page" className="inline-flex items-center" href="#top">
 						<img
 							alt="FabDigital Studio"
 							className="h-12 w-auto shrink-0 opacity-95 sm:h-14 lg:h-20 filter-[drop-shadow(0_0_18px_rgba(59,130,246,0.18))]"
@@ -63,6 +63,7 @@ export default function Header({ navigation }) {
 
 							return (
 								<a
+									aria-current={isActive ? 'location' : undefined}
 									key={item.label}
 									className={`relative pb-2 text-sm font-medium transition after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:rounded-full after:bg-amber-300 after:transition after:duration-200 ${
 										isActive

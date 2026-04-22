@@ -24,6 +24,9 @@ import {
 export default function App() {
 	return (
 		<div className="min-h-screen text-white">
+			<a className="skip-link" href="#main-content">
+				Skip to main content
+			</a>
 			<div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
 				<div className="absolute left-1/2 -top-40 h-112 w-md -translate-x-1/2 rounded-full bg-[#ebc05d]/10 blur-3xl" />
 				<div className="absolute -right-32 top-32 h-104 w-104 rounded-full bg-[#1b4b7a]/20 blur-3xl" />
@@ -32,7 +35,7 @@ export default function App() {
 
 			<Header navigation={navigation} />
 
-			<main>
+			<main id="main-content" tabIndex="-1">
 				<Hero content={heroContent} />
 				<Services services={services} />
 				<SelectedWork projects={selectedWork} />
