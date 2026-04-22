@@ -7,7 +7,7 @@
 	"theme_color": "#0B1630",
 	"icons": [
 		{
-			"src": "/fabdigitalstudio-logo.png",
+			"src": "/fds-logo.png",
 			"sizes": "512x512",
 			"type": "image/png"
 		}
