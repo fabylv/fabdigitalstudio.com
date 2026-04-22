@@ -32,7 +32,7 @@ img {
 
 .button-primary {
 	@apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#09111c] shadow-[0_16px_38px_rgba(233,140,47,0.26)] transition duration-200 ease-out;
-	background-image: linear-gradient(135deg, #e98c2f 0%, #f2bf58 100%);
+	background-image: linear-gradient(135deg, #f47344 0%, #f79d0e 50%, #f3c363 100%);
 }
 
 .button-primary:hover {
