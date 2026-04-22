@@ -19,7 +19,7 @@ export default function Contact({ content }) {
 	const [formData, setFormData] = useState(initialFormState);
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [status, setStatus] = useState({ type: 'idle', message: '' });
-	const contactApiUrl = import.meta.env.VITE_CONTACT_API_URL || '/api/contact';
+	const contactApiUrl = '/api/contact';
 
 	const handleChange = (event) => {
 		const { name, value } = event.target;

@@ -1,19 +1,16 @@
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { Resend } from 'resend';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const distPath = path.resolve(__dirname, '../dist');
+const indexPath = path.join(distPath, 'index.html');
+const app = express();
 const resend = new Resend(process.env.RESEND_API_KEY);
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-function setCorsHeaders(res) {
-	const allowedOrigin = process.env.ALLOWED_ORIGIN || '*';
-	res.setHeader('Access-Control-Allow-Origin', allowedOrigin);
-	res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-	res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-}
-
-function sendJson(res, status, payload) {
-	setCorsHeaders(res);
-	return res.status(status).json(payload);
-}
+const port = Number(process.env.PORT) || 3000;
 
 function escapeHtml(value = '') {
 	return String(value)
@@ -24,16 +21,10 @@ function escapeHtml(value = '') {
 		.replace(/'/g, '&#39;');
 }
 
-export default async function handler(req, res) {
-	if (req.method === 'OPTIONS') {
-		setCorsHeaders(res);
-		return res.status(204).end();
-	}
+app.use(express.json());
+app.use(express.static(distPath));
 
-	if (req.method !== 'POST') {
-		return sendJson(res, 405, { error: 'Method not allowed.' });
-	}
-
+app.post('/api/contact', async (req, res) => {
 	const {
 		name = '',
 		email = '',
@@ -46,23 +37,23 @@ export default async function handler(req, res) {
 	} = req.body || {};
 
 	if (website) {
-		return sendJson(res, 200, { success: true });
+		return res.status(200).json({ success: true });
 	}
 
 	if (!name.trim() || !email.trim() || !message.trim()) {
-		return sendJson(res, 400, { error: 'Name, email, and message are required.' });
+		return res.status(400).json({ error: 'Name, email, and message are required.' });
 	}
 
 	if (!emailPattern.test(email.trim())) {
-		return sendJson(res, 400, { error: 'Please enter a valid email address.' });
+		return res.status(400).json({ error: 'Please enter a valid email address.' });
 	}
 
 	if (message.trim().length > 4000) {
-		return sendJson(res, 400, { error: 'Message is too long.' });
+		return res.status(400).json({ error: 'Message is too long.' });
 	}
 
 	if (!process.env.RESEND_API_KEY || !process.env.CONTACT_TO_EMAIL || !process.env.CONTACT_FROM_EMAIL) {
-		return sendJson(res, 500, { error: 'Missing email configuration.' });
+		return res.status(500).json({ error: 'Missing email configuration.' });
 	}
 
 	const safeFields = {
@@ -106,9 +97,17 @@ export default async function handler(req, res) {
 			`
 		});
 
-		return sendJson(res, 200, { success: true, message: 'Your message was sent successfully.' });
+		return res.status(200).json({ success: true, message: 'Your message was sent successfully.' });
 	} catch (error) {
 		console.error('FabDigital contact error:', error);
-		return sendJson(res, 500, { error: 'Something went wrong while sending your message.' });
+		return res.status(500).json({ error: 'Something went wrong while sending your message.' });
 	}
-}
+});
+
+app.get('*', (_req, res) => {
+	res.sendFile(indexPath);
+});
+
+app.listen(port, () => {
+	console.log(`FabDigital Studio server running on port ${port}`);
+});
