@@ -3,11 +3,19 @@ set -Eeuo pipefail
 
 ENV="${1:-prod}"
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+GLOBAL_ENV_FILE="${GLOBAL_ENV_FILE:-$HOME/.openclaw/secrets/faby.env}"
 DEPLOY_ENV_FILE="$ROOT_DIR/.env.deploy"
 
 # -----------------------------------------------------------------------------
 # LOAD BASE ENV
 # -----------------------------------------------------------------------------
+if [[ -f "$GLOBAL_ENV_FILE" ]]; then
+  # shellcheck disable=SC1090
+  set -a
+  source "$GLOBAL_ENV_FILE"
+  set +a
+fi
+
 if [[ -f "$DEPLOY_ENV_FILE" ]]; then
   # shellcheck disable=SC1090
   set -a
@@ -20,12 +28,12 @@ fi
 # -----------------------------------------------------------------------------
 case "$ENV" in
   prod)
-    REMOTE_DIR="${PROD_REMOTE_DIR:-${DEPLOY_APP_DIR:-}}"
-    SITE_URL="${PROD_SITE_URL:-https://www.fabdigitalstudio.com}"
+    REMOTE_DIR="${PROD_REMOTE_DIR:-${DEPLOY_APP_DIR:-${HZ_FABDIGITAL_PROD_REMOTE_DIR:-}}}"
+    SITE_URL="${PROD_SITE_URL:-${HZ_FABDIGITAL_PROD_SITE_URL:-https://www.fabdigitalstudio.com}}"
     ;;
   dev)
-    REMOTE_DIR="${DEV_REMOTE_DIR:-${DEPLOY_APP_DIR_DEV:-}}"
-    SITE_URL="${DEV_SITE_URL:-https://dev.fabdigitalstudio.com}"
+    REMOTE_DIR="${DEV_REMOTE_DIR:-${DEPLOY_APP_DIR_DEV:-${HZ_FABDIGITAL_DEV_REMOTE_DIR:-}}}"
+    SITE_URL="${DEV_SITE_URL:-${HZ_FABDIGITAL_DEV_SITE_URL:-https://dev.fabdigitalstudio.com}}"
     ;;
   *)
     echo "✖ Invalid environment: $ENV (use prod or dev)" >&2
@@ -36,14 +44,14 @@ esac
 # -----------------------------------------------------------------------------
 # CONFIG
 # -----------------------------------------------------------------------------
-SSH_HOST="${SSH_HOST:-${DEPLOY_HOST:-}}"
-SSH_USER="${SSH_USER:-${DEPLOY_USER:-}}"
-LOCAL_DIST="${LOCAL_DIST:-dist}"
-SSH_KEY="${SSH_KEY:-${SSH_KEY_PATH:-}}"
-SSH_PORT="${SSH_PORT:-${DEPLOY_PORT:-22}}"
-SKIP_REMOTE_INSTALL="${SKIP_REMOTE_INSTALL:-0}"
-REMOTE_INSTALL_COMMAND="${REMOTE_INSTALL_COMMAND:-npm install --omit=dev}"
-REMOTE_RESTART_COMMAND="${REMOTE_RESTART_COMMAND:-}"
+SSH_HOST="${SSH_HOST:-${DEPLOY_HOST:-${HZ_SSH_HOST:-}}}"
+SSH_USER="${SSH_USER:-${DEPLOY_USER:-${HZ_SSH_USER:-}}}"
+LOCAL_DIST="${LOCAL_DIST:-${HZ_LOCAL_DIST:-dist}}"
+SSH_KEY="${SSH_KEY:-${SSH_KEY_PATH:-${HZ_SSH_KEY:-}}}"
+SSH_PORT="${SSH_PORT:-${DEPLOY_PORT:-${HZ_SSH_PORT:-22}}}"
+SKIP_REMOTE_INSTALL="${SKIP_REMOTE_INSTALL:-${HZ_SKIP_REMOTE_INSTALL:-0}}"
+REMOTE_INSTALL_COMMAND="${REMOTE_INSTALL_COMMAND:-${HZ_REMOTE_INSTALL_COMMAND:-npm install --omit=dev}}"
+REMOTE_RESTART_COMMAND="${REMOTE_RESTART_COMMAND:-${HZ_REMOTE_RESTART_COMMAND:-}}"
 
 LOCAL_DIST="${LOCAL_DIST%/}"
 REMOTE_DIR="${REMOTE_DIR%/}"
@@ -66,9 +74,9 @@ command -v npm >/dev/null 2>&1 || die "npm is not installed."
 command -v rsync >/dev/null 2>&1 || die "rsync is not installed."
 command -v ssh >/dev/null 2>&1 || die "ssh is not installed."
 
-[[ -n "$SSH_HOST" ]] || die "SSH_HOST is not set in .env.deploy"
-[[ -n "$SSH_USER" ]] || die "SSH_USER is not set in .env.deploy"
-[[ -n "$REMOTE_DIR" ]] || die "REMOTE_DIR is not set for $ENV in .env.deploy"
+[[ -n "$SSH_HOST" ]] || die "SSH_HOST is not set in faby.env or .env.deploy"
+[[ -n "$SSH_USER" ]] || die "SSH_USER is not set in faby.env or .env.deploy"
+[[ -n "$REMOTE_DIR" ]] || die "REMOTE_DIR is not set for $ENV in faby.env or .env.deploy"
 
 # Expand ~ in SSH key
 if [[ -n "$SSH_KEY" && "$SSH_KEY" == ~* ]]; then
