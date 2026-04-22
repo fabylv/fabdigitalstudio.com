@@ -8,8 +8,8 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"start": "node server/index.js",
-		"deploy-prod": "DEPLOY_ENV_FILE=.env.deploy bash scripts/deploy-prod.sh",
-		"deploy-dev": "DEPLOY_ENV_FILE=.env.deploy.dev bash scripts/deploy-prod.sh"
+		"deploy-prod": "bash deploy.sh prod",
+		"deploy-dev": "bash deploy.sh dev"
 	},
 	"dependencies": {
 		"express": "^4.21.2",
