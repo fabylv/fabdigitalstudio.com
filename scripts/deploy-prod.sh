@@ -2,7 +2,11 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-DEPLOY_ENV_FILE="$ROOT_DIR/.env.deploy"
+DEPLOY_ENV_FILE="${DEPLOY_ENV_FILE:-.env.deploy}"
+
+if [[ "$DEPLOY_ENV_FILE" != /* ]]; then
+  DEPLOY_ENV_FILE="$ROOT_DIR/$DEPLOY_ENV_FILE"
+fi
 
 if [[ -f "$DEPLOY_ENV_FILE" ]]; then
   # shellcheck disable=SC1090
