@@ -14,6 +14,7 @@ fi
 : "${DEPLOY_APP_DIR:?Set DEPLOY_APP_DIR in .env.deploy}"
 
 DEPLOY_PORT="${DEPLOY_PORT:-22}"
+SKIP_REMOTE_INSTALL="${SKIP_REMOTE_INSTALL:-0}"
 REMOTE_INSTALL_COMMAND="${REMOTE_INSTALL_COMMAND:-npm install --omit=dev}"
 REMOTE_RESTART_COMMAND="${REMOTE_RESTART_COMMAND:-}"
 
@@ -44,8 +45,12 @@ rsync -az --delete -e "$RSYNC_RSH" "$ROOT_DIR/dist/" "$REMOTE_TARGET:$DEPLOY_APP
 rsync -az --delete -e "$RSYNC_RSH" "$ROOT_DIR/server/" "$REMOTE_TARGET:$DEPLOY_APP_DIR/server/"
 rsync -az -e "$RSYNC_RSH" "$ROOT_DIR/package.json" "$ROOT_DIR/package-lock.json" "$REMOTE_TARGET:$DEPLOY_APP_DIR/"
 
-echo "==> Installing production dependencies on the server"
-"${SSH_CMD[@]}" "$REMOTE_TARGET" "bash -lc 'cd "$DEPLOY_APP_DIR" && $REMOTE_INSTALL_COMMAND'"
+if [[ "$SKIP_REMOTE_INSTALL" == "1" ]]; then
+  echo "==> SKIP_REMOTE_INSTALL=1, skipping remote npm install"
+else
+  echo "==> Installing production dependencies on the server"
+  "${SSH_CMD[@]}" "$REMOTE_TARGET" "bash -lc 'cd "$DEPLOY_APP_DIR" && $REMOTE_INSTALL_COMMAND'"
+fi
 
 if [[ -n "$REMOTE_RESTART_COMMAND" ]]; then
   echo "==> Restarting remote app"
