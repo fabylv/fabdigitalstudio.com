@@ -263,9 +263,6 @@ export default function Contact({ content }) {
 								<Button disabled={isSubmitting} className={isSubmitting ? 'opacity-70' : ''}>
 									{isSubmitting ? 'Sending...' : 'Send Project Inquiry'}
 								</Button>
-								<p className="text-sm text-white/60">
-									This sends directly to {content.email}.
-								</p>
 							</div>
 						</form>
 					</GlassCard>
