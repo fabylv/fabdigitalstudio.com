@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Container from '../ui/Container';
 import GlassCard from '../ui/GlassCard';
 import SectionTitle from '../ui/SectionTitle';
@@ -19,7 +19,15 @@ export default function Contact({ content }) {
 	const [formData, setFormData] = useState(initialFormState);
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [status, setStatus] = useState({ type: 'idle', message: '' });
+	const statusRef = useRef(null);
 	const contactApiUrl = '/api/contact';
+
+	useEffect(() => {
+		if (!status.message || !statusRef.current) return;
+
+		statusRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		statusRef.current.focus();
+	}, [status]);
 
 	const handleChange = (event) => {
 		const { name, value } = event.target;
@@ -105,6 +113,23 @@ export default function Contact({ content }) {
 
 					<GlassCard className="p-8 sm:p-10">
 						<form className="space-y-6" onSubmit={handleSubmit}>
+							{status.message ? (
+								<div
+									ref={statusRef}
+									tabIndex="-1"
+									className={`rounded-3xl border p-5 shadow-xl outline-none ${
+										status.type === 'success'
+											? 'border-emerald-400/30 bg-emerald-400/12 text-emerald-50'
+											: 'border-rose-400/30 bg-rose-400/12 text-rose-50'
+									}`}
+									role={status.type === 'success' ? 'status' : 'alert'}
+								>
+									<p className="text-sm font-semibold uppercase tracking-[0.18em] text-current/80">
+										{status.type === 'success' ? 'Message sent' : 'Something went wrong'}
+									</p>
+									<p className="mt-2 text-base font-medium text-current">{status.message}</p>
+								</div>
+							) : null}
 							<div>
 								<p className="text-sm font-medium uppercase tracking-[0.22em] text-white/45">
 									Project inquiry form
@@ -233,18 +258,6 @@ export default function Contact({ content }) {
 									value={formData.message}
 								/>
 							</label>
-
-							{status.message ? (
-								<div
-									className={`rounded-2xl border p-4 text-sm shadow-lg ${
-										status.type === 'success'
-											? 'border-emerald-400/25 bg-emerald-400/10 text-emerald-100'
-											: 'border-rose-400/25 bg-rose-400/10 text-rose-100'
-									}`}
-								>
-									{status.message}
-								</div>
-							) : null}
 
 							<div className="flex flex-col gap-4 sm:flex-row sm:items-center">
 								<Button disabled={isSubmitting} className={isSubmitting ? 'opacity-70' : ''}>
