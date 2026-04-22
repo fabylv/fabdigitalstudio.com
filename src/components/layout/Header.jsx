@@ -54,8 +54,7 @@ export default function Header({ navigation }) {
 							alt="FabDigital Studio"
 							className="h-12 w-auto shrink-0 opacity-95 sm:h-14 lg:h-20 filter-[drop-shadow(0_0_18px_rgba(59,130,246,0.18))]"
 							src={logo}
-						/>{' '}
-						- faby
+						/>
 					</a>
 
 					<nav aria-label="Primary" className="hidden items-center gap-8 md:flex">
