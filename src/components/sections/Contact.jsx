@@ -1,17 +1,69 @@
+import { useState } from 'react';
 import Container from '../ui/Container';
 import GlassCard from '../ui/GlassCard';
 import SectionTitle from '../ui/SectionTitle';
 import Button from '../ui/Button';
 
-function buildMailtoLink(email, subject, body) {
-	return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
+const initialFormState = {
+	name: '',
+	email: '',
+	businessName: '',
+	projectType: '',
+	timeline: '',
+	budget: '',
+	message: '',
+	website: ''
+};
 
 export default function Contact({ content }) {
+	const [formData, setFormData] = useState(initialFormState);
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [status, setStatus] = useState({ type: 'idle', message: '' });
+	const contactApiUrl = import.meta.env.VITE_CONTACT_API_URL || '/api/contact';
+
+	const handleChange = (event) => {
+		const { name, value } = event.target;
+		setFormData((current) => ({ ...current, [name]: value }));
+	};
+
+	const handleSubmit = async (event) => {
+		event.preventDefault();
+		setIsSubmitting(true);
+		setStatus({ type: 'idle', message: '' });
+
+		try {
+			const response = await fetch(contactApiUrl, {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(formData)
+			});
+
+			const data = await response.json();
+
+			if (!response.ok) {
+				throw new Error(data.error || 'Something went wrong while sending your message.');
+			}
+
+			setStatus({
+				type: 'success',
+				message: data.message || 'Thanks, your message has been sent successfully.'
+			});
+			setFormData(initialFormState);
+		} catch (error) {
+			setStatus({
+				type: 'error',
+				message: error.message || 'Something went wrong while sending your message.'
+			});
+		} finally {
+			setIsSubmitting(false);
+		}
+	};
+
 	return (
-		<section id="contact" className="relative pb-20 sm:pb-24">
+		<section className="relative pb-20 sm:pb-24">
+			<div className="absolute top-8" id="contact" />
 			<Container>
-				<div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+				<div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
 					<GlassCard className="overflow-hidden p-8 sm:p-10">
 						<SectionTitle
 							eyebrow={content.eyebrow}
@@ -37,64 +89,172 @@ export default function Contact({ content }) {
 									<li>• New service business websites</li>
 									<li>• Strategic redesigns</li>
 									<li>• Landing pages for offers and ads</li>
-									<li>• Speed and front-end cleanup</li>
+									<li>• Accessibility and front-end polish</li>
 								</ul>
 							</div>
 
 							<div className="rounded-2xl border border-amber-300/20 bg-amber-300/10 p-5 text-sm text-amber-100 shadow-lg">
-								<p className="font-semibold text-amber-200">Prefer a simple start?</p>
+								<p className="font-semibold text-amber-200">What happens next?</p>
 								<p className="mt-2 leading-7 text-amber-100/75">
-									Choose the option that fits best and I’ll open a ready-to-send email draft for you.
+									Once you send the form, the details go straight to my inbox so I can review your project and
+									get back to you.
 								</p>
 							</div>
 						</div>
 					</GlassCard>
 
 					<GlassCard className="p-8 sm:p-10">
-						<div>
-							<p className="text-sm font-medium uppercase tracking-[0.22em] text-white/45">
-								Choose your inquiry
-							</p>
-							<h3 className="mt-3 text-2xl font-semibold text-white sm:text-3xl">
-								Start with the option that matches what you need.
-							</h3>
-							<p className="mt-4 max-w-2xl text-sm leading-7 text-white/65">
-								No form needed. Just pick a starting point and send a quick email with a little context.
-							</p>
-						</div>
+						<form className="space-y-6" onSubmit={handleSubmit}>
+							<div>
+								<p className="text-sm font-medium uppercase tracking-[0.22em] text-white/45">
+									Project inquiry form
+								</p>
+								<h3 className="mt-3 text-2xl font-semibold text-white sm:text-3xl">
+									Let’s talk about what you need.
+								</h3>
+							</div>
 
-						<div className="mt-8 grid gap-5">
-							{content.inquiryOptions.map((option, index) => (
+							<div className="grid gap-6 sm:grid-cols-2">
+								<label className="block text-sm font-medium text-white/70">
+									Name
+									<input
+										className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none transition placeholder:text-white/30 focus:border-amber-300/30"
+										name="name"
+										onChange={handleChange}
+										required
+										placeholder="Your name"
+										type="text"
+										value={formData.name}
+									/>
+								</label>
+
+								<label className="block text-sm font-medium text-white/70">
+									Email
+									<input
+										className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none transition placeholder:text-white/30 focus:border-amber-300/30"
+										name="email"
+										onChange={handleChange}
+										required
+										placeholder="you@business.com"
+										type="email"
+										value={formData.email}
+									/>
+								</label>
+							</div>
+
+							<div className="grid gap-6 sm:grid-cols-2">
+								<label className="block text-sm font-medium text-white/70">
+									Business name
+									<input
+										className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none transition placeholder:text-white/30 focus:border-amber-300/30"
+										name="businessName"
+										onChange={handleChange}
+										placeholder="Your business"
+										type="text"
+										value={formData.businessName}
+									/>
+								</label>
+
+								<label className="block text-sm font-medium text-white/70">
+									Project type
+									<select
+										className="mt-2 w-full rounded-2xl border border-white/10 bg-[#0c1728] px-4 py-3 text-base text-white outline-none transition focus:border-amber-300/30"
+										name="projectType"
+										onChange={handleChange}
+										value={formData.projectType}
+									>
+										<option value="">Select one</option>
+										{content.projectTypes.map((option) => (
+											<option key={option} value={option}>
+												{option}
+											</option>
+										))}
+									</select>
+								</label>
+							</div>
+
+							<div className="grid gap-6 sm:grid-cols-2">
+								<label className="block text-sm font-medium text-white/70">
+									Timeline
+									<select
+										className="mt-2 w-full rounded-2xl border border-white/10 bg-[#0c1728] px-4 py-3 text-base text-white outline-none transition focus:border-amber-300/30"
+										name="timeline"
+										onChange={handleChange}
+										value={formData.timeline}
+									>
+										<option value="">Select one</option>
+										{content.timelineOptions.map((option) => (
+											<option key={option} value={option}>
+												{option}
+											</option>
+										))}
+									</select>
+								</label>
+
+								<label className="block text-sm font-medium text-white/70">
+									Budget
+									<select
+										className="mt-2 w-full rounded-2xl border border-white/10 bg-[#0c1728] px-4 py-3 text-base text-white outline-none transition focus:border-amber-300/30"
+										name="budget"
+										onChange={handleChange}
+										value={formData.budget}
+									>
+										<option value="">Select one</option>
+										{content.budgetOptions.map((option) => (
+											<option key={option} value={option}>
+												{option}
+											</option>
+										))}
+									</select>
+								</label>
+							</div>
+
+							<label className="hidden" htmlFor="website">
+								Website
+								<input
+									id="website"
+									name="website"
+									onChange={handleChange}
+									tabIndex="-1"
+									type="text"
+									value={formData.website}
+									autoComplete="off"
+								/>
+							</label>
+
+							<label className="block text-sm font-medium text-white/70">
+								Tell me about your project
+								<textarea
+									className="mt-2 min-h-40 w-full rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none transition placeholder:text-white/30 focus:border-amber-300/30"
+									name="message"
+									onChange={handleChange}
+									placeholder="Tell me what you need, what your current site is missing, and what you want to improve."
+									required
+									value={formData.message}
+								/>
+							</label>
+
+							{status.message ? (
 								<div
-									key={option.title}
-									className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg transition hover:-translate-y-1 hover:border-amber-300/20"
+									className={`rounded-2xl border p-4 text-sm shadow-lg ${
+										status.type === 'success'
+											? 'border-emerald-400/25 bg-emerald-400/10 text-emerald-100'
+											: 'border-rose-400/25 bg-rose-400/10 text-rose-100'
+									}`}
 								>
-									<div className="flex items-start justify-between gap-4">
-										<div>
-											<p className="text-xs font-semibold uppercase tracking-[0.22em] text-amber-200/80">
-												Option {index + 1}
-											</p>
-											<h4 className="mt-2 text-xl font-semibold text-white">{option.title}</h4>
-										</div>
-										<span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-linear-to-br from-blue-500 via-cyan-400 to-amber-300 text-sm font-semibold text-white shadow-lg">
-											{String(index + 1).padStart(2, '0')}
-										</span>
-									</div>
-
-									<p className="mt-4 text-sm leading-7 text-white/70">{option.description}</p>
-
-									<div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-										<Button
-											href={buildMailtoLink(content.email, option.subject, option.body)}
-											variant={index === 0 ? 'primary' : 'secondary'}
-										>
-											Email About This
-										</Button>
-										<p className="text-sm text-white/50">Opens your email app with a draft.</p>
-									</div>
+									{status.message}
 								</div>
-							))}
-						</div>
+							) : null}
+
+							<div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+								<Button disabled={isSubmitting} className={isSubmitting ? 'opacity-70' : ''}>
+									{isSubmitting ? 'Sending...' : 'Send Project Inquiry'}
+								</Button>
+								<p className="text-sm text-white/60">
+									This sends directly to {content.email}.
+								</p>
+							</div>
+						</form>
 					</GlassCard>
 				</div>
 			</Container>

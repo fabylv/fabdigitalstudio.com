@@ -169,35 +169,20 @@ export const ctaContent = {
 
 export const contactDetails = {
 	eyebrow: 'Contact',
-	title: 'Tell us about your project',
+	title: 'Tell me about your project',
 	description:
 		'Share what you need, where your current site stands, and what you want your next version to do better.',
 	email: 'faby@fabdigitalstudio.com',
-	inquiryOptions: [
-		{
-			title: 'Start a New Website',
-			description:
-				'For businesses that need a polished new website with clear messaging, strong design, and a confident launch-ready presence.',
-			subject: 'New Website Project Inquiry',
-			body:
-				'Hi Faby,\n\nI would like to start a new website project.\n\nBusiness:\nWhat I need:\nTimeline:\nBudget range:\n\nThanks!'
-		},
-		{
-			title: 'Request a Redesign',
-			description:
-				'For existing websites that need a stronger first impression, cleaner structure, better design, or a more modern feel.',
-			subject: 'Website Redesign Inquiry',
-			body:
-				'Hi Faby,\n\nI would like help with a website redesign.\n\nCurrent website:\nWhat feels outdated:\nWhat I want to improve:\nTimeline:\n\nThanks!'
-		},
-		{
-			title: 'Ask a Question',
-			description:
-				'For quick questions, smaller updates, landing pages, cleanup work, or help figuring out the best next step for your site.',
-			subject: 'Project Question',
-			body: 'Hi Faby,\n\nI have a question about a website project.\n\nHere is what I am looking for:\n\nThanks!'
-		}
-	]
+	projectTypes: [
+		'New website',
+		'Website redesign',
+		'Landing page',
+		'Accessibility & usability',
+		'Website cleanup or updates',
+		'Something else'
+	],
+	timelineOptions: ['As soon as possible', 'Within 2 to 4 weeks', '1 to 2 months', 'Flexible'],
+	budgetOptions: ['Under $1,000', '$1,000 to $2,500', '$2,500 to $5,000', '$5,000+', 'Not sure yet']
 };
 
 export const footerContent = {
