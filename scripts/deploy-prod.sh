@@ -45,11 +45,11 @@ rsync -az --delete -e "$RSYNC_RSH" "$ROOT_DIR/server/" "$REMOTE_TARGET:$DEPLOY_A
 rsync -az -e "$RSYNC_RSH" "$ROOT_DIR/package.json" "$ROOT_DIR/package-lock.json" "$REMOTE_TARGET:$DEPLOY_APP_DIR/"
 
 echo "==> Installing production dependencies on the server"
-"${SSH_CMD[@]}" "$REMOTE_TARGET" "cd '$DEPLOY_APP_DIR' && $REMOTE_INSTALL_COMMAND"
+"${SSH_CMD[@]}" "$REMOTE_TARGET" "bash -lc 'cd "$DEPLOY_APP_DIR" && $REMOTE_INSTALL_COMMAND'"
 
 if [[ -n "$REMOTE_RESTART_COMMAND" ]]; then
   echo "==> Restarting remote app"
-  "${SSH_CMD[@]}" "$REMOTE_TARGET" "cd '$DEPLOY_APP_DIR' && $REMOTE_RESTART_COMMAND"
+  "${SSH_CMD[@]}" "$REMOTE_TARGET" "bash -lc 'cd "$DEPLOY_APP_DIR" && $REMOTE_RESTART_COMMAND'"
 else
   echo "==> No REMOTE_RESTART_COMMAND configured. Restart the app in Hostinger if needed."
 fi
