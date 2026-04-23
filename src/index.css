@@ -58,7 +58,7 @@ img {
 }
 
 .button-primary {
-	@apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#09111c] shadow-[0_16px_38px_rgba(227,145,75,0.22)] transition duration-200 ease-out;
+	@apply rounded-full px-6 py-3 text-sm font-semibold text-[#09111c] shadow-[0_16px_38px_rgba(227,145,75,0.22)] transition duration-200 ease-out;
 	background-image: linear-gradient(135deg, #e58a61 0%, #eea63c 52%, #efc878 100%);
 }
 
@@ -68,7 +68,7 @@ img {
 }
 
 .button-secondary {
-	@apply inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/85 shadow-[0_10px_30px_rgba(2,8,23,0.20)] transition duration-200 ease-out hover:border-[#ebc05d]/35 hover:text-[#f3cf74];
+	@apply rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/85 shadow-[0_10px_30px_rgba(2,8,23,0.20)] transition duration-200 ease-out hover:border-[#ebc05d]/35 hover:text-[#f3cf74];
 }
 
 .chip {

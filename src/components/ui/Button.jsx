@@ -4,7 +4,7 @@ const variants = {
 };
 
 export default function Button({ href, children, variant = 'primary', className = '', ...props }) {
-	const classes = `${variants[variant] ?? variants.primary} ${className}`.trim();
+	const classes = `inline-flex items-center justify-center ${variants[variant] ?? variants.primary} ${className}`.trim();
 
 	if (href) {
 		return (
