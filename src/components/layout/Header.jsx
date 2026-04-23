@@ -9,6 +9,7 @@ export default function Header({ navigation }) {
 		[navigation]
 	);
 	const [activeHref, setActiveHref] = useState(sectionLinks[0] ?? '');
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -45,14 +46,27 @@ export default function Header({ navigation }) {
 		};
 	}, [sectionLinks]);
 
+	useEffect(() => {
+		if (!menuOpen) return undefined;
+
+		const previousOverflow = document.body.style.overflow;
+		document.body.style.overflow = 'hidden';
+
+		return () => {
+			document.body.style.overflow = previousOverflow;
+		};
+	}, [menuOpen]);
+
+	const closeMenu = () => setMenuOpen(false);
+
 	return (
 		<header className="sticky top-0 z-50 logo-pattern-bg border-b border-white/10 shadow-[0_14px_32px_rgba(2,8,23,0.28)] backdrop-blur-xl">
 			<Container>
-				<div className="flex items-center justify-between gap-6 py-4">
-					<a aria-label="Back to top of page" className="inline-flex items-center" href="#top">
+				<div className="flex items-center justify-between gap-4 py-4">
+					<a aria-label="Back to top of page" className="inline-flex items-center" href="#top" onClick={closeMenu}>
 						<img
 							alt="FabDigital Studio"
-							className="h-12 w-auto shrink-0 opacity-95 sm:h-14 lg:h-20 filter-[drop-shadow(0_0_18px_rgba(59,130,246,0.18))]"
+							className="h-12 w-auto shrink-0 opacity-95 filter-[drop-shadow(0_0_18px_rgba(59,130,246,0.18))] sm:h-14 lg:h-20"
 							src={logo}
 						/>
 					</a>
@@ -78,11 +92,64 @@ export default function Header({ navigation }) {
 						})}
 					</nav>
 
-					<Button className="hidden md:inline-flex" href="#contact">
+					<div className="flex items-center gap-3">
+						<Button className="hidden md:inline-flex" href="#contact">
+							Start Your Project
+						</Button>
+
+						<button
+							aria-expanded={menuOpen}
+							aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+							className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/12 bg-white/5 text-white shadow-[0_12px_30px_rgba(2,8,23,0.25)] transition hover:border-amber-300/30 hover:text-amber-200 md:hidden"
+							onClick={() => setMenuOpen((value) => !value)}
+							type="button"
+						>
+							<svg
+								aria-hidden="true"
+								className="h-5 w-5"
+								fill="none"
+								stroke="currentColor"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="2"
+								viewBox="0 0 24 24"
+							>
+								{menuOpen ? <path d="M6 6l12 12M18 6 6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
+							</svg>
+						</button>
+					</div>
+				</div>
+			</Container>
+
+			{menuOpen ? (
+				<div className="border-t border-white/10 bg-[#081a2f]/98 px-5 pb-5 pt-4 shadow-[0_20px_50px_rgba(2,8,23,0.4)] md:hidden">
+					<nav aria-label="Mobile primary" className="flex flex-col gap-2">
+						{navigation.map((item) => {
+							const isActive = activeHref === item.href;
+
+							return (
+								<a
+									aria-current={isActive ? 'location' : undefined}
+									key={item.label}
+									className={`rounded-2xl px-4 py-3 text-sm font-medium transition ${
+										isActive
+											? 'bg-amber-300/12 text-amber-200'
+											: 'bg-white/5 text-white/80 hover:bg-white/8 hover:text-amber-200'
+									}`}
+									href={item.href}
+									onClick={closeMenu}
+								>
+									{item.label}
+								</a>
+							);
+						})}
+					</nav>
+
+					<Button className="mt-4 w-full justify-center" href="#contact" onClick={closeMenu}>
 						Start Your Project
 					</Button>
 				</div>
-			</Container>
+			) : null}
 		</header>
 	);
 }
