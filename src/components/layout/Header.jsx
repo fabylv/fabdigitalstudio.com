@@ -98,7 +98,10 @@ export default function Header({ navigation }) {
 					</nav>
 
 					<div className="hidden md:inline-flex">
-						<Button href="#contact" className="md:btn-sm lg:btn-md">
+						<Button
+							href="#contact"
+							className="md:px-4 md:py-2.5 md:text-xs lg:px-6 lg:py-3 lg:text-sm"
+						>
 							Start Your Project
 						</Button>
 					</div>
