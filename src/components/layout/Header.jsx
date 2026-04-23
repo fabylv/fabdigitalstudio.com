@@ -93,7 +93,7 @@ export default function Header({ navigation }) {
 					</nav>
 
 					<div className="flex items-center gap-3">
-						<Button className="hidden md:inline-flex" href="#contact">
+						<Button className="!hidden md:!inline-flex" href="#contact">
 							Start Your Project
 						</Button>
 
