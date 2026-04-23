@@ -14,6 +14,7 @@ export default function Button({
 	size = 'md',
 	disabled = false,
 	loading = false,
+	displayClass = 'inline-flex items-center justify-center',
 	className = '',
 	type = 'button',
 	children,
@@ -24,7 +25,7 @@ export default function Button({
 	const isDisabled = disabled || loading;
 
 	const classes = joinClasses(
-		'inline-flex items-center justify-center',
+		displayClass,
 		'btn',
 		`btn-${size}`,
 		isDisabled ? 'btn-disabled' : variants[variant] ?? variants.primary,
