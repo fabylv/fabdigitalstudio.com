@@ -3,43 +3,43 @@ import Container from '../ui/Container';
 
 export default function Hero({ content }) {
 	return (
-		<section className="relative overflow-hidden pb-8 pt-8 sm:pb-10 sm:pt-10" id="top">
+		<section className="relative overflow-hidden pb-7 pt-8 sm:pb-8 sm:pt-10" id="top">
 			<div className="pointer-events-none absolute inset-x-0 top-0 h-136 bg-linear-to-b from-white/6 via-transparent to-transparent" />
 			<div className="pointer-events-none absolute left-1/2 top-20 h-64 w-64 -translate-x-1/2 rounded-full bg-amber-300/10 blur-3xl" />
 			<div className="pointer-events-none absolute left-[8%] top-24 h-56 w-56 rounded-full bg-cyan-400/8 blur-3xl" />
 			<div className="pointer-events-none absolute right-[10%] top-16 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl" />
 
 			<Container>
-				<div className="mx-auto max-w-6xl text-center">
+				<div className="mx-auto max-w-5xl text-center">
 					<span className="mb-3 inline-flex rounded-full border border-amber-300/30 bg-amber-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-amber-200">
 						{content.eyebrow}
 					</span>
 
-					<h1 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl lg:text-7xl lg:leading-[0.95]">
+					<h1 className="mx-auto max-w-4xl text-3xl font-semibold tracking-tight text-white sm:text-[2.85rem] md:text-[3.2rem] lg:text-7xl lg:leading-[0.95]">
 						<span className="bg-linear-to-r from-white via-amber-100 to-amber-300 bg-clip-text text-transparent">
 							{content.title}
 						</span>
 					</h1>
 
-					<p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-white/70 sm:text-lg">
+					<p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-white/70 sm:text-lg">
 						{content.description}
 					</p>
 
-					<div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+					<div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
 						<Button href={content.primaryCta.href}>{content.primaryCta.label}</Button>
 						<Button href={content.secondaryCta.href} variant="secondary">
 							{content.secondaryCta.label}
 						</Button>
 					</div>
 
-					<div className="mt-7 flex flex-wrap items-center justify-center gap-3">
+					<div className="mt-5 flex flex-wrap items-center justify-center gap-2.5">
 						<span className="chip">AI-assisted workflow</span>
 						<span className="chip">Redesigns + cleanups</span>
 						<span className="chip">Fast performance</span>
 						<span className="chip-accent">Built to stand out</span>
 					</div>
 				</div>
-				<div className="relative mt-10 sm:mt-12">
+				<div className="relative mt-8 sm:mt-10">
 					<div className="pointer-events-none absolute inset-x-0 top-8 h-48 bg-radial from-cyan-400/14 to-transparent blur-3xl" />
 					<div className="pointer-events-none absolute left-[8%] top-14 hidden -rotate-6 lg:block">
 						<div className="chip">Mobile-friendly layouts</div>
@@ -86,7 +86,7 @@ export default function Hero({ content }) {
 						</div>
 					</div>
 				</div>
-				<dl className="mt-8 grid gap-3 sm:grid-cols-3 lg:mt-10">
+				<dl className="mt-6 grid gap-3 sm:grid-cols-3 lg:mt-8">
 					{content.stats.map((stat) => (
 						<div
 							key={stat.label}

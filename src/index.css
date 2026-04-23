@@ -92,11 +92,11 @@ img {
 }
 
 .chip {
-	@apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm font-medium text-white/75 shadow-[0_12px_30px_rgba(2,8,23,0.20)] backdrop-blur;
+	@apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-2.5 py-1.5 text-xs font-medium text-white/75 shadow-[0_12px_30px_rgba(2,8,23,0.20)] backdrop-blur sm:px-3 sm:py-2 sm:text-sm;
 }
 
 .chip-accent {
-	@apply inline-flex items-center gap-2 rounded-full border border-[#ebc05d]/20 bg-[#ebc05d]/10 px-3 py-2 text-sm font-medium text-[#f3cf74] shadow-[0_12px_30px_rgba(235,192,93,0.12)] backdrop-blur;
+	@apply inline-flex items-center gap-2 rounded-full border border-[#ebc05d]/20 bg-[#ebc05d]/10 px-2.5 py-1.5 text-xs font-medium text-[#f3cf74] shadow-[0_12px_30px_rgba(235,192,93,0.12)] backdrop-blur sm:px-3 sm:py-2 sm:text-sm;
 }
 .logo-pattern-bg {
 	background-color: #081a2f;

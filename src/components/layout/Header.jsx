@@ -76,7 +76,7 @@ export default function Header({ navigation }) {
 						/>
 					</a>
 
-					<nav aria-label="Primary" className="hidden items-center gap-8 md:flex">
+					<nav aria-label="Primary" className="hidden items-center gap-5 lg:gap-8 md:flex">
 						{navigation.map((item) => {
 							const isActive = activeHref === item.href;
 
@@ -84,7 +84,7 @@ export default function Header({ navigation }) {
 								<a
 									aria-current={isActive ? 'location' : undefined}
 									key={item.label}
-									className={`relative pb-2 text-sm font-medium transition after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:rounded-full after:bg-amber-300 after:transition after:duration-200 ${
+									className={`relative pb-2 text-[13px] font-medium transition lg:text-sm after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:rounded-full after:bg-amber-300 after:transition after:duration-200 ${
 										isActive
 											? 'text-amber-200 after:scale-100'
 											: 'text-white/72 after:scale-0 hover:text-amber-200 hover:after:scale-100'
@@ -100,7 +100,7 @@ export default function Header({ navigation }) {
 					<div className="hidden md:inline-flex">
 						<Button
 							href="#contact"
-							className="md:px-4 md:py-2.5 md:text-xs lg:px-6 lg:py-3 lg:text-sm"
+							className="md:px-3.5 md:py-2 md:text-[11px] lg:px-6 lg:py-3 lg:text-sm"
 						>
 							Start Your Project
 						</Button>
