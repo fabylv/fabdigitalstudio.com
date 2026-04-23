@@ -1,22 +1,53 @@
+function joinClasses(...classes) {
+	return classes.filter(Boolean).join(' ');
+}
+
 const variants = {
 	primary: 'button-primary',
 	secondary: 'button-secondary'
 };
 
-export default function Button({ href, children, variant = 'primary', className = '', ...props }) {
-	const classes = `inline-flex items-center justify-center ${variants[variant] ?? variants.primary} ${className}`.trim();
+export default function Button({
+	as = 'button',
+	href,
+	variant = 'primary',
+	size = 'md',
+	disabled = false,
+	loading = false,
+	className = '',
+	type = 'button',
+	children,
+	...props
+}) {
+	const isLink = as === 'a' || Boolean(href);
+	const Component = isLink ? 'a' : as;
+	const isDisabled = disabled || loading;
 
-	if (href) {
+	const classes = joinClasses(
+		'inline-flex items-center justify-center',
+		'btn',
+		`btn-${size}`,
+		isDisabled ? 'btn-disabled' : variants[variant] ?? variants.primary,
+		isDisabled && isLink ? 'pointer-events-none' : '',
+		className
+	);
+
+	if (isLink) {
 		return (
-			<a className={classes} href={href} {...props}>
+			<Component
+				href={isDisabled ? undefined : href}
+				aria-disabled={isDisabled || undefined}
+				className={classes}
+				{...props}
+			>
 				{children}
-			</a>
+			</Component>
 		);
 	}
 
 	return (
-		<button className={classes} type="button" {...props}>
+		<Component type={type} disabled={isDisabled} className={classes} {...props}>
 			{children}
-		</button>
+		</Component>
 	);
 }
