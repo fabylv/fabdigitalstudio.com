@@ -1,5 +1,3 @@
-import heroPreview from '../assets/fabdigitalstudio-hero-preview.svg';
-
 export const navigation = [
 	{ label: 'Services', href: '#services' },
 	{ label: 'Why Us', href: '#why-us' },
@@ -17,8 +15,7 @@ export const heroContent = {
 		{ label: 'Launch-ready builds', value: 'Fast' },
 		{ label: 'Focused on conversion', value: 'Clear' },
 		{ label: 'Built for growth', value: 'Scalable' }
-	],
-	image: heroPreview
+	]
 };
 
 export const servicesIntro = {

@@ -2,6 +2,13 @@ import Button from '../ui/Button';
 import Container from '../ui/Container';
 
 export default function Hero({ content }) {
+	const previewSteps = ['Homepage refresh', 'Clearer messaging', 'Conversion-focused CTA'];
+	const previewMetrics = [
+		{ label: 'Launch-ready', value: 'Fast' },
+		{ label: 'Mobile-first', value: 'Responsive' },
+		{ label: 'Goal', value: 'More inquiries' }
+	];
+
 	return (
 		<section className="relative overflow-hidden pb-10 pt-8 sm:pb-12 sm:pt-10" id="top">
 			<div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(34,240,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,240,255,0.05)_1px,transparent_1px)] bg-size-[28px_28px] opacity-50" />
@@ -57,21 +64,93 @@ export default function Hero({ content }) {
 						<div className="relative overflow-hidden rounded-4xl border border-[#22f0ff]/12 bg-[#0b1628]/88 p-3 shadow-[0_30px_90px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:p-4 lg:p-5">
 							<div className="absolute inset-0 bg-linear-to-br from-[#0a7cff]/10 via-transparent to-[#22f0ff]/10" />
 							<div className="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-white/8 to-transparent" />
-							<div className="relative mb-3 flex items-center px-2 sm:px-3">
+							<div className="relative mb-3 flex items-center justify-between px-2 sm:px-3">
 								<div className="flex gap-2">
 									<span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
 									<span className="h-2.5 w-2.5 rounded-full bg-yellow-400/70" />
 									<span className="h-2.5 w-2.5 rounded-full bg-green-400/70" />
 								</div>
+								<span className="rounded-full border border-[#22f0ff]/20 bg-[#0a7cff]/12 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#dff7ff]">
+									Website upgrade
+								</span>
 							</div>
 
-							<div className="relative overflow-hidden rounded-[1.75rem] border border-[#22f0ff]/12 bg-[#102038] shadow-2xl ring-1 ring-[#22f0ff]/8">
+							<div className="relative overflow-hidden rounded-[1.75rem] border border-[#22f0ff]/12 bg-[#102038] p-5 shadow-2xl ring-1 ring-[#22f0ff]/8 sm:p-6">
 								<div className="pointer-events-none absolute inset-0 bg-linear-to-br from-[#0a7cff]/12 via-transparent to-[#22f0ff]/10" />
-								<img
-									alt="FabDigital Studio homepage preview"
-									className="relative w-full"
-									src={content.image}
-								/>
+								<div className="relative">
+									<div className="flex flex-wrap items-center gap-2">
+										<span className="rounded-full border border-[#22f0ff]/18 bg-[#22f0ff]/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#dff7ff]">
+											Custom website
+										</span>
+										<span className="rounded-full border border-[#ff6a00]/20 bg-[#ff6a00]/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#ffd9c7]">
+											Built to convert
+										</span>
+									</div>
+
+									<div className="mt-4 rounded-[1.5rem] border border-white/10 bg-[#0a1629]/88 p-4 shadow-[0_18px_40px_rgba(0,0,0,0.22)]">
+										<div className="flex items-start justify-between gap-4">
+											<div>
+												<p className="text-xs font-medium uppercase tracking-[0.2em] text-[#22f0ff]/75">
+													Service business website
+												</p>
+												<h3 className="mt-2 text-xl font-semibold text-white sm:text-2xl">
+													Clear offer. Stronger brand. More leads.
+												</h3>
+											</div>
+											<div className="rounded-2xl border border-[#22f0ff]/16 bg-[#0a7cff]/10 px-3 py-2 text-right">
+												<p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#dff7ff]/70">
+													Goal
+												</p>
+												<p className="mt-1 text-sm font-semibold text-white">Better conversion</p>
+											</div>
+										</div>
+
+										<div className="mt-5 grid gap-4 sm:grid-cols-[1.08fr_0.92fr]">
+											<div className="rounded-[1.25rem] border border-white/8 bg-white/4 p-4">
+												<div className="h-3 w-28 rounded-full bg-white/10" />
+												<div className="mt-3 h-2 w-full rounded-full bg-white/8" />
+												<div className="mt-2 h-2 w-5/6 rounded-full bg-white/8" />
+												<div className="mt-2 h-2 w-2/3 rounded-full bg-white/8" />
+												<div className="mt-4 flex gap-2">
+													<div className="rounded-full bg-linear-to-r from-[#0a7cff] via-[#22f0ff] to-[#ff6a00] px-4 py-2 text-xs font-semibold text-white">
+														Start Project
+													</div>
+													<div className="rounded-full border border-white/10 px-4 py-2 text-xs font-medium text-white/70">
+														See Services
+													</div>
+												</div>
+												<div className="mt-4 space-y-2">
+													{previewSteps.map((step) => (
+														<div key={step} className="flex items-center gap-2 text-sm text-white/76">
+															<span className="h-2 w-2 rounded-full bg-[#22f0ff] shadow-[0_0_12px_rgba(34,240,255,0.7)]" />
+															<span>{step}</span>
+														</div>
+													))}
+												</div>
+											</div>
+
+											<div className="grid gap-3">
+												{previewMetrics.map((metric, index) => (
+													<div
+														key={metric.label}
+														className={`rounded-[1.25rem] border p-4 ${
+															index === 0
+																? 'border-[#49a7ff]/16 bg-[#0a7cff]/10'
+																: index === 1
+																	? 'border-[#22f0ff]/16 bg-[#22f0ff]/8'
+																	: 'border-[#ff6a00]/16 bg-[#ff6a00]/8'
+														}`}
+													>
+														<p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/58">
+															{metric.label}
+														</p>
+														<p className="mt-1 text-base font-semibold text-white">{metric.value}</p>
+													</div>
+												))}
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
