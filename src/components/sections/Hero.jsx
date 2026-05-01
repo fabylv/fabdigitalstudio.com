@@ -33,11 +33,14 @@ export default function Hero({ content }) {
 							</Button>
 						</div>
 
-						<div className="mt-5 flex flex-wrap items-center justify-center gap-2.5 lg:justify-start">
-							<span className="chip">AI-assisted workflow</span>
-							<span className="chip">Redesigns + cleanups</span>
-							<span className="chip">Fast performance</span>
-							<span className="chip-accent">Built to stand out</span>
+						<div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-medium uppercase tracking-[0.18em] text-white/45 lg:justify-start">
+							<span>AI-assisted workflow</span>
+							<span className="hidden h-1 w-1 rounded-full bg-[#0a7cff]/60 sm:inline-block" />
+							<span>Redesigns + cleanups</span>
+							<span className="hidden h-1 w-1 rounded-full bg-[#ffb300]/70 sm:inline-block" />
+							<span>Fast performance</span>
+							<span className="hidden h-1 w-1 rounded-full bg-white/35 sm:inline-block" />
+							<span className="text-[#dff7ff]/70">Built to stand out</span>
 						</div>
 					</div>
 
