@@ -2,9 +2,7 @@ import heroPreview from '../assets/fabdigitalstudio-hero-preview.svg';
 
 export const navigation = [
 	{ label: 'Services', href: '#services' },
-	{ label: 'Capabilities', href: '#work' },
 	{ label: 'Why Us', href: '#why-us' },
-	{ label: 'Process', href: '#process' },
 	{ label: 'Contact', href: '#contact' }
 ];
 
@@ -14,7 +12,7 @@ export const heroContent = {
 	description:
 		'We build fast, polished websites with personality—designed to elevate your brand, build trust, and make a stronger first impression.',
 	primaryCta: { label: 'Start Your Project', href: '#contact' },
-	secondaryCta: { label: 'See Our Process', href: '#process' },
+	secondaryCta: { label: 'Why FabDigital', href: '#why-us' },
 	stats: [
 		{ label: 'Launch-ready builds', value: 'Fast' },
 		{ label: 'Focused on conversion', value: 'Clear' },
@@ -179,7 +177,6 @@ export const footerContent = {
 
 export const footerLinks = [
 	{ label: 'Services', href: '#services' },
-	{ label: 'Capabilities', href: '#work' },
-	{ label: 'Process', href: '#process' },
+	{ label: 'Why Us', href: '#why-us' },
 	{ label: 'Contact', href: '#contact' }
 ];
