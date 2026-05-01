@@ -4,6 +4,12 @@ export const navigation = [
 	{ label: 'Contact', href: '#contact' }
 ];
 
+export const legalNavigation = [
+	{ label: 'Home', href: '/' },
+	{ label: 'Privacy', href: '/privacy' },
+	{ label: 'Terms', href: '/terms' }
+];
+
 export const heroContent = {
 	eyebrow: 'WE BUILD DIGITAL EXPERIENCES',
 	title: 'Building Digital Experiences That Drive Results',
@@ -104,7 +110,119 @@ export const footerContent = {
 };
 
 export const footerLinks = [
-	{ label: 'Services', href: '#services' },
-	{ label: 'Why Us', href: '#why-us' },
-	{ label: 'Contact', href: '#contact' }
+	{ label: 'Services', href: '/#services' },
+	{ label: 'Why Us', href: '/#why-us' },
+	{ label: 'Contact', href: '/#contact' },
+	{ label: 'Privacy', href: '/privacy' },
+	{ label: 'Terms', href: '/terms' }
 ];
+
+export const privacyPolicyContent = {
+	eyebrow: 'Privacy Policy',
+	title: 'Privacy Policy',
+	description:
+		'This starter policy explains what information FabDigital Studio may collect through this website, how that information may be used, and the choices visitors have. It should be reviewed and tailored for your business, jurisdiction, and actual practices.',
+	lastUpdated: 'May 1, 2026',
+	sections: [
+		{
+			title: 'Information We May Collect',
+			paragraphs: [
+				'When you contact FabDigital Studio through this website, we may collect the information you choose to provide, such as your name, email address, business name, project type, timeline, budget details, and the message you submit.',
+				'We may also collect limited technical information automatically, such as basic analytics, browser information, device data, or logs used to help operate, secure, and improve the site.'
+			]
+		},
+		{
+			title: 'How Information May Be Used',
+			items: [
+				'To respond to inquiries and discuss potential projects',
+				'To provide proposals, client communication, or project follow-up',
+				'To operate, maintain, secure, and improve the website',
+				'To comply with legal obligations or protect against misuse of the site'
+			]
+		},
+		{
+			title: 'How Information May Be Shared',
+			paragraphs: [
+				'FabDigital Studio does not sell personal information through this website. Information may be shared with trusted service providers only when reasonably necessary to operate the site, process inquiries, send email, or support business operations.',
+				'Information may also be disclosed if required by law, legal process, or to protect rights, safety, or the integrity of the business and website.'
+			]
+		},
+		{
+			title: 'Retention and Security',
+			paragraphs: [
+				'Information may be kept for as long as reasonably necessary to respond to inquiries, maintain records, support projects, resolve disputes, or meet legal and operational obligations.',
+				'FabDigital Studio uses reasonable measures to protect information, but no website, email transmission, or storage method can be guaranteed completely secure.'
+			]
+		},
+		{
+			title: 'Your Choices',
+			paragraphs: [
+				'You may contact FabDigital Studio to ask about the information you have submitted, request updates or deletion where appropriate, or ask questions about this policy. Any applicable privacy rights may depend on your location and the law that applies to your request.'
+			]
+		},
+		{
+			title: 'Children and Contact',
+			paragraphs: [
+				'This website is not intended for children under 13, and FabDigital Studio does not knowingly collect personal information from children through the site.',
+				'For privacy questions, contact faby@fabdigitalstudio.com.'
+			]
+		}
+	]
+};
+
+export const termsContent = {
+	eyebrow: 'Terms of Service',
+	title: 'Terms of Service',
+	description:
+		'These starter terms are intended to set a basic framework for use of the website and inquiries submitted through it. They should be reviewed and tailored to match your actual project, payment, proposal, and contract practices.',
+	lastUpdated: 'May 1, 2026',
+	sections: [
+		{
+			title: 'Use of This Website',
+			paragraphs: [
+				'By using this website, you agree to use it only for lawful purposes and in a way that does not interfere with the website, its security, or other visitors. FabDigital Studio may update, suspend, or change the site at any time without notice.'
+			]
+		},
+		{
+			title: 'Project Inquiries and Proposals',
+			paragraphs: [
+				'Submitting an inquiry through the website does not create a client relationship, guarantee availability, or guarantee that FabDigital Studio will accept a project. Any services, scope, pricing, timelines, and deliverables are subject to separate written agreement, proposal, or invoice terms.'
+			]
+		},
+		{
+			title: 'Client Responsibilities',
+			items: [
+				'Provide accurate and timely information',
+				'Ensure you have the rights to any content, images, logos, or materials you supply',
+				'Review deliverables and approvals within agreed timelines',
+				'Use final deliverables in compliance with applicable laws and third-party terms'
+			]
+		},
+		{
+			title: 'Intellectual Property',
+			paragraphs: [
+				'Unless otherwise stated in a written agreement, FabDigital Studio retains ownership of its pre-existing materials, workflows, design systems, and development methods. Ownership or license rights for project deliverables should be defined in the specific client agreement governing the work.'
+			]
+		},
+		{
+			title: 'Third-Party Services',
+			paragraphs: [
+				'Projects may involve third-party tools, hosting providers, fonts, plugins, analytics tools, or integrations. FabDigital Studio is not responsible for outages, policy changes, pricing changes, or actions taken by third-party providers.'
+			]
+		},
+		{
+			title: 'Disclaimers and Limitation of Liability',
+			paragraphs: [
+				'This website and its content are provided on an "as is" and "as available" basis without warranties of any kind, to the extent permitted by law. FabDigital Studio does not guarantee specific business outcomes, rankings, leads, conversions, or uninterrupted website availability.',
+				'To the extent permitted by law, FabDigital Studio will not be liable for indirect, incidental, special, or consequential damages arising from use of the website or reliance on its content. Project-specific liability terms should be addressed in the governing client agreement.'
+			]
+		},
+		{
+			title: 'Changes and Contact',
+			paragraphs: [
+				'FabDigital Studio may update these terms from time to time by posting a revised version on the website. Continued use of the website after changes are posted indicates acceptance of the updated terms.',
+				'For questions about these terms, contact faby@fabdigitalstudio.com.'
+			]
+		}
+	]
+};

@@ -3,7 +3,12 @@ import logo from '../../assets/fds-logo.png';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
 
-export default function Header({ navigation }) {
+export default function Header({
+	navigation,
+	logoHref = '#top',
+	ctaHref = '#contact',
+	ctaLabel = 'Start Your Project'
+}) {
 	const sectionLinks = useMemo(
 		() => navigation.map((item) => item.href).filter((href) => href.startsWith('#')),
 		[navigation]
@@ -66,7 +71,7 @@ export default function Header({ navigation }) {
 					<a
 						aria-label="Back to top of page"
 						className="inline-flex items-center"
-						href="#top"
+						href={logoHref}
 						onClick={closeMenu}
 					>
 						<img
@@ -99,10 +104,10 @@ export default function Header({ navigation }) {
 
 					<div className="hidden md:inline-flex">
 						<Button
-							href="#contact"
+							href={ctaHref}
 							className="md:px-3.5 md:py-2 md:text-[11px] lg:px-6 lg:py-3 lg:text-sm"
 						>
-							Start Your Project
+							{ctaLabel}
 						</Button>
 					</div>
 
@@ -153,8 +158,8 @@ export default function Header({ navigation }) {
 						})}
 					</nav>
 
-					<Button className="mt-4 w-full justify-center" href="#contact" onClick={closeMenu}>
-						Start Your Project
+					<Button className="mt-4 w-full justify-center" href={ctaHref} onClick={closeMenu}>
+						{ctaLabel}
 					</Button>
 				</div>
 			) : null}

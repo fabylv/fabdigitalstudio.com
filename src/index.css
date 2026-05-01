@@ -65,6 +65,10 @@ img {
 	@apply relative py-5 sm:py-10;
 }
 
+.section-shell-end {
+	@apply relative pb-14 sm:pb-20;
+}
+
 .btn {
 	@apply rounded-full text-sm font-semibold transition duration-200 ease-out;
 }
@@ -92,15 +96,15 @@ img {
 
 	background-image: linear-gradient(
 		135deg,
-		#0b5fcf 0%,
-		#168fc5 42%,
-		#0f658f 66%,
-		#c95510 100%
+		#094eaa 0%,
+		#126f96 42%,
+		#0f5d78 66%,
+		#b14f18 100%
 	);
 
 	box-shadow:
-		0 6px 10px rgba(0, 0, 0, 0.5),
-		0 12px 20px rgba(5, 95, 212, 0.2),
+		0 5px 9px rgba(0, 0, 0, 0.44),
+		0 10px 18px rgba(5, 95, 212, 0.14),
 		inset 0 1px 0 rgba(255, 255, 255, 0.12),
 		inset 0 -6px 12px rgba(0, 0, 0, 0.18);
 }
@@ -110,15 +114,15 @@ img {
 
 	background-image: linear-gradient(
 		135deg,
-		#0f6de0 0%,
-		#1aa3d6 42%,
-		#1474a3 66%,
-		#d46314 100%
+		#0d60ca 0%,
+		#1889b5 42%,
+		#126989 66%,
+		#c35c18 100%
 	);
 
 	box-shadow:
-		0 8px 14px rgba(0, 0, 0, 0.55),
-		0 16px 26px rgba(5, 95, 212, 0.25),
+		0 7px 13px rgba(0, 0, 0, 0.5),
+		0 14px 24px rgba(5, 95, 212, 0.18),
 		inset 0 1px 0 rgba(255, 255, 255, 0.14),
 		inset 0 -6px 14px rgba(0, 0, 0, 0.16);
 }

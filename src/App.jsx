@@ -1,4 +1,6 @@
+import { useMemo } from 'react';
 import Maintenance from './components/Maintenance';
+import LegalPage from './components/LegalPage';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
@@ -11,20 +13,34 @@ import ScrollToTopButton from './components/ui/ScrollToTopButton';
 
 import {
 	navigation,
+	legalNavigation,
 	heroContent,
 	services,
 	valuePoints,
 	ctaContent,
 	contactDetails,
-	footerLinks
+	footerLinks,
+	privacyPolicyContent,
+	termsContent
 } from './data/siteContent';
 
 const maintenanceMode = import.meta.env.VITE_MAINTENANCE === 'true';
 
+function getCurrentPath() {
+	if (typeof window === 'undefined') return '/';
+	const normalizedPath = window.location.pathname.replace(/\/+$/, '');
+	return normalizedPath || '/';
+}
+
 export default function App() {
+	const currentPath = useMemo(() => getCurrentPath(), []);
+	const legalContent = currentPath === '/privacy' ? privacyPolicyContent : currentPath === '/terms' ? termsContent : null;
+	const isLegalPage = Boolean(legalContent);
+
 	if (maintenanceMode) {
 		return <Maintenance />;
 	}
+
 	return (
 		<div className="min-h-screen text-white">
 			<a className="skip-link" href="#main-content">
@@ -36,18 +52,28 @@ export default function App() {
 				<div className="absolute -bottom-40 -left-24 h-96 w-[24rem] rounded-full bg-[#ff6a00]/10 blur-3xl" />
 			</div>
 
-			<Header navigation={navigation} />
+			<Header
+				navigation={isLegalPage ? legalNavigation : navigation}
+				logoHref={isLegalPage ? '/' : '#top'}
+				ctaHref={isLegalPage ? '/#contact' : '#contact'}
+			/>
 
 			<main id="main-content" tabIndex="-1">
-				<Hero content={heroContent} />
-				<DecorativeDivider />
-				<Services services={services} />
-				<DecorativeDivider />
-				<ValueSection points={valuePoints} />
-				<DecorativeDivider />
-				<CTASection content={ctaContent} />
-				<DecorativeDivider />
-				<Contact content={contactDetails} />
+				{isLegalPage ? (
+					<LegalPage content={legalContent} />
+				) : (
+					<>
+						<Hero content={heroContent} />
+						<DecorativeDivider />
+						<Services services={services} />
+						<DecorativeDivider />
+						<ValueSection points={valuePoints} />
+						<DecorativeDivider />
+						<CTASection content={ctaContent} />
+						<DecorativeDivider />
+						<Contact content={contactDetails} />
+					</>
+				)}
 			</main>
 
 			<Footer links={footerLinks} />
