@@ -77,8 +77,8 @@ export default function Contact({ content }) {
 	};
 
 	return (
-		<section className="section-shell-end">
-			<div className="absolute top-8" id="contact" />
+		<section id="contact" className="section-shell">
+			<div className="absolute top-8" />
 			<Container>
 				<div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
 					<GlassCard className="overflow-hidden p-8 sm:p-10">

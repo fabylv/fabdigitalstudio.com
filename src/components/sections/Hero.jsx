@@ -5,7 +5,7 @@ export default function Hero({ content }) {
 	return (
 		<section className="relative overflow-hidden pb-10 pt-8 sm:pb-12 sm:pt-10" id="top">
 			<div className="pointer-events-none absolute inset-x-0 top-0 h-136 bg-linear-to-b from-white/6 via-transparent to-transparent" />
-			<div className="pointer-events-none absolute inset-x-0 top-0 h-[32rem] bg-radial from-[#0a7cff]/18 via-transparent to-transparent opacity-90" />
+			<div className="pointer-events-none absolute inset-x-0 top-0 h-128 bg-radial from-[#0a7cff]/18 via-transparent to-transparent opacity-90" />
 			<div className="pointer-events-none absolute left-[-4%] top-24 h-72 w-72 rounded-full bg-[#18d7ff]/14 blur-3xl" />
 			<div className="pointer-events-none absolute left-1/2 top-14 h-72 w-72 -translate-x-1/2 rounded-full bg-[#ffb300]/14 blur-3xl" />
 			<div className="pointer-events-none absolute right-[6%] top-12 h-88 w-88 rounded-full bg-[#ff6a00]/14 blur-3xl" />
@@ -19,8 +19,8 @@ export default function Hero({ content }) {
 							{content.eyebrow}
 						</span>
 
-						<h1 className="max-w-5xl text-4xl font-semibold tracking-tight text-white sm:text-[3.4rem] sm:leading-[0.98] lg:text-[5rem] lg:leading-[0.95] xl:text-[5.6rem]">
-							<span className="bg-linear-to-r from-[#ffffff] via-[#dff7ff] via-[42%] to-[#ff8a34] bg-clip-text text-transparent">
+						<h1 className="max-w-4xl text-3xl font-semibold tracking-tight text-white sm:text-[2.85rem] md:text-[3.2rem] lg:text-6xl lg:leading-[0.98] xl:text-7xl">
+							<span className="bg-linear-to-r from-[#f5f1e8] via-[#dff7ff] to-[#ffb300] bg-clip-text text-transparent">
 								{content.title}
 							</span>
 						</h1>
