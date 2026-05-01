@@ -33,8 +33,7 @@ export default function SelectedWork({ projects }) {
 						>
 							<div className="flex h-full flex-col justify-between gap-8">
 								<div>
-									<div className="flex items-center justify-between gap-4">
-										<span className="chip-accent">What I Can Do</span>
+									<div className="flex items-center justify-end gap-4">
 										<span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-linear-to-br from-[#0a7cff] via-[#22b6ff] to-[#ffb300] text-sm font-semibold text-[#07111f] shadow-[0_12px_24px_rgba(10,124,255,0.24)]">
 											{String(index + 1).padStart(2, '0')}
 										</span>

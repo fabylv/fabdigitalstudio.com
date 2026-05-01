@@ -20,28 +20,7 @@ export const heroContent = {
 		{ label: 'Focused on conversion', value: 'Clear' },
 		{ label: 'Built for growth', value: 'Scalable' }
 	],
-	image: heroPreview,
-	preview: {
-		label: 'Sample homepage direction',
-		title: 'Clear offer, clean structure, stronger first impression.',
-		description:
-			'A simpler preview that looks like an actual homepage concept instead of one large abstract mockup.',
-		badges: ['Hero message', 'Service highlights', 'Mobile-ready'],
-		notes: [
-			{
-				title: 'What this is',
-				text: 'A sample homepage direction that shows the kind of layout and clarity your site can have.'
-			},
-			{
-				title: 'What it helps with',
-				text: 'Helping visitors understand the offer fast, trust the brand quicker, and know where to click next.'
-			},
-			{
-				title: 'Why it works better',
-				text: 'Smaller, clearer visuals make the hero easier to scan without fighting the main message.'
-			}
-		]
-	}
+	image: heroPreview
 };
 
 export const servicesIntro = {
@@ -75,48 +54,36 @@ export const services = [
 ];
 
 export const workIntro = {
-	eyebrow: 'What I Can Do',
-	title: 'Whether you need a brand new site, a redesign, or a cleanup, I can help.',
+	eyebrow: 'Capabilities',
+	title: 'The kinds of outcomes your website can deliver.',
 	description:
-		'This section is less about old portfolio pieces and more about the kinds of website transformations I can create for you right now.'
+		'Instead of repeating the service list, this section shows the practical results we can help create for your business.'
 };
 
 export const selectedWork = [
 	{
-		title: 'Fresh Website Build',
+		title: 'Stronger First Impression',
 		description:
-			'For businesses that need a professional online presence from scratch with a clear structure and a polished visual feel.',
-		highlights: ['Custom layout direction', 'Modern responsive design', 'Built for trust and clarity']
+			'For businesses that need a site to feel more credible, more current, and more aligned with the quality of what they offer.',
+		highlights: ['Sharper visual direction', 'More premium presence', 'Stronger trust signals']
 	},
 	{
-		title: 'Website Redesign',
+		title: 'Clearer Messaging',
 		description:
-			'For outdated websites that need a stronger first impression, cleaner messaging, and a more modern visual identity.',
-		highlights: ['Visual refresh', 'Improved hierarchy', 'Cleaner user flow']
+			'For websites that already have the right services, but do not explain the offer clearly enough or guide visitors well.',
+		highlights: ['Clearer hierarchy', 'Better page flow', 'Stronger calls to action']
 	},
 	{
-		title: 'Landing Page Creation',
+		title: 'Better Mobile Experience',
 		description:
-			'For launches, campaigns, offers, or lead generation pages that need to feel focused, clear, and persuasive.',
-		highlights: ['Offer-focused structure', 'Higher conversion intent', 'Fast launch turnaround']
+			'For websites that need a cleaner, faster, more usable experience across phones, tablets, and modern browsers.',
+		highlights: ['Responsive improvements', 'Faster-feeling layouts', 'Smoother usability']
 	},
 	{
-		title: 'Website Cleanup',
+		title: 'More Confident Online Presence',
 		description:
-			'For websites that already exist but feel cluttered, inconsistent, or visually outdated and need to be tightened up.',
-		highlights: ['Content cleanup', 'Layout refinement', 'Visual consistency']
-	},
-	{
-		title: 'Mobile + Speed Polish',
-		description:
-			'For websites that work, but still need better responsiveness, smoother interaction, and stronger performance on mobile.',
-		highlights: ['Responsive fixes', 'Performance improvements', 'Better user experience']
-	},
-	{
-		title: 'Ongoing Website Updates',
-		description:
-			'For businesses that want someone they can rely on for edits, refreshes, improvements, and continued site care over time.',
-		highlights: ['Content updates', 'Design refreshes', 'Continuous improvement']
+			'For brands that want a website that feels polished enough to support outreach, referrals, ads, and business growth.',
+		highlights: ['More polished presentation', 'Brand consistency', 'Built to scale over time']
 	}
 ];
 

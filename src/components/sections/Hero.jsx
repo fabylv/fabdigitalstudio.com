@@ -48,14 +48,11 @@ export default function Hero({ content }) {
 						<div className="pointer-events-none absolute inset-x-0 top-10 h-40 bg-radial from-[#0a7cff]/14 to-transparent blur-3xl" />
 						<div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0b1628]/90 p-3 shadow-[0_30px_80px_rgba(0,0,0,0.40)] backdrop-blur-xl sm:p-4 lg:p-5">
 							<div className="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-white/6 to-transparent" />
-							<div className="relative mb-3 flex items-center justify-between px-2 sm:px-3">
+							<div className="relative mb-3 flex items-center px-2 sm:px-3">
 								<div className="flex gap-2">
 									<span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
 									<span className="h-2.5 w-2.5 rounded-full bg-yellow-400/70" />
 									<span className="h-2.5 w-2.5 rounded-full bg-green-400/70" />
-								</div>
-								<div className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-white/65 sm:text-xs">
-									Homepage preview
 								</div>
 							</div>
 
@@ -67,20 +64,6 @@ export default function Hero({ content }) {
 								/>
 							</div>
 
-							<div className="mt-4 grid gap-3 sm:grid-cols-2">
-								<div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl">
-									<p className="text-sm font-semibold text-white">Clearer at a glance</p>
-									<p className="mt-2 text-sm leading-6 text-white/60">
-										Now the text and preview sit side by side, so the hero is easier to understand.
-									</p>
-								</div>
-								<div className="rounded-2xl border border-[#ffb300]/20 bg-[#ffb300]/10 p-4 backdrop-blur-xl">
-									<p className="text-sm font-semibold text-[#dff7ff]">Better balance</p>
-									<p className="mt-2 text-sm leading-6 text-[#dff7ff]/75">
-										The visual supports the message instead of taking over the whole section.
-									</p>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
