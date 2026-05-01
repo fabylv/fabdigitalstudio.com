@@ -144,6 +144,13 @@ img {
 .services-card {
 	position: relative;
 	overflow: hidden;
+	opacity: 0;
+	transform: translateY(22px);
+	transition:
+		opacity 720ms cubic-bezier(0.22, 1, 0.36, 1),
+		transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
+	transition-delay: var(--card-delay, 0ms);
+	will-change: transform, opacity;
 }
 
 .services-card::before {
@@ -155,17 +162,7 @@ img {
 	opacity: 0.9;
 }
 
-.services-card-inner {
-	opacity: 0;
-	transform: translateY(18px);
-	transition:
-		opacity 680ms cubic-bezier(0.22, 1, 0.36, 1),
-		transform 680ms cubic-bezier(0.22, 1, 0.36, 1);
-	transition-delay: var(--card-delay, 0ms);
-	will-change: transform, opacity;
-}
-
-.services-card[data-visible='true'] .services-card-inner {
+.services-card[data-visible='true'] {
 	opacity: 1;
 	transform: translateY(0);
 }
@@ -200,7 +197,7 @@ img {
 		transform: none;
 	}
 
-	.services-card-inner {
+	.services-card {
 		opacity: 1;
 		transform: none;
 		transition: none;
