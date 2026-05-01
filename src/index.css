@@ -124,16 +124,13 @@ img {
 	@apply inline-flex items-center gap-2 rounded-full border border-[#18d7ff]/20 bg-[#0a7cff]/10 px-2.5 py-1.5 text-xs font-medium text-[#dff7ff] shadow-[0_12px_30px_rgba(10,124,255,0.12)] backdrop-blur sm:px-3 sm:py-2 sm:text-sm;
 }
 .logo-pattern-bg {
-  background-color: #081422;
+  background-color: #06101f;
 
   background-image:
-	linear-gradient(rgba(24, 215, 255, 0.06) 1px, transparent 1px),
-	linear-gradient(90deg, rgba(24, 215, 255, 0.06) 1px, transparent 1px),
-	radial-gradient(circle at top right, rgba(255, 106, 0, 0.12), transparent 28%),
-	radial-gradient(circle at center, rgba(8, 20, 34, 0.6), transparent 65%);
+    linear-gradient(rgba(199,165,107,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(199,165,107,0.045) 1px, transparent 1px);
 
-	background-size: 20px 20px, 20px 20px, auto, auto;
-  background-position: center;
+  background-size: 26px 26px;
 }
 
 
