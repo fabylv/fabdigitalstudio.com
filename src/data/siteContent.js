@@ -14,7 +14,7 @@ export const heroContent = {
 	eyebrow: 'WE BUILD DIGITAL EXPERIENCES',
 	title: 'Building Digital Experiences That Drive Results',
 	description:
-		'We design and develop high-performing websites that help brands stand out, build trust, and grow.',
+		'We design and build high-performing websites that help service businesses look more credible, communicate clearly, and turn more visitors into inquiries.',
 	primaryCta: { label: 'Start Your Project', href: '#contact' },
 	secondaryCta: { label: 'Why FabDigital', href: '#why-us' }
 };
@@ -23,7 +23,7 @@ export const servicesIntro = {
 	eyebrow: 'Services',
 	title: 'The website work most businesses actually need.',
 	description:
-		'A practical service stack designed to improve credibility, clarity, and performance without adding unnecessary complexity.'
+		'Focused website services designed to improve credibility, clarity, and conversions without bloated scope or unnecessary extras.'
 };
 
 export const services = [
@@ -51,9 +51,9 @@ export const services = [
 
 export const valueIntro = {
 	eyebrow: 'Why FabDigital Studio',
-	title: 'A sharper digital process, built for today’s clients.',
+	title: 'A sharper process for modern website work.',
 	description:
-		'FabDigital Studio blends strategy, modern front-end execution, and AI-assisted speed to create websites that feel current, clear, and confidently professional.'
+		'FabDigital Studio combines strategy, modern front-end execution, and a streamlined workflow to create websites that feel current, clear, and confidently professional.'
 };
 
 export const valuePoints = [
@@ -81,9 +81,9 @@ export const valuePoints = [
 
 export const ctaContent = {
 	eyebrow: 'Start Your Project',
-	title: 'Ready for a website that feels sharper, faster, and more professional?',
+	title: 'Ready for a website that feels clear, current, and built to convert?',
 	description:
-		'Let’s build a digital presence that reflects the quality of your business and helps you win more trust online.',
+		'Let’s create a digital presence that reflects the quality of your business and gives people a clear reason to reach out.',
 	action: { label: 'Start Your Project', href: '#contact' }
 };
 
@@ -91,7 +91,7 @@ export const contactDetails = {
 	eyebrow: 'Contact',
 	title: 'Tell me about your project',
 	description:
-		'Share what you need, where your current site stands, and what you want your next version to do better.',
+		'Share what you need, what your current site is missing, and what a better version should help you do.',
 	email: 'faby@fabdigitalstudio.com',
 	projectTypes: [
 		'New website',

@@ -1,5 +1,4 @@
 import logo from '../assets/fds-logo.png';
-import Button from './ui/Button';
 import Container from './ui/Container';
 
 export default function Maintenance() {
@@ -22,20 +21,20 @@ export default function Maintenance() {
 						Temporarily offline for updates
 					</div>
 
-				
 					<h2 className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
-						FabDigital Studio is temporarily in maintenance mode while we polish a few things.
-						 Please check back soon.
+						FabDigital Studio is temporarily in maintenance mode while we polish a few things. Please check back soon.
 					</h2>
 
-				
 					<div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-5 text-left backdrop-blur-xl sm:p-6">
 						<p className="text-sm font-semibold text-white">Need to reach us in the meantime?</p>
 						<p className="mt-2 text-sm leading-6 text-white/65 sm:text-base">
-							Email <a className="text-[#dff7ff] hover:text-[#f2f7fb]" href="mailto:faby@fabdigitalstudio.com">faby@fabdigitalstudio.com</a> 							 and we’ll get back to you as soon as possible.
+							Email{' '}
+							<a className="text-[#dff7ff] hover:text-[#f2f7fb]" href="mailto:faby@fabdigitalstudio.com">
+								faby@fabdigitalstudio.com
+							</a>{' '}
+							and we’ll get back to you as soon as possible.
 						</p>
 					</div>
-
 				</div>
 			</Container>
 		</div>

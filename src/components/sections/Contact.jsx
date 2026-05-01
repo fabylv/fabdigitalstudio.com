@@ -113,8 +113,8 @@ export default function Contact({ content }) {
 							<div className="rounded-2xl border border-[#18d7ff]/18 bg-linear-to-br from-[#0a7cff]/10 to-[#ff6a00]/10 p-5 text-sm text-[#dff7ff] shadow-lg">
 								<p className="font-semibold text-[#f2f7fb]">What happens next?</p>
 								<p className="mt-2 leading-7 text-[#dff7ff]/75">
-									Once you send the form, the details go straight to my inbox so I can review your project and
-									get back to you.
+									Once you send the form, it goes straight to my inbox so I can review it and follow up with
+									next steps.
 								</p>
 							</div>
 						</div>
@@ -257,12 +257,12 @@ export default function Contact({ content }) {
 							</label>
 
 							<label className="block text-sm font-medium text-white/70">
-								Tell me about your project
+								Project details
 								<textarea
-								className="mt-2 min-h-40 w-full rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none transition placeholder:text-white/30 focus:border-[#18d7ff]/30"
+									className="mt-2 min-h-40 w-full rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none transition placeholder:text-white/30 focus:border-[#18d7ff]/30"
 									name="message"
 									onChange={handleChange}
-									placeholder="Tell me what you need, what your current site is missing, and what you want to improve."
+									placeholder="Share the goals, pages, problems, or improvements you have in mind."
 									required
 									value={formData.message}
 								/>

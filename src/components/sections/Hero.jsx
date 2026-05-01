@@ -1,7 +1,7 @@
 import Button from '../ui/Button';
 import Container from '../ui/Container';
 
-const previewSteps = ['Homepage refresh', 'Clearer messaging', 'Conversion-focused CTA'];
+const previewSteps = ['Clear offer', 'Better structure', 'Inquiry-focused CTA'];
 const previewMetrics = [
 	{ label: 'Launch-ready', value: 'Fast' },
 	{ label: 'Mobile-first', value: 'Responsive' },
@@ -46,7 +46,7 @@ export default function Hero({ content }) {
 						</div>
 
 						<div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-medium uppercase tracking-[0.18em] text-white/50 lg:justify-start">
-							<span>AI-assisted workflow</span>
+							<span>Strategy-led messaging</span>
 							<span className="hidden h-1 w-1 rounded-full bg-[#22f0ff]/70 sm:inline-block" />
 							<span>Redesigns + cleanups</span>
 							<span className="hidden h-1 w-1 rounded-full bg-[#ff6a00]/70 sm:inline-block" />
