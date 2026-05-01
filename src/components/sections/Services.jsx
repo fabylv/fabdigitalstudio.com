@@ -25,20 +25,25 @@ export default function Services({ services }) {
 					{services.map((service, index) => (
 						<GlassCard
 							key={service.title}
-							className={`group p-7 transition hover:-translate-y-1 hover:border-[#18d7ff]/20 ${
+							className={`services-card p-7 ${
 								layoutClasses[index] ?? 'lg:col-span-6'
 							}`}
+							style={{ '--card-delay': `${index * 90}ms` }}
 						>
-							<div className="flex items-center justify-between gap-4">
+							<div className="services-card-inner flex items-center justify-between gap-4">
 								<span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-linear-to-br from-[#0a7cff] via-[#18d7ff] to-[#ff6a00] text-sm font-semibold text-[#06101d] shadow-[0_16px_32px_rgba(10,124,255,0.22)]">
 									{String(index + 1).padStart(2, '0')}
 								</span>
 								<span className="h-px flex-1 bg-linear-to-r from-[#18d7ff]/45 via-[#0a7cff]/35 to-[#ff6a00]/10" />
 							</div>
 
-							<h3 className="mt-6 text-xl font-semibold text-white sm:text-2xl">{service.title}</h3>
+							<h3 className="services-card-inner mt-6 text-xl font-semibold text-white sm:text-2xl">
+								{service.title}
+							</h3>
 
-							<p className="mt-4 max-w-xl text-sm leading-7 text-white/70">{service.description}</p>
+							<p className="services-card-inner mt-4 max-w-xl text-sm leading-7 text-white/70">
+								{service.description}
+							</p>
 						</GlassCard>
 					))}
 				</div>

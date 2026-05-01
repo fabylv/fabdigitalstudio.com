@@ -141,6 +141,39 @@ img {
 	@apply border border-[#22f0ff]/20 bg-white/5 text-[#f2f7fb] shadow-[0_10px_30px_rgba(0,0,0,0.22)] hover:border-[#22f0ff]/40 hover:text-[#dff7ff];
 }
 
+.services-card {
+	position: relative;
+	overflow: hidden;
+}
+
+.services-card::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background: linear-gradient(180deg, rgba(34, 240, 255, 0.05), transparent 42%);
+	opacity: 0.9;
+}
+
+.services-card-inner {
+	opacity: 0;
+	animation: services-card-rise 680ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+	animation-delay: var(--card-delay, 0ms);
+	will-change: transform, opacity;
+}
+
+@keyframes services-card-rise {
+	from {
+		opacity: 0;
+		transform: translateY(18px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 .logo-pattern-bg {
 	background-color: #06101f;
 
@@ -169,5 +202,10 @@ img {
 	.button-primary:hover,
 	.button-secondary:hover {
 		transform: none;
+	}
+
+	.services-card-inner {
+		opacity: 1;
+		animation: none;
 	}
 }
