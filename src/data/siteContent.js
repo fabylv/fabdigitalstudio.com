@@ -1,33 +1,29 @@
-import heroPreview from '../assets/fabdigitalstudio-hero-preview.svg';
-
 export const navigation = [
 	{ label: 'Services', href: '#services' },
-	{ label: 'Capabilities', href: '#work' },
 	{ label: 'Why Us', href: '#why-us' },
-	{ label: 'Process', href: '#process' },
 	{ label: 'Contact', href: '#contact' }
 ];
 
+export const legalNavigation = [
+	{ label: 'Home', href: '/' },
+	{ label: 'Privacy', href: '/privacy' },
+	{ label: 'Terms', href: '/terms' }
+];
+
 export const heroContent = {
-	eyebrow: 'Design. Development. Performance.',
-	title: 'Modern websites that don’t just look good — they stand out.',
+	eyebrow: 'WE BUILD DIGITAL EXPERIENCES',
+	title: 'Building Digital Experiences That Drive Results',
 	description:
-		'We build fast, polished websites with personality—designed to elevate your brand, build trust, and make a stronger first impression.',
+		'We design and build high-performing websites that help service businesses look more credible, communicate clearly, and turn more visitors into inquiries.',
 	primaryCta: { label: 'Start Your Project', href: '#contact' },
-	secondaryCta: { label: 'See Our Process', href: '#process' },
-	stats: [
-		{ label: 'Launch-ready builds', value: 'Fast' },
-		{ label: 'Focused on conversion', value: 'Clear' },
-		{ label: 'Built for growth', value: 'Scalable' }
-	],
-	image: heroPreview
+	secondaryCta: { label: 'Why FabDigital', href: '#why-us' }
 };
 
 export const servicesIntro = {
 	eyebrow: 'Services',
 	title: 'The website work most businesses actually need.',
 	description:
-		'A practical service stack designed to improve credibility, clarity, and performance without adding unnecessary complexity.'
+		'Focused website services designed to improve credibility, clarity, and conversions without bloated scope or unnecessary extras.'
 };
 
 export const services = [
@@ -49,61 +45,15 @@ export const services = [
 	{
 		title: 'Accessibility & Usability',
 		description:
-			'Improve readability, navigation, structure, and inclusive design so your site is easier to use for more people across every device.'
-	}
-];
-
-export const workIntro = {
-	eyebrow: 'What I Can Do',
-	title: 'Whether you need a brand new site, a redesign, or a cleanup, I can help.',
-	description:
-		'This section is less about old portfolio pieces and more about the kinds of website transformations I can create for you right now.'
-};
-
-export const selectedWork = [
-	{
-		title: 'Fresh Website Build',
-		description:
-			'For businesses that need a professional online presence from scratch with a clear structure and a polished visual feel.',
-		highlights: ['Custom layout direction', 'Modern responsive design', 'Built for trust and clarity']
-	},
-	{
-		title: 'Website Redesign',
-		description:
-			'For outdated websites that need a stronger first impression, cleaner messaging, and a more modern visual identity.',
-		highlights: ['Visual refresh', 'Improved hierarchy', 'Cleaner user flow']
-	},
-	{
-		title: 'Landing Page Creation',
-		description:
-			'For launches, campaigns, offers, or lead generation pages that need to feel focused, clear, and persuasive.',
-		highlights: ['Offer-focused structure', 'Higher conversion intent', 'Fast launch turnaround']
-	},
-	{
-		title: 'Website Cleanup',
-		description:
-			'For websites that already exist but feel cluttered, inconsistent, or visually outdated and need to be tightened up.',
-		highlights: ['Content cleanup', 'Layout refinement', 'Visual consistency']
-	},
-	{
-		title: 'Mobile + Speed Polish',
-		description:
-			'For websites that work, but still need better responsiveness, smoother interaction, and stronger performance on mobile.',
-		highlights: ['Responsive fixes', 'Performance improvements', 'Better user experience']
-	},
-	{
-		title: 'Ongoing Website Updates',
-		description:
-			'For businesses that want someone they can rely on for edits, refreshes, improvements, and continued site care over time.',
-		highlights: ['Content updates', 'Design refreshes', 'Continuous improvement']
+		'Improve readability, navigation, structure, and inclusive design so your site is easier to use for more people across every device.'
 	}
 ];
 
 export const valueIntro = {
 	eyebrow: 'Why FabDigital Studio',
-	title: 'A sharper digital process, built for today’s clients.',
+	title: 'A sharper process for modern website work.',
 	description:
-		'FabDigital Studio blends strategy, modern front-end execution, and AI-assisted speed to create websites that feel current, clear, and confidently professional.'
+		'FabDigital Studio combines strategy, modern front-end execution, and a streamlined workflow to create websites that feel current, clear, and confidently professional.'
 };
 
 export const valuePoints = [
@@ -125,45 +75,15 @@ export const valuePoints = [
 	{
 		title: 'Fast, focused delivery',
 		description:
-			'Clear scope, organized process, and practical execution keep projects moving without the usual drag.'
-	}
-];
-
-export const processIntro = {
-	eyebrow: 'Process',
-	title: 'A clear path from idea to launch.',
-	description:
-		'Simple, focused steps that keep the project moving and make collaboration easy for busy clients.'
-};
-
-export const processSteps = [
-	{
-		title: 'Discovery',
-		description:
-			'We learn your business, your audience, and what the site actually needs to accomplish.'
-	},
-	{
-		title: 'Design',
-		description:
-			'We shape the layout, content hierarchy, and visual direction around clarity and trust.'
-	},
-	{
-		title: 'Build',
-		description:
-			'We develop the site with clean front-end structure and a strong focus on performance.'
-	},
-	{
-		title: 'Launch',
-		description:
-			'We polish, test, and deliver a site that is ready to represent your business confidently.'
+		'Clear scope, organized process, and practical execution keep projects moving without the usual drag.'
 	}
 ];
 
 export const ctaContent = {
 	eyebrow: 'Start Your Project',
-	title: 'Ready for a website that feels sharper, faster, and more professional?',
+	title: 'Ready for a website that feels clear, current, and built to convert?',
 	description:
-		'Let’s build a digital presence that reflects the quality of your business and helps you win more trust online.',
+		'Let’s create a digital presence that reflects the quality of your business and gives people a clear reason to reach out.',
 	action: { label: 'Start Your Project', href: '#contact' }
 };
 
@@ -171,7 +91,7 @@ export const contactDetails = {
 	eyebrow: 'Contact',
 	title: 'Tell me about your project',
 	description:
-		'Share what you need, where your current site stands, and what you want your next version to do better.',
+		'Share what you need, what your current site is missing, and what a better version should help you do.',
 	email: 'faby@fabdigitalstudio.com',
 	projectTypes: [
 		'New website',
@@ -190,8 +110,125 @@ export const footerContent = {
 };
 
 export const footerLinks = [
-	{ label: 'Services', href: '#services' },
-	{ label: 'Capabilities', href: '#work' },
-	{ label: 'Process', href: '#process' },
-	{ label: 'Contact', href: '#contact' }
+	{ label: 'Services', href: '/#services' },
+	{ label: 'Why Us', href: '/#why-us' },
+	{ label: 'Contact', href: '/#contact' },
+	{ label: 'Privacy', href: '/privacy' },
+	{ label: 'Terms', href: '/terms' }
 ];
+
+export const privacyPolicyContent = {
+	eyebrow: 'Privacy Policy',
+	title: 'Privacy Policy',
+	description:
+		'This starter policy is written for a Florida-based U.S. studio site and explains what information FabDigital Studio may collect through this website, how that information may be used, and how to get in touch with questions about your information. It should still be reviewed and tailored for your exact business practices.',
+	lastUpdated: 'May 1, 2026',
+	sections: [
+		{
+			title: 'Information We May Collect',
+			paragraphs: [
+				'When you contact FabDigital Studio through this website, we may collect the information you choose to provide, such as your name, email address, business name, project type, timeline, budget details, and the message you submit.',
+				'This website does not currently offer account creation, user logins, or online checkout. We may also collect limited technical information such as browser, device, and server-log data used to operate, secure, and improve the site.'
+			]
+		},
+		{
+			title: 'How Information May Be Used',
+			items: [
+				'To respond to inquiries and discuss potential projects',
+				'To provide proposals, client communication, project follow-up, or client onboarding',
+				'To operate, maintain, secure, and improve the website',
+				'To comply with legal obligations or protect against misuse of the site'
+			]
+		},
+		{
+			title: 'How Information May Be Shared',
+			paragraphs: [
+				'FabDigital Studio does not sell personal information through this website. Inquiry details may be processed through trusted service providers only when reasonably necessary to operate the site, transmit email, receive contact-form submissions, or support business operations.',
+				'Information may also be disclosed if required by law, legal process, or to protect rights, safety, or the integrity of the business and website.'
+			]
+		},
+		{
+			title: 'Retention and Security',
+			paragraphs: [
+				'Information may be kept for as long as reasonably necessary to respond to inquiries, maintain records, support projects, resolve disputes, or meet legal and operational obligations.',
+				'FabDigital Studio uses reasonable measures to protect information, but no website, email transmission, or storage method can be guaranteed completely secure.'
+			]
+		},
+		{
+			title: 'Your Choices',
+			paragraphs: [
+				'You may contact FabDigital Studio to ask about the information you have submitted, request updates or deletion where appropriate, or ask questions about this policy. Any privacy rights available to you may depend on your location and the law that applies to your request.'
+			]
+		},
+		{
+			title: 'Children and Contact',
+			paragraphs: ['This website is not intended for children.'],
+			contactLead: 'For privacy questions, contact',
+			contactEmail: 'faby@fabdigitalstudio.com'
+		}
+	]
+};
+
+export const termsContent = {
+	eyebrow: 'Terms of Service',
+	title: 'Terms of Service',
+	description:
+		'These starter terms are intended to set a practical baseline for a Florida-based U.S. studio site and for inquiries submitted through it. They should still be reviewed and tailored to match your actual proposal, payment, scope, and contract practices.',
+	lastUpdated: 'May 1, 2026',
+	sections: [
+		{
+			title: 'Use of This Website',
+			paragraphs: [
+				'By using this website, you agree to use it only for lawful purposes and in a way that does not interfere with the website, its security, or other visitors. FabDigital Studio may update, suspend, or change the site at any time without notice.'
+			]
+		},
+		{
+			title: 'Project Inquiries and Proposals',
+			paragraphs: [
+				'Submitting an inquiry through the website does not create a client relationship, guarantee availability, or guarantee that FabDigital Studio will accept a project. Any services, scope, pricing, timelines, deliverables, revisions, and payment terms are subject to a separate written agreement, proposal, or invoice.'
+			]
+		},
+		{
+			title: 'Client Responsibilities',
+			items: [
+				'Provide accurate and timely information',
+				'Ensure you have the rights to any content, images, logos, or materials you supply',
+				'Review deliverables and approvals within agreed timelines',
+				'Use final deliverables in compliance with applicable laws and third-party terms'
+			]
+		},
+		{
+			title: 'Intellectual Property',
+			paragraphs: [
+				'Unless otherwise stated in a written agreement, FabDigital Studio retains ownership of its pre-existing materials, workflows, design systems, and development methods. Ownership or license rights for project deliverables should be defined in the specific client agreement governing the work.'
+			]
+		},
+		{
+			title: 'Third-Party Services',
+			paragraphs: [
+				'Projects and website inquiries may involve third-party tools, hosting providers, fonts, plugins, email services, analytics tools, or integrations. FabDigital Studio is not responsible for outages, policy changes, pricing changes, or actions taken by third-party providers.'
+			]
+		},
+		{
+			title: 'Disclaimers and Limitation of Liability',
+			paragraphs: [
+				'This website and its content are provided on an "as is" and "as available" basis without warranties of any kind, to the extent permitted by law. FabDigital Studio does not guarantee specific business outcomes, rankings, leads, conversions, or uninterrupted website availability.',
+				'To the extent permitted by law, FabDigital Studio will not be liable for indirect, incidental, special, or consequential damages arising from use of the website or reliance on its content. Project-specific liability terms should be addressed in the governing client agreement.'
+			]
+		},
+		{
+			title: 'Governing Law',
+			paragraphs: [
+				'These website terms are governed by the laws of the State of Florida, without regard to conflict-of-law principles. Any project-specific agreement may set different dispute, venue, or governing-law terms if both parties agree to them in writing.'
+			]
+		},
+		{
+			title: 'Changes and Contact',
+			paragraphs: [
+				'FabDigital Studio may update these terms from time to time by posting a revised version on the website. Continued use of the website after changes are posted indicates acceptance of the updated terms.'
+			],
+			contactLead: 'For questions about these terms, contact',
+			contactEmail: 'faby@fabdigitalstudio.com'
+		}
+	]
+};

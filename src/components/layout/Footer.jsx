@@ -4,7 +4,7 @@ import { footerContent } from '../../data/siteContent';
 
 export default function Footer({ links }) {
 	return (
-		<footer className="logo-pattern-bg border-t border-white/8 backdrop-blur">
+		<footer className="logo-pattern-bg border-t border-[#18d7ff]/10 backdrop-blur">
 			<Container>
 				<div className="flex flex-col gap-6 py-4 sm:flex-row sm:items-center sm:justify-between">
 					<div>
@@ -14,12 +14,12 @@ export default function Footer({ links }) {
 							src={logo}
 						/>
 						<p className="mt-3 text-sm text-white/60">{footerContent.tagline}</p>
-						<div className="my-4 h-px w-40 bg-linear-to-r from-amber-300 to-cyan-400" />
+						<div className="my-4 h-px w-40 bg-linear-to-r from-[#18d7ff] via-[#0a7cff] to-[#ff6a00]" />
 					</div>
 
 					<nav aria-label="Footer" className="flex flex-wrap gap-5 text-sm text-white/60">
 						{links.map((link) => (
-							<a key={link.label} className="transition hover:text-white" href={link.href}>
+							<a key={link.label} className="transition hover:text-[#dff7ff]" href={link.href}>
 								{link.label}
 							</a>
 						))}

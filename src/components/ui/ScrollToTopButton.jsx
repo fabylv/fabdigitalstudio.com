@@ -22,7 +22,7 @@ export default function ScrollToTopButton() {
 	return (
 		<button
 			aria-label="Back to top"
-			className={`fixed bottom-5 right-5 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/12 bg-slate-950/85 text-white shadow-[0_18px_40px_rgba(2,8,23,0.35)] backdrop-blur transition duration-200 hover:-translate-y-0.5 hover:border-amber-300/40 hover:text-amber-200 sm:bottom-6 sm:right-6 sm:h-14 sm:w-14 ${
+			className={`fixed bottom-5 right-5 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-[#0b1628]/90 text-[#f5f1e8] shadow-[0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur transition duration-200 hover:-translate-y-0.5 hover:border-[#ffb300]/40 hover:text-[#dff7ff] sm:bottom-6 sm:right-6 sm:h-14 sm:w-14 ${
 				isVisible ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none translate-y-3 opacity-0'
 			}`}
 			onClick={scrollToTop}
