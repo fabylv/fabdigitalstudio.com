@@ -14,7 +14,7 @@ export default function SelectedWork({ projects }) {
 	];
 
 	return (
-		<section id="work" className="relative py-20 sm:py-24">
+		<section id="work" className="section-shell">
 			<Container>
 				<SectionTitle
 					eyebrow={workIntro.eyebrow}

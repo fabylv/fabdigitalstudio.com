@@ -57,6 +57,14 @@ img {
 	@apply min-h-screen;
 }
 
+.section-shell {
+	@apply relative py-20 sm:py-24;
+}
+
+.section-shell-end {
+	@apply relative pb-20 sm:pb-24;
+}
+
 .btn {
 	@apply rounded-full text-sm font-semibold transition duration-200 ease-out;
 }

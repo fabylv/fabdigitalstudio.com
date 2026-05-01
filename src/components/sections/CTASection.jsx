@@ -3,7 +3,7 @@ import Container from '../ui/Container';
 
 export default function CTASection({ content }) {
 	return (
-		<section className="py-20 sm:py-24">
+		<section className="section-shell">
 			<Container>
 				<div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-[#07111f] via-[#0a1f3d] to-[#0a7cff] px-6 py-12 text-white shadow-2xl sm:px-10 sm:py-14 lg:flex lg:items-center lg:justify-between lg:gap-10">
 					<div className="absolute -left-10 top-0 h-40 w-40 rounded-full bg-white/10 blur-3xl" />

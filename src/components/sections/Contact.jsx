@@ -77,7 +77,7 @@ export default function Contact({ content }) {
 	};
 
 	return (
-		<section className="relative pb-20 sm:pb-24">
+		<section className="section-shell-end">
 			<div className="absolute top-8" id="contact" />
 			<Container>
 				<div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">

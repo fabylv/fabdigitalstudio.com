@@ -12,7 +12,7 @@ export default function Services({ services }) {
 	];
 
 	return (
-		<section id="services" className="relative py-20 sm:py-24">
+		<section id="services" className="section-shell">
 			<Container>
 				<SectionTitle
 					eyebrow={servicesIntro.eyebrow}
