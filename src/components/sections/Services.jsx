@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Accessibility, LayoutTemplate, MonitorSmartphone, PencilRuler } from 'lucide-react';
+import { PersonStanding, LayoutTemplate, MonitorSmartphone, PencilRuler } from 'lucide-react';
 import Container from '../ui/Container';
 import GlassCard from '../ui/GlassCard';
 import SectionTitle from '../ui/SectionTitle';
@@ -9,7 +9,7 @@ const serviceIcons = {
 	'Website Development': MonitorSmartphone,
 	'Website Redesigns': PencilRuler,
 	'Landing Pages': LayoutTemplate,
-	'Accessibility & Usability': Accessibility
+	'Accessibility & Usability': PersonStanding
 };
 
 export default function Services({ services }) {
