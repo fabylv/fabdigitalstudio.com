@@ -10,7 +10,7 @@ export default function Hero({ content }) {
 			<div className="pointer-events-none absolute right-[10%] top-16 h-72 w-72 rounded-full bg-[#0a7cff]/12 blur-3xl" />
 
 			<Container>
-				<div className="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(420px,0.95fr)] lg:gap-10">
+				<div className="mx-auto grid max-w-[1400px] items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(420px,0.95fr)] lg:gap-10">
 					<div className="text-center lg:text-left">
 						<span className="mb-3 inline-flex rounded-full border border-[#ffb300]/30 bg-[#ffb300]/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#dff7ff]">
 							{content.eyebrow}
@@ -68,7 +68,7 @@ export default function Hero({ content }) {
 					</div>
 				</div>
 
-				<dl className="mx-auto mt-8 grid max-w-6xl gap-3 sm:grid-cols-3 lg:mt-10">
+				<dl className="mx-auto mt-8 grid max-w-[1400px] gap-3 sm:grid-cols-3 lg:mt-10">
 					{content.stats.map((stat) => (
 						<div
 							key={stat.label}
