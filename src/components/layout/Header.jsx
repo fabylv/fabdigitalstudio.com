@@ -8,7 +8,7 @@ export default function Header({ navigation }) {
 		() => navigation.map((item) => item.href).filter((href) => href.startsWith('#')),
 		[navigation]
 	);
-	const [activeHref, setActiveHref] = useState(sectionLinks[0] ?? '');
+	const [activeHref, setActiveHref] = useState('');
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	useEffect(() => {
@@ -20,7 +20,7 @@ export default function Header({ navigation }) {
 				return;
 			}
 
-			let currentHref = sectionLinks[0];
+			let currentHref = '';
 			const offset = 150;
 
 			sectionLinks.forEach((href) => {
