@@ -156,24 +156,6 @@ export default function Hero({ content }) {
 						</div>
 					</div>
 				</div>
-
-				<dl className="mt-8 grid w-full gap-3 sm:grid-cols-3 lg:mt-10">
-					{content.stats.map((stat, index) => (
-						<div
-							key={stat.label}
-							className={`rounded-xl border px-4 py-4 text-center backdrop-blur-xl ${
-								index === 0
-									? 'border-[#49a7ff]/18 bg-[#0a7cff]/12'
-									: index === 1
-										? 'border-[#22f0ff]/18 bg-[#22f0ff]/8'
-										: 'border-[#ff6a00]/18 bg-[#ff6a00]/8'
-							}`}
-						>
-							<dd className="text-xl font-semibold text-white">{stat.value}</dd>
-							<dt className="mt-1 text-xs text-white/62">{stat.label}</dt>
-						</div>
-					))}
-				</dl>
 			</Container>
 		</section>
 	);

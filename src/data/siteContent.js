@@ -10,12 +10,7 @@ export const heroContent = {
 	description:
 		'We design and develop high-performing websites that help brands stand out, build trust, and grow.',
 	primaryCta: { label: 'Start Your Project', href: '#contact' },
-	secondaryCta: { label: 'Why FabDigital', href: '#why-us' },
-	stats: [
-		{ label: 'Launch-ready builds', value: 'Fast' },
-		{ label: 'Focused on conversion', value: 'Clear' },
-		{ label: 'Built for growth', value: 'Scalable' }
-	]
+	secondaryCta: { label: 'Why FabDigital', href: '#why-us' }
 };
 
 export const servicesIntro = {
