@@ -1,18 +1,18 @@
 import Button from '../ui/Button';
 import Container from '../ui/Container';
 
-export default function Hero({ content }) {
-	const previewSteps = ['Homepage refresh', 'Clearer messaging', 'Conversion-focused CTA'];
-	const previewMetrics = [
-		{ label: 'Launch-ready', value: 'Fast' },
-		{ label: 'Mobile-first', value: 'Responsive' },
-		{ label: 'Goal', value: 'More inquiries' }
-	];
+const previewSteps = ['Homepage refresh', 'Clearer messaging', 'Conversion-focused CTA'];
+const previewMetrics = [
+	{ label: 'Launch-ready', value: 'Fast' },
+	{ label: 'Mobile-first', value: 'Responsive' },
+	{ label: 'Goal', value: 'More inquiries' }
+];
 
+export default function Hero({ content }) {
 	return (
-		<section className="relative overflow-hidden pb-10 pt-8 sm:pb-20 sm:pt-10 mb-10" id="top">
+		<section className="relative mb-10 overflow-hidden pb-10 pt-8 sm:pb-20 sm:pt-10" id="top">
 			<div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(34,240,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,240,255,0.05)_1px,transparent_1px)] bg-size-[28px_28px] opacity-50" />
- 			<div className="pointer-events-none absolute inset-0 bg-[#06101f]/65" />
+			<div className="pointer-events-none absolute inset-0 bg-[#06101f]/65" />
 			<div className="pointer-events-none absolute inset-x-0 top-0 h-136 bg-linear-to-b from-white/6 via-transparent to-transparent" />
 			<div className="pointer-events-none absolute inset-x-0 top-0 h-128 bg-radial from-[#0a7cff]/22 via-transparent to-transparent opacity-95" />
 			<div className="pointer-events-none absolute left-[-4%] top-24 h-72 w-72 rounded-full bg-[#22f0ff]/18 blur-3xl" />
@@ -22,13 +22,11 @@ export default function Hero({ content }) {
 
 			<Container>
 				<div className="grid w-full items-center gap-10 lg:grid-cols-[minmax(0,1.12fr)_minmax(420px,0.88fr)] lg:gap-12 xl:gap-16">
-	
 					<div className="relative text-center lg:text-left">
 						<div className="pointer-events-none absolute -left-8 top-10 hidden h-28 w-28 rounded-full bg-[#22f0ff]/12 blur-3xl lg:block" />
 						<span className="mb-4 inline-flex rounded-full border border-[#22f0ff]/28 bg-[#0a7cff]/14 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#dff7ff] shadow-[0_0_24px_rgba(34,240,255,0.16)] sm:text-xs">
 							{content.eyebrow}
 						</span>
-
 
 						<h1 className="max-w-4xl text-3xl font-semibold tracking-tight text-white sm:text-[2.85rem] md:text-[3.2rem] lg:text-6xl lg:leading-[1.2] xl:text-7xl">
 							<span className="bg-linear-to-r from-[#49a7ff] via-[#22f0ff] to-[#ff6a00] bg-clip-text text-transparent">

@@ -65,8 +65,6 @@ img {
 	@apply relative py-5 sm:py-10;
 }
 
-
-
 .btn {
 	@apply rounded-full text-sm font-semibold transition duration-200 ease-out;
 }
@@ -139,29 +137,20 @@ img {
 		0 8px 14px rgba(0, 0, 0, 0.5);
 }
 
-
 .button-secondary {
 	@apply border border-[#22f0ff]/20 bg-white/5 text-[#f2f7fb] shadow-[0_10px_30px_rgba(0,0,0,0.22)] hover:border-[#22f0ff]/40 hover:text-[#dff7ff];
 }
 
-.chip {
-	@apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-2.5 py-1.5 text-xs font-medium text-white/75 shadow-[0_12px_30px_rgba(2,8,23,0.20)] backdrop-blur sm:px-3 sm:py-2 sm:text-sm;
-}
-
-.chip-accent {
-	@apply inline-flex items-center gap-2 rounded-full border border-[#22f0ff]/22 bg-[#0a7cff]/12 px-2.5 py-1.5 text-xs font-medium text-[#dff7ff] shadow-[0_12px_30px_rgba(34,240,255,0.12)] backdrop-blur sm:px-3 sm:py-2 sm:text-sm;
-}
 .logo-pattern-bg {
-  background-color: #06101f;
+	background-color: #06101f;
 
-  background-image:
-	linear-gradient(rgba(34,240,255,0.05) 1px, transparent 1px),
-	linear-gradient(90deg, rgba(34,240,255,0.05) 1px, transparent 1px),
-	linear-gradient(180deg, rgba(10,124,255,0.1), rgba(6,16,31,0));
+	background-image:
+		linear-gradient(rgba(34,240,255,0.05) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(34,240,255,0.05) 1px, transparent 1px),
+		linear-gradient(180deg, rgba(10,124,255,0.1), rgba(6,16,31,0));
 
 	background-size: 26px 26px, 26px 26px, 100% 100%;
 }
-
 
 @media (prefers-reduced-motion: reduce) {
 	html {

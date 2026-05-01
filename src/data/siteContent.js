@@ -39,41 +39,7 @@ export const services = [
 	{
 		title: 'Accessibility & Usability',
 		description:
-			'Improve readability, navigation, structure, and inclusive design so your site is easier to use for more people across every device.'
-	}
-];
-
-export const workIntro = {
-	eyebrow: 'Capabilities',
-	title: 'The kinds of outcomes your website can deliver.',
-	description:
-		'Instead of repeating the service list, this section shows the practical results we can help create for your business.'
-};
-
-export const selectedWork = [
-	{
-		title: 'Stronger First Impression',
-		description:
-			'For businesses that need a site to feel more credible, more current, and more aligned with the quality of what they offer.',
-		highlights: ['Sharper visual direction', 'More premium presence', 'Stronger trust signals']
-	},
-	{
-		title: 'Clearer Messaging',
-		description:
-			'For websites that already have the right services, but do not explain the offer clearly enough or guide visitors well.',
-		highlights: ['Clearer hierarchy', 'Better page flow', 'Stronger calls to action']
-	},
-	{
-		title: 'Better Mobile Experience',
-		description:
-			'For websites that need a cleaner, faster, more usable experience across phones, tablets, and modern browsers.',
-		highlights: ['Responsive improvements', 'Faster-feeling layouts', 'Smoother usability']
-	},
-	{
-		title: 'More Confident Online Presence',
-		description:
-			'For brands that want a website that feels polished enough to support outreach, referrals, ads, and business growth.',
-		highlights: ['More polished presentation', 'Brand consistency', 'Built to scale over time']
+		'Improve readability, navigation, structure, and inclusive design so your site is easier to use for more people across every device.'
 	}
 ];
 
@@ -103,37 +69,7 @@ export const valuePoints = [
 	{
 		title: 'Fast, focused delivery',
 		description:
-			'Clear scope, organized process, and practical execution keep projects moving without the usual drag.'
-	}
-];
-
-export const processIntro = {
-	eyebrow: 'Process',
-	title: 'A clear path from idea to launch.',
-	description:
-		'Simple, focused steps that keep the project moving and make collaboration easy for busy clients.'
-};
-
-export const processSteps = [
-	{
-		title: 'Discovery',
-		description:
-			'We learn your business, your audience, and what the site actually needs to accomplish.'
-	},
-	{
-		title: 'Design',
-		description:
-			'We shape the layout, content hierarchy, and visual direction around clarity and trust.'
-	},
-	{
-		title: 'Build',
-		description:
-			'We develop the site with clean front-end structure and a strong focus on performance.'
-	},
-	{
-		title: 'Launch',
-		description:
-			'We polish, test, and deliver a site that is ready to represent your business confidently.'
+		'Clear scope, organized process, and practical execution keep projects moving without the usual drag.'
 	}
 ];
 
