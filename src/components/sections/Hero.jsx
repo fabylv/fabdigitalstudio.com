@@ -10,7 +10,7 @@ export default function Hero({ content }) {
 	];
 
 	return (
-		<section className="relative overflow-hidden pb-10 pt-8 sm:pb-12 sm:pt-10" id="top">
+		<section className="relative overflow-hidden pb-10 pt-8 sm:pb-20 sm:pt-10 mb-10" id="top">
 			<div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(34,240,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,240,255,0.05)_1px,transparent_1px)] bg-size-[28px_28px] opacity-50" />
  			<div className="pointer-events-none absolute inset-0 bg-[#06101f]/65" />
 			<div className="pointer-events-none absolute inset-x-0 top-0 h-136 bg-linear-to-b from-white/6 via-transparent to-transparent" />

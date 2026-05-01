@@ -62,7 +62,7 @@ img {
 }
 
 .section-shell {
-	@apply relative py-10 sm:py-20;
+	@apply relative py-5 sm:py-10;
 }
 
 
