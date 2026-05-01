@@ -56,6 +56,7 @@ export default function App() {
 				navigation={isLegalPage ? legalNavigation : navigation}
 				logoHref={isLegalPage ? '/' : '#top'}
 				ctaHref={isLegalPage ? '/#contact' : '#contact'}
+				currentPath={currentPath}
 			/>
 
 			<main id="main-content" tabIndex="-1">

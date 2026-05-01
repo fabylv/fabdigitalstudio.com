@@ -7,7 +7,8 @@ export default function Header({
 	navigation,
 	logoHref = '#top',
 	ctaHref = '#contact',
-	ctaLabel = 'Start Your Project'
+	ctaLabel = 'Start Your Project',
+	currentPath = '/'
 }) {
 	const sectionLinks = useMemo(
 		() => navigation.map((item) => item.href).filter((href) => href.startsWith('#')),
@@ -17,8 +18,12 @@ export default function Header({
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	useEffect(() => {
+		if (!sectionLinks.length) {
+			setActiveHref(currentPath);
+			return undefined;
+		}
+
 		const handleScroll = () => {
-			if (!sectionLinks.length) return;
 
 			if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 120) {
 				setActiveHref(sectionLinks[sectionLinks.length - 1]);
@@ -49,7 +54,7 @@ export default function Header({
 			window.removeEventListener('scroll', handleScroll);
 			window.removeEventListener('resize', handleScroll);
 		};
-	}, [sectionLinks]);
+	}, [currentPath, sectionLinks]);
 
 	useEffect(() => {
 		if (!menuOpen) return undefined;
