@@ -4,26 +4,26 @@ import Container from '../ui/Container';
 export default function Hero({ content }) {
 	return (
 		<section className="relative overflow-hidden pb-10 pt-8 sm:pb-12 sm:pt-10" id="top">
-			<div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(199,165,107,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(199,165,107,0.035)_1px,transparent_1px)] bg-size-[28px_28px] opacity-40" />
+			<div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(34,240,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,240,255,0.05)_1px,transparent_1px)] bg-size-[28px_28px] opacity-50" />
  			<div className="pointer-events-none absolute inset-0 bg-[#06101f]/65" />
 			<div className="pointer-events-none absolute inset-x-0 top-0 h-136 bg-linear-to-b from-white/6 via-transparent to-transparent" />
-			<div className="pointer-events-none absolute inset-x-0 top-0 h-128 bg-radial from-[#0a7cff]/18 via-transparent to-transparent opacity-90" />
-			<div className="pointer-events-none absolute left-[-4%] top-24 h-72 w-72 rounded-full bg-[#18d7ff]/14 blur-3xl" />
-			<div className="pointer-events-none absolute left-1/2 top-14 h-72 w-72 -translate-x-1/2 rounded-full bg-[#ffb300]/14 blur-3xl" />
-			<div className="pointer-events-none absolute right-[6%] top-12 h-88 w-88 rounded-full bg-[#ff6a00]/14 blur-3xl" />
-			<div className="pointer-events-none absolute right-[18%] top-28 h-64 w-64 rounded-full bg-[#0a7cff]/16 blur-3xl" />
+			<div className="pointer-events-none absolute inset-x-0 top-0 h-128 bg-radial from-[#0a7cff]/22 via-transparent to-transparent opacity-95" />
+			<div className="pointer-events-none absolute left-[-4%] top-24 h-72 w-72 rounded-full bg-[#22f0ff]/18 blur-3xl" />
+			<div className="pointer-events-none absolute left-1/2 top-14 h-72 w-72 -translate-x-1/2 rounded-full bg-[#0a7cff]/10 blur-3xl" />
+			<div className="pointer-events-none absolute right-[6%] top-12 h-88 w-88 rounded-full bg-[#ff6a00]/16 blur-3xl" />
+			<div className="pointer-events-none absolute right-[18%] top-28 h-64 w-64 rounded-full bg-[#22f0ff]/18 blur-3xl" />
 
 			<Container>
 				<div className="grid w-full items-center gap-10 lg:grid-cols-[minmax(0,1.12fr)_minmax(420px,0.88fr)] lg:gap-12 xl:gap-16">
 	
 					<div className="relative text-center lg:text-left">
-						<div className="pointer-events-none absolute -left-8 top-10 hidden h-28 w-28 rounded-full bg-[#18d7ff]/10 blur-3xl lg:block" />
-						<span className="mb-4 inline-flex rounded-full border border-[#22b6ff]/30 bg-[#0a7cff]/12 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#dff7ff] shadow-[0_0_24px_rgba(10,124,255,0.14)] sm:text-xs">
+						<div className="pointer-events-none absolute -left-8 top-10 hidden h-28 w-28 rounded-full bg-[#22f0ff]/12 blur-3xl lg:block" />
+						<span className="mb-4 inline-flex rounded-full border border-[#22f0ff]/28 bg-[#0a7cff]/14 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#dff7ff] shadow-[0_0_24px_rgba(34,240,255,0.16)] sm:text-xs">
 							{content.eyebrow}
 						</span>
 
 						<h1 className="max-w-4xl text-3xl font-semibold tracking-tight text-white sm:text-[2.85rem] md:text-[3.2rem] lg:text-6xl lg:leading-[0.98] xl:text-7xl">
-							<span className="bg-linear-to-r from-[#0a7cff] via-[#22b6ff] to-[#ff6a00] bg-clip-text text-transparent">
+							<span className="bg-linear-to-r from-[#49a7ff] via-[#22f0ff] to-[#ff6a00] bg-clip-text text-transparent">
 								{content.title}
 							</span>
 						</h1>
@@ -41,21 +41,21 @@ export default function Hero({ content }) {
 
 						<div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-medium uppercase tracking-[0.18em] text-white/50 lg:justify-start">
 							<span>AI-assisted workflow</span>
-							<span className="hidden h-1 w-1 rounded-full bg-[#0a7cff]/70 sm:inline-block" />
+							<span className="hidden h-1 w-1 rounded-full bg-[#22f0ff]/70 sm:inline-block" />
 							<span>Redesigns + cleanups</span>
 							<span className="hidden h-1 w-1 rounded-full bg-[#ff6a00]/70 sm:inline-block" />
 							<span>Fast performance</span>
-							<span className="hidden h-1 w-1 rounded-full bg-[#18d7ff]/60 sm:inline-block" />
+							<span className="hidden h-1 w-1 rounded-full bg-[#49a7ff]/60 sm:inline-block" />
 							<span className="text-[#dff7ff]/80">Built to stand out</span>
 						</div>
 					</div>
 
 					<div className="relative">
-						<div className="pointer-events-none absolute -left-8 top-10 h-48 w-48 rounded-full bg-[#0a7cff]/22 blur-3xl" />
+						<div className="pointer-events-none absolute -left-8 top-10 h-48 w-48 rounded-full bg-[#22f0ff]/18 blur-3xl" />
 						<div className="pointer-events-none absolute -right-6 bottom-10 h-48 w-48 rounded-full bg-[#ff6a00]/20 blur-3xl" />
-						<div className="pointer-events-none absolute inset-x-10 top-0 h-28 bg-radial from-[#18d7ff]/18 to-transparent blur-3xl" />
-						<div className="relative overflow-hidden rounded-4xl border border-white/12 bg-[#0b1628]/88 p-3 shadow-[0_30px_90px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:p-4 lg:p-5">
-							<div className="absolute inset-0 bg-linear-to-br from-[#0a7cff]/8 via-transparent to-[#ff6a00]/8" />
+						<div className="pointer-events-none absolute inset-x-10 top-0 h-28 bg-radial from-[#22f0ff]/24 to-transparent blur-3xl" />
+						<div className="relative overflow-hidden rounded-4xl border border-[#22f0ff]/12 bg-[#0b1628]/88 p-3 shadow-[0_30px_90px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:p-4 lg:p-5">
+							<div className="absolute inset-0 bg-linear-to-br from-[#0a7cff]/10 via-transparent to-[#22f0ff]/10" />
 							<div className="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-white/8 to-transparent" />
 							<div className="relative mb-3 flex items-center px-2 sm:px-3">
 								<div className="flex gap-2">
@@ -65,8 +65,8 @@ export default function Hero({ content }) {
 								</div>
 							</div>
 
-							<div className="relative overflow-hidden rounded-[1.75rem] border border-white/12 bg-[#102038] shadow-2xl ring-1 ring-white/6">
-								<div className="pointer-events-none absolute inset-0 bg-linear-to-br from-[#0a7cff]/10 via-transparent to-[#ff6a00]/10" />
+							<div className="relative overflow-hidden rounded-[1.75rem] border border-[#22f0ff]/12 bg-[#102038] shadow-2xl ring-1 ring-[#22f0ff]/8">
+								<div className="pointer-events-none absolute inset-0 bg-linear-to-br from-[#0a7cff]/12 via-transparent to-[#22f0ff]/10" />
 								<img
 									alt="FabDigital Studio homepage preview"
 									className="relative w-full"
@@ -83,9 +83,9 @@ export default function Hero({ content }) {
 							key={stat.label}
 							className={`rounded-xl border px-4 py-4 text-center backdrop-blur-xl ${
 								index === 0
-									? 'border-[#0a7cff]/18 bg-[#0a7cff]/10'
+									? 'border-[#49a7ff]/18 bg-[#0a7cff]/12'
 									: index === 1
-										? 'border-[#18d7ff]/18 bg-white/5'
+										? 'border-[#22f0ff]/18 bg-[#22f0ff]/8'
 										: 'border-[#ff6a00]/18 bg-[#ff6a00]/8'
 							}`}
 						>

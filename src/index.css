@@ -37,9 +37,10 @@ html {
 body {
 	@apply m-0 min-h-screen font-sans text-white antialiased;
 	background:
-		radial-gradient(circle at top left, rgba(10, 124, 255, 0.16), transparent 28%),
-		radial-gradient(circle at top right, rgba(255, 106, 0, 0.14), transparent 26%),
-		linear-gradient(180deg, #06101d 0%, #0b1628 46%, #07111f 100%);
+		radial-gradient(circle at top left, rgba(24, 215, 255, 0.2), transparent 26%),
+		radial-gradient(circle at 82% 10%, rgba(10, 124, 255, 0.22), transparent 24%),
+		radial-gradient(circle at top right, rgba(255, 106, 0, 0.14), transparent 24%),
+		linear-gradient(180deg, #040b16 0%, #091425 44%, #06101d 100%);
 }
 
 a {
@@ -93,27 +94,27 @@ img {
   background-image: linear-gradient(
     135deg,
 	#0a7cff 0%,
-	#18d7ff 34%,
+	#22f0ff 38%,
 	#ff6a00 100%
   );
 
-	box-shadow: 0 12px 30px rgba(10, 124, 255, 0.22), 0 0 24px rgba(255, 106, 0, 0.16);
+	box-shadow: 0 14px 36px rgba(10, 124, 255, 0.26), 0 0 26px rgba(34, 240, 255, 0.18), 0 0 18px rgba(255, 106, 0, 0.12);
 }
 
 .button-primary:hover {
   background-image: linear-gradient(
     135deg,
-	#096de0 0%,
-	#22dcff 34%,
+	#178bff 0%,
+	#51f4ff 38%,
 	#ff7d21 100%
   );
 
-	box-shadow: 0 0 28px rgba(255, 106, 0, 0.24), 0 12px 32px rgba(10, 124, 255, 0.26);
+	box-shadow: 0 0 30px rgba(34, 240, 255, 0.24), 0 0 26px rgba(255, 106, 0, 0.16), 0 14px 34px rgba(10, 124, 255, 0.3);
   transform: translateY(-1px);
 }
 
 .button-secondary {
-	@apply border border-[#18d7ff]/18 bg-white/5 text-[#f2f7fb] shadow-[0_10px_30px_rgba(0,0,0,0.22)] hover:border-[#ff6a00]/40 hover:text-[#ffd9c7];
+	@apply border border-[#22f0ff]/20 bg-white/5 text-[#f2f7fb] shadow-[0_10px_30px_rgba(0,0,0,0.22)] hover:border-[#22f0ff]/40 hover:text-[#dff7ff];
 }
 
 .chip {
@@ -121,16 +122,17 @@ img {
 }
 
 .chip-accent {
-	@apply inline-flex items-center gap-2 rounded-full border border-[#18d7ff]/20 bg-[#0a7cff]/10 px-2.5 py-1.5 text-xs font-medium text-[#dff7ff] shadow-[0_12px_30px_rgba(10,124,255,0.12)] backdrop-blur sm:px-3 sm:py-2 sm:text-sm;
+	@apply inline-flex items-center gap-2 rounded-full border border-[#22f0ff]/22 bg-[#0a7cff]/12 px-2.5 py-1.5 text-xs font-medium text-[#dff7ff] shadow-[0_12px_30px_rgba(34,240,255,0.12)] backdrop-blur sm:px-3 sm:py-2 sm:text-sm;
 }
 .logo-pattern-bg {
   background-color: #06101f;
 
   background-image:
-    linear-gradient(rgba(199,165,107,0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(199,165,107,0.045) 1px, transparent 1px);
+	linear-gradient(rgba(34,240,255,0.05) 1px, transparent 1px),
+	linear-gradient(90deg, rgba(34,240,255,0.05) 1px, transparent 1px),
+	linear-gradient(180deg, rgba(10,124,255,0.1), rgba(6,16,31,0));
 
-  background-size: 26px 26px;
+	background-size: 26px 26px, 26px 26px, 100% 100%;
 }
 
 
