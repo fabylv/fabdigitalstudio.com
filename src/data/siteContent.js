@@ -162,10 +162,9 @@ export const privacyPolicyContent = {
 		},
 		{
 			title: 'Children and Contact',
-			paragraphs: [
-				'This website is not intended for children.',
-				'For privacy questions, contact faby@fabdigitalstudio.com.'
-			]
+			paragraphs: ['This website is not intended for children.'],
+			contactLead: 'For privacy questions, contact',
+			contactEmail: 'faby@fabdigitalstudio.com'
 		}
 	]
 };
@@ -226,9 +225,10 @@ export const termsContent = {
 		{
 			title: 'Changes and Contact',
 			paragraphs: [
-				'FabDigital Studio may update these terms from time to time by posting a revised version on the website. Continued use of the website after changes are posted indicates acceptance of the updated terms.',
-				'For questions about these terms, contact faby@fabdigitalstudio.com.'
-			]
+				'FabDigital Studio may update these terms from time to time by posting a revised version on the website. Continued use of the website after changes are posted indicates acceptance of the updated terms.'
+			],
+			contactLead: 'For questions about these terms, contact',
+			contactEmail: 'faby@fabdigitalstudio.com'
 		}
 	]
 };

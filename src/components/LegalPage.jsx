@@ -39,6 +39,19 @@ export default function LegalPage({ content }) {
 									<p key={paragraph}>{paragraph}</p>
 								))}
 
+								{section.contactEmail ? (
+									<p>
+										{section.contactLead ?? 'Contact us at'}{' '}
+										<a
+											className="font-medium text-[#dff7ff] underline decoration-[#22f0ff]/40 underline-offset-4 transition hover:text-white hover:decoration-[#22f0ff]"
+											href={`mailto:${section.contactEmail}`}
+										>
+											{section.contactEmail}
+										</a>
+										.
+									</p>
+								) : null}
+
 								{section.items?.length ? (
 									<ul className="space-y-2 pl-5 text-white/72">
 										{section.items.map((item) => (
