@@ -20,10 +20,10 @@ html {
 	z-index: 100;
 	transform: translateY(-150%);
 	border-radius: 9999px;
-	border: 1px solid rgba(231, 215, 184, 0.18);
-	background: rgba(18, 19, 21, 0.96);
+	border: 1px solid rgba(24, 215, 255, 0.18);
+	background: rgba(8, 20, 34, 0.96);
 	padding: 0.75rem 1rem;
-	color: #f5f1e8;
+	color: #f2f7fb;
 	font-size: 0.875rem;
 	font-weight: 600;
 	box-shadow: 0 18px 42px rgba(0, 0, 0, 0.35);
@@ -36,7 +36,10 @@ html {
 
 body {
 	@apply m-0 min-h-screen font-sans text-white antialiased;
-	background: linear-gradient(180deg, #07111f 0%, #0b1628 46%, #07111f 100%);
+	background:
+		radial-gradient(circle at top left, rgba(10, 124, 255, 0.16), transparent 28%),
+		radial-gradient(circle at top right, rgba(255, 106, 0, 0.14), transparent 26%),
+		linear-gradient(180deg, #06101d 0%, #0b1628 46%, #07111f 100%);
 }
 
 a {
@@ -44,9 +47,9 @@ a {
 }
 
 :where(a, button, input, textarea, select):focus-visible {
-	outline: 2px solid #ffb300;
+	outline: 2px solid #18d7ff;
 	outline-offset: 3px;
-	box-shadow: 0 0 0 4px rgba(255, 179, 0, 0.16);
+	box-shadow: 0 0 0 4px rgba(24, 215, 255, 0.16);
 }
 
 img {
@@ -89,28 +92,28 @@ img {
 
   background-image: linear-gradient(
     135deg,
-    #044a7c 0%,
-    #2f80ba 35%,
-    #e77355 100%
+	#0a7cff 0%,
+	#18d7ff 34%,
+	#ff6a00 100%
   );
 
-  box-shadow: 0 10px 25px rgba(4, 74, 124, 0.25);
+	box-shadow: 0 12px 30px rgba(10, 124, 255, 0.22), 0 0 24px rgba(255, 106, 0, 0.16);
 }
 
 .button-primary:hover {
   background-image: linear-gradient(
     135deg,
-    #03395f 0%,
-    #256ea3 35%,
-    #f28b6d 100%
+	#096de0 0%,
+	#22dcff 34%,
+	#ff7d21 100%
   );
 
-  box-shadow: 0 0 22px rgba(231, 115, 85, 0.45);
+	box-shadow: 0 0 28px rgba(255, 106, 0, 0.24), 0 12px 32px rgba(10, 124, 255, 0.26);
   transform: translateY(-1px);
 }
 
 .button-secondary {
-	@apply border border-white/12 bg-white/5 text-[#f2f7fb] shadow-[0_10px_30px_rgba(0,0,0,0.22)] hover:border-[#ff6a00]/35 hover:text-[#ffd9c7];
+	@apply border border-[#18d7ff]/18 bg-white/5 text-[#f2f7fb] shadow-[0_10px_30px_rgba(0,0,0,0.22)] hover:border-[#ff6a00]/40 hover:text-[#ffd9c7];
 }
 
 .chip {
@@ -118,17 +121,18 @@ img {
 }
 
 .chip-accent {
-	@apply inline-flex items-center gap-2 rounded-full border border-[#ffb300]/20 bg-[#ffb300]/10 px-2.5 py-1.5 text-xs font-medium text-[#dff7ff] shadow-[0_12px_30px_rgba(199,165,107,0.12)] backdrop-blur sm:px-3 sm:py-2 sm:text-sm;
+	@apply inline-flex items-center gap-2 rounded-full border border-[#18d7ff]/20 bg-[#0a7cff]/10 px-2.5 py-1.5 text-xs font-medium text-[#dff7ff] shadow-[0_12px_30px_rgba(10,124,255,0.12)] backdrop-blur sm:px-3 sm:py-2 sm:text-sm;
 }
 .logo-pattern-bg {
   background-color: #081422;
 
   background-image:
-    linear-gradient(rgba(199, 165, 107, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(199, 165, 107, 0.08) 1px, transparent 1px),
-    radial-gradient(circle at center, rgba(8, 20, 34, 0.6), transparent 65%);
+	linear-gradient(rgba(24, 215, 255, 0.06) 1px, transparent 1px),
+	linear-gradient(90deg, rgba(24, 215, 255, 0.06) 1px, transparent 1px),
+	radial-gradient(circle at top right, rgba(255, 106, 0, 0.12), transparent 28%),
+	radial-gradient(circle at center, rgba(8, 20, 34, 0.6), transparent 65%);
 
-  background-size: 20px 20px, 20px 20px, auto;
+	background-size: 20px 20px, 20px 20px, auto, auto;
   background-position: center;
 }
 

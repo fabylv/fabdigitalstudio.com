@@ -100,7 +100,7 @@ export default function Contact({ content }) {
 								</a>
 							</div>
 
-							<div className="rounded-2xl border border-white/10 bg-linear-to-br from-[#0a7cff]/15 to-[#ffb300]/10 p-5 shadow-lg">
+							<div className="rounded-2xl border border-white/10 bg-linear-to-br from-[#0a7cff]/15 via-[#18d7ff]/6 to-[#ff6a00]/10 p-5 shadow-lg">
 								<p className="text-sm font-medium text-white/70">Typical projects</p>
 								<ul className="mt-3 space-y-2 text-sm text-white/65">
 									<li>• New service business websites</li>
@@ -110,7 +110,7 @@ export default function Contact({ content }) {
 								</ul>
 							</div>
 
-							<div className="rounded-2xl border border-[#ffb300]/20 bg-[#ffb300]/10 p-5 text-sm text-[#dff7ff] shadow-lg">
+							<div className="rounded-2xl border border-[#18d7ff]/18 bg-linear-to-br from-[#0a7cff]/10 to-[#ff6a00]/10 p-5 text-sm text-[#dff7ff] shadow-lg">
 								<p className="font-semibold text-[#f2f7fb]">What happens next?</p>
 								<p className="mt-2 leading-7 text-[#dff7ff]/75">
 									Once you send the form, the details go straight to my inbox so I can review your project and
@@ -152,7 +152,7 @@ export default function Contact({ content }) {
 								<label className="block text-sm font-medium text-white/70">
 									Name
 									<input
-										className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none transition placeholder:text-white/30 focus:border-[#ffb300]/30"
+									className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none transition placeholder:text-white/30 focus:border-[#18d7ff]/30"
 										name="name"
 										onChange={handleChange}
 										required
@@ -165,7 +165,7 @@ export default function Contact({ content }) {
 								<label className="block text-sm font-medium text-white/70">
 									Email
 									<input
-										className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none transition placeholder:text-white/30 focus:border-[#ffb300]/30"
+									className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none transition placeholder:text-white/30 focus:border-[#18d7ff]/30"
 										name="email"
 										onChange={handleChange}
 										required
@@ -180,7 +180,7 @@ export default function Contact({ content }) {
 								<label className="block text-sm font-medium text-white/70">
 									Business name
 									<input
-										className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none transition placeholder:text-white/30 focus:border-[#ffb300]/30"
+									className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none transition placeholder:text-white/30 focus:border-[#18d7ff]/30"
 										name="businessName"
 										onChange={handleChange}
 										placeholder="Your business"
@@ -192,7 +192,7 @@ export default function Contact({ content }) {
 								<label className="block text-sm font-medium text-white/70">
 									Project type
 									<select
-										className="mt-2 w-full rounded-2xl border border-white/10 bg-[#0b1628] px-4 py-3 text-base text-white outline-none transition focus:border-[#ffb300]/30"
+									className="mt-2 w-full rounded-2xl border border-white/10 bg-[#0b1628] px-4 py-3 text-base text-white outline-none transition focus:border-[#18d7ff]/30"
 										name="projectType"
 										onChange={handleChange}
 										value={formData.projectType}
@@ -211,7 +211,7 @@ export default function Contact({ content }) {
 								<label className="block text-sm font-medium text-white/70">
 									Timeline
 									<select
-										className="mt-2 w-full rounded-2xl border border-white/10 bg-[#0b1628] px-4 py-3 text-base text-white outline-none transition focus:border-[#ffb300]/30"
+									className="mt-2 w-full rounded-2xl border border-white/10 bg-[#0b1628] px-4 py-3 text-base text-white outline-none transition focus:border-[#18d7ff]/30"
 										name="timeline"
 										onChange={handleChange}
 										value={formData.timeline}
@@ -228,7 +228,7 @@ export default function Contact({ content }) {
 								<label className="block text-sm font-medium text-white/70">
 									Budget
 									<select
-										className="mt-2 w-full rounded-2xl border border-white/10 bg-[#0b1628] px-4 py-3 text-base text-white outline-none transition focus:border-[#ffb300]/30"
+									className="mt-2 w-full rounded-2xl border border-white/10 bg-[#0b1628] px-4 py-3 text-base text-white outline-none transition focus:border-[#18d7ff]/30"
 										name="budget"
 										onChange={handleChange}
 										value={formData.budget}
@@ -259,7 +259,7 @@ export default function Contact({ content }) {
 							<label className="block text-sm font-medium text-white/70">
 								Tell me about your project
 								<textarea
-									className="mt-2 min-h-40 w-full rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none transition placeholder:text-white/30 focus:border-[#ffb300]/30"
+								className="mt-2 min-h-40 w-full rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none transition placeholder:text-white/30 focus:border-[#18d7ff]/30"
 									name="message"
 									onChange={handleChange}
 									placeholder="Tell me what you need, what your current site is missing, and what you want to improve."
