@@ -163,7 +163,7 @@ export const privacyPolicyContent = {
 		{
 			title: 'Children and Contact',
 			paragraphs: [
-				'This website is not intended for children under 13, and FabDigital Studio does not knowingly collect personal information from children through the site.',
+				'This website is not intended for children.',
 				'For privacy questions, contact faby@fabdigitalstudio.com.'
 			]
 		}
