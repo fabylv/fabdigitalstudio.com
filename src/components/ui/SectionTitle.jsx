@@ -4,7 +4,7 @@ export default function SectionTitle({ eyebrow, title, description, align = 'cen
 	return (
 		<div className={`max-w-3xl ${alignment}`}>
 			{eyebrow ? (
-				<p className="mb-3 inline-flex rounded-full border border-amber-300/30 bg-amber-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-amber-200">
+				<p className="mb-3 inline-flex rounded-full border border-[#c7a56b]/30 bg-[#c7a56b]/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#e7d7b8]">
 					{eyebrow}
 				</p>
 			) : null}

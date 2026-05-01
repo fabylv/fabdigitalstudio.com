@@ -35,7 +35,7 @@ export default function SelectedWork({ projects }) {
 								<div>
 									<div className="flex items-center justify-between gap-4">
 										<span className="chip-accent">What I Can Do</span>
-										<span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-linear-to-br from-brand-600 via-cyan-400 to-accent-400 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(47,123,255,0.26)]">
+										<span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-linear-to-br from-[#7d8794] via-[#b0b5bd] to-[#c7a56b] text-sm font-semibold text-[#151312] shadow-[0_12px_24px_rgba(125,135,148,0.24)]">
 											{String(index + 1).padStart(2, '0')}
 										</span>
 									</div>

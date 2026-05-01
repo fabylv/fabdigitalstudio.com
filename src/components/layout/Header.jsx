@@ -71,7 +71,7 @@ export default function Header({ navigation }) {
 					>
 						<img
 							alt="FabDigital Studio"
-							className="h-12 w-auto shrink-0 opacity-95 filter-[drop-shadow(0_0_18px_rgba(59,130,246,0.18))] sm:h-14 lg:h-20"
+							className="h-12 w-auto shrink-0 opacity-95 filter-[drop-shadow(0_0_18px_rgba(199,165,107,0.16))] sm:h-14 lg:h-20"
 							src={logo}
 						/>
 					</a>
@@ -84,10 +84,10 @@ export default function Header({ navigation }) {
 								<a
 									aria-current={isActive ? 'location' : undefined}
 									key={item.label}
-									className={`relative pb-2 text-[13px] font-medium transition lg:text-sm after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:rounded-full after:bg-amber-300 after:transition after:duration-200 ${
+									className={`relative pb-2 text-[13px] font-medium transition lg:text-sm after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:rounded-full after:bg-[#c7a56b] after:transition after:duration-200 ${
 										isActive
-											? 'text-amber-200 after:scale-100'
-											: 'text-white/72 after:scale-0 hover:text-amber-200 hover:after:scale-100'
+											? 'text-[#e7d7b8] after:scale-100'
+											: 'text-white/72 after:scale-0 hover:text-[#e7d7b8] hover:after:scale-100'
 									}`}
 									href={item.href}
 								>
@@ -109,7 +109,7 @@ export default function Header({ navigation }) {
 					<button
 						aria-expanded={menuOpen}
 						aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-						className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/12 bg-white/5 text-white shadow-[0_12px_30px_rgba(2,8,23,0.25)] transition hover:border-amber-300/30 hover:text-amber-200 md:hidden"
+						className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/12 bg-white/5 text-white shadow-[0_12px_30px_rgba(0,0,0,0.25)] transition hover:border-[#c7a56b]/30 hover:text-[#e7d7b8] md:hidden"
 						onClick={() => setMenuOpen((value) => !value)}
 						type="button"
 					>
@@ -130,7 +130,7 @@ export default function Header({ navigation }) {
 			</Container>
 
 			{menuOpen ? (
-				<div className="border-t border-white/10 bg-[#081a2f]/98 px-5 pb-5 pt-4 shadow-[0_20px_50px_rgba(2,8,23,0.4)] md:hidden">
+				<div className="border-t border-white/10 bg-[#141619]/98 px-5 pb-5 pt-4 shadow-[0_20px_50px_rgba(0,0,0,0.4)] md:hidden">
 					<nav aria-label="Mobile primary" className="flex flex-col gap-2">
 						{navigation.map((item) => {
 							const isActive = activeHref === item.href;
@@ -141,8 +141,8 @@ export default function Header({ navigation }) {
 									key={item.label}
 									className={`rounded-2xl px-4 py-3 text-sm font-medium transition ${
 										isActive
-											? 'bg-amber-300/12 text-amber-200'
-											: 'bg-white/5 text-white/80 hover:bg-white/8 hover:text-amber-200'
+											? 'bg-[#c7a56b]/12 text-[#e7d7b8]'
+											: 'bg-white/5 text-white/80 hover:bg-white/8 hover:text-[#e7d7b8]'
 									}`}
 									href={item.href}
 									onClick={closeMenu}
