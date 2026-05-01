@@ -26,7 +26,7 @@ export default function CTASection({ content }) {
 
 					<div className="relative mt-8 lg:mt-0">
 						<Button
-							className="bg-[#ffd36a] text-[#07111f] hover:bg-[#dff7ff]"
+							className="bg-[#ff6a00] text-white hover:bg-[#ff7e26]"
 							href={content.action.href}
 						>
 							{content.action.label}
