@@ -20,7 +20,28 @@ export const heroContent = {
 		{ label: 'Focused on conversion', value: 'Clear' },
 		{ label: 'Built for growth', value: 'Scalable' }
 	],
-	image: heroPreview
+	image: heroPreview,
+	preview: {
+		label: 'Sample homepage direction',
+		title: 'Clear offer, clean structure, stronger first impression.',
+		description:
+			'A simpler preview that looks like an actual homepage concept instead of one large abstract mockup.',
+		badges: ['Hero message', 'Service highlights', 'Mobile-ready'],
+		notes: [
+			{
+				title: 'What this is',
+				text: 'A sample homepage direction that shows the kind of layout and clarity your site can have.'
+			},
+			{
+				title: 'What it helps with',
+				text: 'Helping visitors understand the offer fast, trust the brand quicker, and know where to click next.'
+			},
+			{
+				title: 'Why it works better',
+				text: 'Smaller, clearer visuals make the hero easier to scan without fighting the main message.'
+			}
+		]
+	}
 };
 
 export const servicesIntro = {

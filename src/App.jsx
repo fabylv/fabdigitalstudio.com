@@ -1,3 +1,4 @@
+import Maintenance from './components/Maintenance';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
@@ -21,7 +22,12 @@ import {
 	footerLinks
 } from './data/siteContent';
 
+const maintenanceMode = import.meta.env.VITE_MAINTENANCE === 'true';
+
 export default function App() {
+	if (maintenanceMode) {
+		return <Maintenance />;
+	}
 	return (
 		<div className="min-h-screen text-white">
 			<a className="skip-link" href="#main-content">
