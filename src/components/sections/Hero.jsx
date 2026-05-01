@@ -5,19 +5,19 @@ export default function Hero({ content }) {
 	return (
 		<section className="relative overflow-hidden pb-10 pt-8 sm:pb-12 sm:pt-10" id="top">
 			<div className="pointer-events-none absolute inset-x-0 top-0 h-136 bg-linear-to-b from-white/6 via-transparent to-transparent" />
-			<div className="pointer-events-none absolute left-1/2 top-20 h-64 w-64 -translate-x-1/2 rounded-full bg-[#c7a56b]/10 blur-3xl" />
-			<div className="pointer-events-none absolute left-[8%] top-24 h-56 w-56 rounded-full bg-[#5d4630]/10 blur-3xl" />
-			<div className="pointer-events-none absolute right-[10%] top-16 h-72 w-72 rounded-full bg-[#7d8794]/12 blur-3xl" />
+			<div className="pointer-events-none absolute left-1/2 top-20 h-64 w-64 -translate-x-1/2 rounded-full bg-[#ffb300]/10 blur-3xl" />
+			<div className="pointer-events-none absolute left-[8%] top-24 h-56 w-56 rounded-full bg-[#ff6a00]/10 blur-3xl" />
+			<div className="pointer-events-none absolute right-[10%] top-16 h-72 w-72 rounded-full bg-[#0a7cff]/12 blur-3xl" />
 
 			<Container>
 				<div className="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(420px,0.95fr)] lg:gap-10">
 					<div className="text-center lg:text-left">
-						<span className="mb-3 inline-flex rounded-full border border-[#c7a56b]/30 bg-[#c7a56b]/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#e7d7b8]">
+						<span className="mb-3 inline-flex rounded-full border border-[#ffb300]/30 bg-[#ffb300]/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#dff7ff]">
 							{content.eyebrow}
 						</span>
 
 						<h1 className="max-w-4xl text-3xl font-semibold tracking-tight text-white sm:text-[2.85rem] md:text-[3.2rem] lg:text-6xl lg:leading-[0.98] xl:text-7xl">
-							<span className="bg-linear-to-r from-[#f5f1e8] via-[#e7d7b8] to-[#c7a56b] bg-clip-text text-transparent">
+							<span className="bg-linear-to-r from-[#f5f1e8] via-[#dff7ff] to-[#ffb300] bg-clip-text text-transparent">
 								{content.title}
 							</span>
 						</h1>
@@ -42,8 +42,8 @@ export default function Hero({ content }) {
 					</div>
 
 					<div className="relative">
-						<div className="pointer-events-none absolute inset-x-0 top-10 h-40 bg-radial from-[#7d8794]/14 to-transparent blur-3xl" />
-						<div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#17191d]/90 p-3 shadow-[0_30px_80px_rgba(0,0,0,0.40)] backdrop-blur-xl sm:p-4 lg:p-5">
+						<div className="pointer-events-none absolute inset-x-0 top-10 h-40 bg-radial from-[#0a7cff]/14 to-transparent blur-3xl" />
+						<div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0b1628]/90 p-3 shadow-[0_30px_80px_rgba(0,0,0,0.40)] backdrop-blur-xl sm:p-4 lg:p-5">
 							<div className="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-white/6 to-transparent" />
 							<div className="relative mb-3 flex items-center justify-between px-2 sm:px-3">
 								<div className="flex gap-2">
@@ -56,7 +56,7 @@ export default function Hero({ content }) {
 								</div>
 							</div>
 
-							<div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#1a1d21] shadow-2xl">
+							<div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#102038] shadow-2xl">
 								<img
 									alt="FabDigital Studio homepage preview"
 									className="w-full"
@@ -71,9 +71,9 @@ export default function Hero({ content }) {
 										Now the text and preview sit side by side, so the hero is easier to understand.
 									</p>
 								</div>
-								<div className="rounded-2xl border border-[#c7a56b]/20 bg-[#c7a56b]/10 p-4 backdrop-blur-xl">
-									<p className="text-sm font-semibold text-[#e7d7b8]">Better balance</p>
-									<p className="mt-2 text-sm leading-6 text-[#e7d7b8]/75">
+								<div className="rounded-2xl border border-[#ffb300]/20 bg-[#ffb300]/10 p-4 backdrop-blur-xl">
+									<p className="text-sm font-semibold text-[#dff7ff]">Better balance</p>
+									<p className="mt-2 text-sm leading-6 text-[#dff7ff]/75">
 										The visual supports the message instead of taking over the whole section.
 									</p>
 								</div>

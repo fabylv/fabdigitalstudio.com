@@ -34,9 +34,9 @@ export default function App() {
 				Skip to main content
 			</a>
 			<div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-				<div className="absolute left-1/2 -top-40 h-112 w-md -translate-x-1/2 rounded-full bg-[#c7a56b]/10 blur-3xl" />
-				<div className="absolute -right-32 top-32 h-104 w-104 rounded-full bg-[#7d8794]/14 blur-3xl" />
-				<div className="absolute -bottom-40 -left-24 h-96 w-[24rem] rounded-full bg-[#5d4630]/10 blur-3xl" />
+				<div className="absolute left-1/2 -top-40 h-112 w-md -translate-x-1/2 rounded-full bg-[#ffb300]/10 blur-3xl" />
+				<div className="absolute -right-32 top-32 h-104 w-104 rounded-full bg-[#0a7cff]/14 blur-3xl" />
+				<div className="absolute -bottom-40 -left-24 h-96 w-[24rem] rounded-full bg-[#ff6a00]/10 blur-3xl" />
 			</div>
 
 			<Header navigation={navigation} />

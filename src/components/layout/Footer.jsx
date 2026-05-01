@@ -14,7 +14,7 @@ export default function Footer({ links }) {
 							src={logo}
 						/>
 						<p className="mt-3 text-sm text-white/60">{footerContent.tagline}</p>
-						<div className="my-4 h-px w-40 bg-linear-to-r from-[#c7a56b] to-[#7d8794]" />
+						<div className="my-4 h-px w-40 bg-linear-to-r from-[#ffb300] to-[#0a7cff]" />
 					</div>
 
 					<nav aria-label="Footer" className="flex flex-wrap gap-5 text-sm text-white/60">

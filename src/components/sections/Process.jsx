@@ -15,12 +15,12 @@ export default function Process({ steps }) {
 				/>
 
 				<ol className="relative mt-12 grid gap-6 lg:grid-cols-2 lg:gap-x-12">
-					<div className="absolute left-1/2 top-4 hidden h-[calc(100%-2rem)] w-px -translate-x-1/2 bg-linear-to-b from-[#7d8794]/50 via-[#9ba3ad]/35 to-[#c7a56b]/35 lg:block" />
+					<div className="absolute left-1/2 top-4 hidden h-[calc(100%-2rem)] w-px -translate-x-1/2 bg-linear-to-b from-[#0a7cff]/50 via-[#22b6ff]/35 to-[#ffb300]/35 lg:block" />
 
 					{steps.map((step, index) => (
 						<li key={step.title} className={index % 2 === 0 ? 'lg:mr-10' : 'lg:ml-10 lg:mt-16'}>
 							<GlassCard className="relative p-7 transition hover:-translate-y-1">
-								<div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-linear-to-br from-[#7d8794] to-[#c7a56b] text-sm font-semibold text-[#151312] shadow-lg">
+								<div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-linear-to-br from-[#0a7cff] to-[#ffb300] text-sm font-semibold text-[#07111f] shadow-lg">
 									{String(index + 1).padStart(2, '0')}
 								</div>
 								<h3 className="mt-6 text-xl font-semibold text-white">{step.title}</h3>

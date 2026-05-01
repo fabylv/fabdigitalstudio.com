@@ -36,7 +36,7 @@ html {
 
 body {
 	@apply m-0 min-h-screen font-sans text-white antialiased;
-	background: linear-gradient(180deg, #111315 0%, #17191d 46%, #121416 100%);
+	background: linear-gradient(180deg, #07111f 0%, #0b1628 46%, #07111f 100%);
 }
 
 a {
@@ -44,9 +44,9 @@ a {
 }
 
 :where(a, button, input, textarea, select):focus-visible {
-	outline: 2px solid #c7a56b;
+	outline: 2px solid #ffb300;
 	outline-offset: 3px;
-	box-shadow: 0 0 0 4px rgba(199, 165, 107, 0.16);
+	box-shadow: 0 0 0 4px rgba(255, 179, 0, 0.16);
 }
 
 img {
@@ -78,17 +78,17 @@ img {
 }
 
 .button-primary {
-	@apply text-[#151312] shadow-[0_16px_38px_rgba(199,165,107,0.18)];
-	background-image: linear-gradient(135deg, #eadbbe 0%, #c7a56b 52%, #a68453 100%);
+	@apply text-[#07111f] shadow-[0_16px_38px_rgba(199,165,107,0.18)];
+	background-image: linear-gradient(135deg, #ffd36a 0%, #ffb300 52%, #a68453 100%);
 }
 
 .button-primary:hover {
 	transform: translateY(-1px);
-	box-shadow: 0 18px 42px rgba(199, 165, 107, 0.2);
+	box-shadow: 0 18px 42px rgba(255, 179, 0, 0.2);
 }
 
 .button-secondary {
-	@apply border border-white/12 bg-white/5 text-[#f1ece2] shadow-[0_10px_30px_rgba(0,0,0,0.22)] hover:border-[#c7a56b]/35 hover:text-[#e7d7b8];
+	@apply border border-white/12 bg-white/5 text-[#f2f7fb] shadow-[0_10px_30px_rgba(0,0,0,0.22)] hover:border-[#ffb300]/35 hover:text-[#dff7ff];
 }
 
 .chip {
@@ -96,10 +96,10 @@ img {
 }
 
 .chip-accent {
-	@apply inline-flex items-center gap-2 rounded-full border border-[#c7a56b]/20 bg-[#c7a56b]/10 px-2.5 py-1.5 text-xs font-medium text-[#e7d7b8] shadow-[0_12px_30px_rgba(199,165,107,0.12)] backdrop-blur sm:px-3 sm:py-2 sm:text-sm;
+	@apply inline-flex items-center gap-2 rounded-full border border-[#ffb300]/20 bg-[#ffb300]/10 px-2.5 py-1.5 text-xs font-medium text-[#dff7ff] shadow-[0_12px_30px_rgba(199,165,107,0.12)] backdrop-blur sm:px-3 sm:py-2 sm:text-sm;
 }
 .logo-pattern-bg {
-	background-color: #141619;
+	background-color: #081422;
 
 	background-image: linear-gradient(rgba(199, 165, 107, 0.035) 1px, transparent 1px),
 		linear-gradient(90deg, rgba(199, 165, 107, 0.035) 1px, transparent 1px),
@@ -112,8 +112,8 @@ img {
 	content: '';
 	position: absolute;
 	inset: 0;
-	background: radial-gradient(circle at 20% 30%, rgba(199, 165, 107, 0.12), transparent 40%),
-		radial-gradient(circle at 80% 70%, rgba(125, 135, 148, 0.1), transparent 40%);
+	background: radial-gradient(circle at 20% 30%, rgba(255, 179, 0, 0.12), transparent 40%),
+		radial-gradient(circle at 80% 70%, rgba(10, 124, 255, 0.1), transparent 40%);
 	pointer-events: none;
 }
 
