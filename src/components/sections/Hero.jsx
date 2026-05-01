@@ -29,13 +29,9 @@ export default function Hero({ content }) {
 							{content.eyebrow}
 						</span>
 
-<<<<<<< Updated upstream
-						<h1 className="max-w-4xl text-3xl font-semibold tracking-tight text-white sm:text-[2.85rem] md:text-[3.2rem] lg:text-6xl lg:leading-[0.98] xl:text-7xl">
-							<span className="bg-linear-to-r from-[#49a7ff] via-[#22f0ff] to-[#ff6a00] bg-clip-text text-transparent">
-=======
+
 						<h1 className="max-w-4xl text-3xl font-semibold tracking-tight text-white sm:text-[2.85rem] md:text-[3.2rem] lg:text-6xl lg:leading-[1.2] xl:text-7xl">
-							<span className="bg-linear-to-r from-[#0a7cff] via-[#22b6ff] to-[#ff6a00] bg-clip-text text-transparent">
->>>>>>> Stashed changes
+							<span className="bg-linear-to-r from-[#49a7ff] via-[#22f0ff] to-[#ff6a00] bg-clip-text text-transparent">
 								{content.title}
 							</span>
 						</h1>
@@ -92,7 +88,7 @@ export default function Hero({ content }) {
 										</span>
 									</div>
 
-									<div className="mt-4 rounded-[1.5rem] border border-white/10 bg-[#0a1629]/88 p-4 shadow-[0_18px_40px_rgba(0,0,0,0.22)]">
+									<div className="mt-4 rounded-3xl border border-white/10 bg-[#0a1629]/88 p-4 shadow-[0_18px_40px_rgba(0,0,0,0.22)]">
 										<div className="flex items-start justify-between gap-4">
 											<div>
 												<p className="text-xs font-medium uppercase tracking-[0.2em] text-[#22f0ff]/75">
