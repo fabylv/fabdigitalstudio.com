@@ -1,9 +1,9 @@
-import { useEffect, useRef } from 'react';
 import { PersonStanding, LayoutTemplate, MonitorSmartphone, PencilRuler } from 'lucide-react';
 import Container from '../ui/Container';
 import GlassCard from '../ui/GlassCard';
 import SectionTitle from '../ui/SectionTitle';
 import { servicesIntro } from '../../data/siteContent';
+import useScrollReveal from '../../hooks/useScrollReveal';
 
 const serviceIcons = {
 	'Website Development': MonitorSmartphone,
@@ -13,7 +13,7 @@ const serviceIcons = {
 };
 
 export default function Services({ services }) {
-	const sectionRef = useRef(null);
+	const sectionRef = useScrollReveal({ threshold: 0.16, rootMargin: '0px 0px -6% 0px' });
 	const layoutClasses = [
 		'lg:col-span-7 lg:min-h-72',
 		'lg:col-span-5 lg:translate-y-8',
@@ -21,47 +21,31 @@ export default function Services({ services }) {
 		'lg:col-span-7 lg:min-h-72'
 	];
 
-	useEffect(() => {
-		const cards = sectionRef.current?.querySelectorAll('[data-services-card]');
-		if (!cards?.length) return undefined;
-
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (!entry.isIntersecting) return;
-					entry.target.setAttribute('data-visible', 'true');
-					observer.unobserve(entry.target);
-				});
-			},
-			{ threshold: 0.2, rootMargin: '0px 0px -8% 0px' }
-		);
-
-		cards.forEach((card) => observer.observe(card));
-
-		return () => observer.disconnect();
-	}, []);
-
 	return (
 		<section id="services" className="section-shell" ref={sectionRef}>
 			<Container>
-				<SectionTitle
-					eyebrow={servicesIntro.eyebrow}
-					title={servicesIntro.title}
-					description={servicesIntro.description}
-					align="center"
-				/>
+				<div className="reveal reveal-up" data-reveal>
+					<SectionTitle
+						eyebrow={servicesIntro.eyebrow}
+						title={servicesIntro.title}
+						description={servicesIntro.description}
+						align="center"
+					/>
+				</div>
 
 				<div className="mt-16 grid gap-8 lg:grid-cols-12 lg:gap-10 xl:gap-12">
 					{services.map((service, index) => {
 						const Icon = serviceIcons[service.title] ?? MonitorSmartphone;
 						const isStandingIcon = service.title === 'Accessibility & Usability';
+						const revealClass =
+							index % 2 === 0 ? 'reveal reveal-left services-card' : 'reveal reveal-right services-card';
 
 						return (
 							<GlassCard
 								key={service.title}
-								className={`services-card p-9 sm:p-10 ${layoutClasses[index] ?? 'lg:col-span-6'}`}
-								data-services-card
-								style={{ '--card-delay': `${index * 90}ms` }}
+								className={`${revealClass} p-9 sm:p-10 ${layoutClasses[index] ?? 'lg:col-span-6'}`}
+								data-reveal
+								style={{ '--reveal-delay': `${index * 90}ms` }}
 							>
 								<div className="flex items-center justify-between gap-6">
 									<span className="inline-flex h-13 w-13 items-center justify-center rounded-2xl bg-linear-to-br from-[#0a7cff] via-[#18d7ff] to-[#ff6a00] text-[#06101d] shadow-[0_16px_32px_rgba(10,124,255,0.22)]">

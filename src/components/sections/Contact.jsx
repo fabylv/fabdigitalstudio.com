@@ -3,6 +3,7 @@ import Container from '../ui/Container';
 import GlassCard from '../ui/GlassCard';
 import SectionTitle from '../ui/SectionTitle';
 import Button from '../ui/Button';
+import useScrollReveal from '../../hooks/useScrollReveal';
 
 const initialFormState = {
 	name: '',
@@ -16,6 +17,7 @@ const initialFormState = {
 };
 
 export default function Contact({ content }) {
+	const sectionRef = useScrollReveal({ threshold: 0.16, rootMargin: '0px 0px -6% 0px' });
 	const [formData, setFormData] = useState(initialFormState);
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [status, setStatus] = useState({ type: 'idle', message: '' });
@@ -77,11 +79,11 @@ export default function Contact({ content }) {
 	};
 
 	return (
-		<section id="contact" className="section-shell">
+		<section id="contact" className="section-shell" ref={sectionRef}>
 			<div className="absolute top-8" />
 			<Container>
 				<div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
-					<GlassCard className="overflow-hidden p-8 sm:p-10">
+					<GlassCard className="reveal reveal-left overflow-hidden p-8 sm:p-10" data-reveal>
 						<SectionTitle
 							eyebrow={content.eyebrow}
 							title={content.title}
@@ -120,7 +122,7 @@ export default function Contact({ content }) {
 						</div>
 					</GlassCard>
 
-					<GlassCard className="p-8 sm:p-10">
+					<GlassCard className="reveal reveal-right p-8 sm:p-10" data-reveal style={{ '--reveal-delay': '120ms' }}>
 						<form className="space-y-6" onSubmit={handleSubmit}>
 							{status.message ? (
 								<div

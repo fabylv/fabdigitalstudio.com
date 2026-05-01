@@ -1,10 +1,13 @@
 import Container from './Container';
+import useScrollReveal from '../../hooks/useScrollReveal';
 
 export default function DecorativeDivider() {
+	const dividerRef = useScrollReveal({ threshold: 0.4, rootMargin: '0px 0px -12% 0px' });
+
 	return (
-		<div aria-hidden="true" className="relative py-3 sm:py-4">
+		<div aria-hidden="true" className="relative py-3 sm:py-4" ref={dividerRef}>
 			<Container>
-				<div className="flex w-full items-center gap-4">
+				<div className="reveal reveal-divider flex w-full items-center gap-4" data-reveal>
 					<div className="h-px flex-1 bg-linear-to-r from-transparent via-[#22f0ff]/50 to-[#49a7ff]/28" />
 					<div className="relative flex h-4 w-12 items-center justify-center">
 						<div className="absolute h-8 w-8 rounded-full bg-[#22f0ff]/20 blur-xl" />

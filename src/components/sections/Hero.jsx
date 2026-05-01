@@ -1,5 +1,6 @@
 import Button from '../ui/Button';
 import Container from '../ui/Container';
+import useScrollReveal from '../../hooks/useScrollReveal';
 
 const previewSteps = ['Clear offer', 'Better structure', 'Inquiry-focused CTA'];
 const previewMetrics = [
@@ -9,8 +10,10 @@ const previewMetrics = [
 ];
 
 export default function Hero({ content }) {
+	const sectionRef = useScrollReveal({ threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+
 	return (
-		<section className="relative mb-10 overflow-hidden pb-10 pt-8 sm:pb-20 sm:pt-10" id="top">
+		<section className="relative mb-10 overflow-hidden pb-10 pt-8 sm:pb-20 sm:pt-10" id="top" ref={sectionRef}>
 			<div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(34,240,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,240,255,0.05)_1px,transparent_1px)] bg-size-[28px_28px] opacity-50" />
 			<div className="pointer-events-none absolute inset-0 bg-[#06101f]/65" />
 			<div className="pointer-events-none absolute inset-x-0 top-0 h-136 bg-linear-to-b from-white/6 via-transparent to-transparent" />
@@ -22,7 +25,7 @@ export default function Hero({ content }) {
 
 			<Container>
 				<div className="grid w-full items-center gap-10 lg:grid-cols-[minmax(0,1.12fr)_minmax(420px,0.88fr)] lg:gap-12 xl:gap-16">
-					<div className="relative text-center lg:text-left">
+					<div className="reveal reveal-left relative text-center lg:text-left" data-reveal>
 						<div className="pointer-events-none absolute -left-8 top-10 hidden h-28 w-28 rounded-full bg-[#22f0ff]/12 blur-3xl lg:block" />
 						<span className="mb-4 inline-flex rounded-full border border-[#22f0ff]/28 bg-[#0a7cff]/14 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#dff7ff] shadow-[0_0_24px_rgba(34,240,255,0.16)] sm:text-xs">
 							{content.eyebrow}
@@ -56,7 +59,7 @@ export default function Hero({ content }) {
 						</div>
 					</div>
 
-					<div className="relative">
+					<div className="reveal reveal-right relative" data-reveal style={{ '--reveal-delay': '120ms' }}>
 						<div className="pointer-events-none absolute -left-8 top-10 h-48 w-48 rounded-full bg-[#22f0ff]/18 blur-3xl" />
 						<div className="pointer-events-none absolute -right-6 bottom-10 h-48 w-48 rounded-full bg-[#ff6a00]/20 blur-3xl" />
 						<div className="pointer-events-none absolute inset-x-10 top-0 h-28 bg-radial from-[#22f0ff]/24 to-transparent blur-3xl" />
