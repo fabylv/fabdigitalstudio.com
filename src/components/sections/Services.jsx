@@ -51,20 +51,25 @@ export default function Services({ services }) {
 					align="center"
 				/>
 
-				<div className="mt-14 grid gap-7 lg:grid-cols-12 lg:gap-8 xl:gap-9">
+				<div className="mt-16 grid gap-8 lg:grid-cols-12 lg:gap-10 xl:gap-12">
 					{services.map((service, index) => {
 						const Icon = serviceIcons[service.title] ?? MonitorSmartphone;
+						const isStandingIcon = service.title === 'Accessibility & Usability';
 
 						return (
 							<GlassCard
 								key={service.title}
-								className={`services-card p-8 sm:p-9 ${layoutClasses[index] ?? 'lg:col-span-6'}`}
+								className={`services-card p-9 sm:p-10 ${layoutClasses[index] ?? 'lg:col-span-6'}`}
 								data-services-card
 								style={{ '--card-delay': `${index * 90}ms` }}
 							>
-								<div className="flex items-center justify-between gap-5">
-									<span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-linear-to-br from-[#0a7cff] via-[#18d7ff] to-[#ff6a00] text-[#06101d] shadow-[0_16px_32px_rgba(10,124,255,0.22)]">
-										<Icon aria-hidden="true" className="h-5 w-5" strokeWidth={2.1} />
+								<div className="flex items-center justify-between gap-6">
+									<span className="inline-flex h-13 w-13 items-center justify-center rounded-2xl bg-linear-to-br from-[#0a7cff] via-[#18d7ff] to-[#ff6a00] text-[#06101d] shadow-[0_16px_32px_rgba(10,124,255,0.22)]">
+										<Icon
+											aria-hidden="true"
+											className={isStandingIcon ? 'h-6.5 w-6.5' : 'h-5.5 w-5.5'}
+											strokeWidth={2.1}
+										/>
 									</span>
 									<span className="h-px flex-1 bg-linear-to-r from-[#18d7ff]/45 via-[#0a7cff]/35 to-[#ff6a00]/10" />
 								</div>
