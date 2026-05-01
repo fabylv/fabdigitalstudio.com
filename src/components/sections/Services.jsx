@@ -1,9 +1,11 @@
+import { useEffect, useRef } from 'react';
 import Container from '../ui/Container';
 import GlassCard from '../ui/GlassCard';
 import SectionTitle from '../ui/SectionTitle';
 import { servicesIntro } from '../../data/siteContent';
 
 export default function Services({ services }) {
+	const sectionRef = useRef(null);
 	const layoutClasses = [
 		'lg:col-span-7 lg:min-h-72',
 		'lg:col-span-5 lg:translate-y-8',
@@ -11,8 +13,28 @@ export default function Services({ services }) {
 		'lg:col-span-7 lg:min-h-72'
 	];
 
+	useEffect(() => {
+		const cards = sectionRef.current?.querySelectorAll('[data-services-card]');
+		if (!cards?.length) return undefined;
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (!entry.isIntersecting) return;
+					entry.target.setAttribute('data-visible', 'true');
+					observer.unobserve(entry.target);
+				});
+			},
+			{ threshold: 0.2, rootMargin: '0px 0px -8% 0px' }
+		);
+
+		cards.forEach((card) => observer.observe(card));
+
+		return () => observer.disconnect();
+	}, []);
+
 	return (
-		<section id="services" className="section-shell">
+		<section id="services" className="section-shell" ref={sectionRef}>
 			<Container>
 				<SectionTitle
 					eyebrow={servicesIntro.eyebrow}
@@ -28,6 +50,7 @@ export default function Services({ services }) {
 							className={`services-card p-7 ${
 								layoutClasses[index] ?? 'lg:col-span-6'
 							}`}
+							data-services-card
 							style={{ '--card-delay': `${index * 90}ms` }}
 						>
 							<div className="services-card-inner flex items-center justify-between gap-4">
