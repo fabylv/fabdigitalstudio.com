@@ -51,7 +51,7 @@ export default function Hero({ content }) {
 						<div className="pointer-events-none absolute -left-8 top-10 h-48 w-48 rounded-full bg-[#0a7cff]/22 blur-3xl" />
 						<div className="pointer-events-none absolute -right-6 bottom-10 h-48 w-48 rounded-full bg-[#ff6a00]/20 blur-3xl" />
 						<div className="pointer-events-none absolute inset-x-10 top-0 h-28 bg-radial from-[#18d7ff]/18 to-transparent blur-3xl" />
-						<div className="relative overflow-hidden rounded-[2rem] border border-white/12 bg-[#0b1628]/88 p-3 shadow-[0_30px_90px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:p-4 lg:p-5">
+						<div className="relative overflow-hidden rounded-4xl border border-white/12 bg-[#0b1628]/88 p-3 shadow-[0_30px_90px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:p-4 lg:p-5">
 							<div className="absolute inset-0 bg-linear-to-br from-[#0a7cff]/8 via-transparent to-[#ff6a00]/8" />
 							<div className="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-white/8 to-transparent" />
 							<div className="relative mb-3 flex items-center px-2 sm:px-3">
