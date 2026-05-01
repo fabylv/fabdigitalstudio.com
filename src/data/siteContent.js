@@ -7,10 +7,10 @@ export const navigation = [
 ];
 
 export const heroContent = {
-	eyebrow: 'Design. Development. Performance.',
-	title: 'Modern websites that don’t just look good — they stand out.',
+	eyebrow: 'WE BUILD DIGITAL EXPERIENCES',
+	title: 'Building Digital Experiences That Drive Results',
 	description:
-		'We build fast, polished websites with personality—designed to elevate your brand, build trust, and make a stronger first impression.',
+		'We design and develop high-performing websites that help brands stand out, build trust, and grow.',
 	primaryCta: { label: 'Start Your Project', href: '#contact' },
 	secondaryCta: { label: 'Why FabDigital', href: '#why-us' },
 	stats: [
