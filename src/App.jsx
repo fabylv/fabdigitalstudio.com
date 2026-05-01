@@ -6,6 +6,7 @@ import Services from './components/sections/Services';
 import ValueSection from './components/sections/ValueSection';
 import CTASection from './components/sections/CTASection';
 import Contact from './components/sections/Contact';
+import DecorativeDivider from './components/ui/DecorativeDivider';
 import ScrollToTopButton from './components/ui/ScrollToTopButton';
 
 import {
@@ -39,6 +40,7 @@ export default function App() {
 
 			<main id="main-content" tabIndex="-1">
 				<Hero content={heroContent} />
+				<DecorativeDivider />
 				<Services services={services} />
 				<ValueSection points={valuePoints} />
 				<CTASection content={ctaContent} />
