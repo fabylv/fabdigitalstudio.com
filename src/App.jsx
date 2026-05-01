@@ -42,8 +42,11 @@ export default function App() {
 				<Hero content={heroContent} />
 				<DecorativeDivider />
 				<Services services={services} />
+				<DecorativeDivider />
 				<ValueSection points={valuePoints} />
+				<DecorativeDivider />
 				<CTASection content={ctaContent} />
+				<DecorativeDivider />
 				<Contact content={contactDetails} />
 			</main>
 
