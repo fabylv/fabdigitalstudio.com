@@ -11,43 +11,31 @@ export default function Maintenance() {
 			<div className="pointer-events-none absolute right-[8%] top-24 h-64 w-64 rounded-full bg-blue-500/12 blur-3xl" />
 
 			<Container className="relative">
-				<div className="mx-auto max-w-3xl rounded-[2rem] border border-white/10 bg-slate-950/80 p-7 text-center shadow-[0_30px_80px_rgba(2,8,23,0.40)] backdrop-blur-xl sm:p-10">
+				<div className="mx-auto max-w-3xl rounded-4xl border border-white/10 bg-slate-950/80 p-7 text-center shadow-[0_30px_80px_rgba(2,8,23,0.40)] backdrop-blur-xl sm:p-10">
 					<img
 						alt="FabDigital Studio"
-						className="mx-auto h-20 w-auto opacity-95 sm:h-24"
+						className="mx-auto h-30 w-auto opacity-95 sm:h-34"
 						src={logo}
 					/>
 
-					<span className="mt-6 inline-flex rounded-full border border-amber-300/30 bg-amber-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-amber-200">
+					<div className="mt-6 inline-flex rounded-full border border-amber-300/30 bg-amber-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-amber-200">
 						Temporarily offline for updates
-					</span>
-
-					<h1 className="mx-auto mt-5 max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-5xl sm:leading-tight">
-						We’re making a few improvements behind the scenes.
-					</h1>
-
-					<p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
-						FabDigital Studio is temporarily in maintenance mode while we polish a few things.
-						 Please check back soon.
-					</p>
-
-					<div className="mt-6 flex flex-wrap items-center justify-center gap-2.5">
-						<span className="chip">Website updates</span>
-						<span className="chip">Performance polish</span>
-						<span className="chip-accent">Back shortly</span>
 					</div>
 
+				
+					<h2 className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
+						FabDigital Studio is temporarily in maintenance mode while we polish a few things.
+						 Please check back soon.
+					</h2>
+
+				
 					<div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-5 text-left backdrop-blur-xl sm:p-6">
 						<p className="text-sm font-semibold text-white">Need to reach us in the meantime?</p>
 						<p className="mt-2 text-sm leading-6 text-white/65 sm:text-base">
-							Email <a className="text-amber-200 hover:text-amber-100" href="mailto:faby@fabdigitalstudio.com">faby@fabdigitalstudio.com</a>
-							 {' '}and we’ll get back to you as soon as possible.
+							Email <a className="text-amber-200 hover:text-amber-100" href="mailto:faby@fabdigitalstudio.com">faby@fabdigitalstudio.com</a> 							 and we’ll get back to you as soon as possible.
 						</p>
 					</div>
 
-					<div className="mt-8 flex justify-center">
-						<Button href="mailto:faby@fabdigitalstudio.com">Contact FabDigital Studio</Button>
-					</div>
 				</div>
 			</Container>
 		</div>
