@@ -68,7 +68,7 @@ export default function Hero({ content }) {
 					</div>
 				</div>
 
-				<dl className="mx-auto mt-8 grid max-w-[1400px] gap-3 sm:grid-cols-3 lg:mt-10">
+				<dl className="mx-auto mt-8 grid max-w-[1440px] gap-3 sm:grid-cols-3 lg:mt-10">
 					{content.stats.map((stat) => (
 						<div
 							key={stat.label}

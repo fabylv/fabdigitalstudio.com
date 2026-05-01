@@ -3,9 +3,7 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
 import Services from './components/sections/Services';
-import SelectedWork from './components/sections/SelectedWork';
 import ValueSection from './components/sections/ValueSection';
-import Process from './components/sections/Process';
 import CTASection from './components/sections/CTASection';
 import Contact from './components/sections/Contact';
 import ScrollToTopButton from './components/ui/ScrollToTopButton';
@@ -14,9 +12,7 @@ import {
 	navigation,
 	heroContent,
 	services,
-	selectedWork,
 	valuePoints,
-	processSteps,
 	ctaContent,
 	contactDetails,
 	footerLinks
@@ -44,9 +40,7 @@ export default function App() {
 			<main id="main-content" tabIndex="-1">
 				<Hero content={heroContent} />
 				<Services services={services} />
-				<SelectedWork projects={selectedWork} />
 				<ValueSection points={valuePoints} />
-				<Process steps={processSteps} />
 				<CTASection content={ctaContent} />
 				<Contact content={contactDetails} />
 			</main>
