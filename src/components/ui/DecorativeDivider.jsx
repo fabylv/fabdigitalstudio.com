@@ -4,7 +4,7 @@ export default function DecorativeDivider() {
 	return (
 		<div aria-hidden="true" className="relative py-3 sm:py-4">
 			<Container>
-				<div className="mx-auto flex max-w-[1440px] items-center gap-4">
+				<div className="flex w-full items-center gap-4">
 					<div className="h-px flex-1 bg-linear-to-r from-transparent via-[#0a7cff]/40 to-[#22b6ff]/25" />
 					<div className="relative flex h-4 w-12 items-center justify-center">
 						<div className="absolute h-8 w-8 rounded-full bg-[#0a7cff]/18 blur-xl" />
