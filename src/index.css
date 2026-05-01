@@ -162,6 +162,12 @@ img {
 	transform: translate3d(0, 0, 0) scale(1);
 }
 
+.reveal:focus-within {
+	opacity: 1;
+	filter: blur(0);
+	transform: translate3d(0, 0, 0) scale(1);
+}
+
 .reveal-up {
 	transform: translate3d(0, 34px, 0);
 }

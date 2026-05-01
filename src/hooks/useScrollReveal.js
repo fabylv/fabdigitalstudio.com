@@ -10,6 +10,19 @@ export default function useScrollReveal(options = {}) {
 		const revealElements = root.querySelectorAll('[data-reveal]');
 		if (!revealElements.length) return undefined;
 
+		const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+		const setAllVisible = (visible) => {
+			revealElements.forEach((element) => {
+				element.setAttribute('data-visible', visible ? 'true' : 'false');
+			});
+		};
+
+		if (motionQuery.matches) {
+			setAllVisible(true);
+			return undefined;
+		}
+
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
@@ -24,7 +37,18 @@ export default function useScrollReveal(options = {}) {
 
 		revealElements.forEach((element) => observer.observe(element));
 
-		return () => observer.disconnect();
+		const handleMotionPreferenceChange = (event) => {
+			if (!event.matches) return;
+			observer.disconnect();
+			setAllVisible(true);
+		};
+
+		motionQuery.addEventListener('change', handleMotionPreferenceChange);
+
+		return () => {
+			observer.disconnect();
+			motionQuery.removeEventListener('change', handleMotionPreferenceChange);
+		};
 	}, [options.rootMargin, options.threshold]);
 
 	return sectionRef;
