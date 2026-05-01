@@ -111,10 +111,10 @@ export default function Hero({ content }) {
 												<div className="mt-2 h-2 w-5/6 rounded-full bg-white/8" />
 												<div className="mt-2 h-2 w-2/3 rounded-full bg-white/8" />
 												<div className="mt-4 flex gap-2">
-													<div className="rounded-full bg-linear-to-r from-[#0a7cff] via-[#22f0ff] to-[#ff6a00] px-4 py-2 text-xs font-semibold text-white">
+													<div className="rounded-full border border-white/8 bg-[#122033]/92 px-4 py-2 text-xs font-medium text-white/62 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
 														Start Project
 													</div>
-													<div className="rounded-full border border-white/10 px-4 py-2 text-xs font-medium text-white/70">
+													<div className="rounded-full border border-white/10 bg-transparent px-4 py-2 text-xs font-medium text-white/70">
 														See Services
 													</div>
 												</div>
